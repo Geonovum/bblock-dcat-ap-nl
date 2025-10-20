@@ -1,5 +1,5 @@
 Validation report for geonovum.bbr.dcat.dcat-ap-nl-records - DCAT-AP-NL profile 3.0 - Records binding
-Generated 2025-08-29T12:47:11.350274+00:00
+Generated 2025-09-11T12:56:59.326650+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -56,17 +56,17 @@ Validation result for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/re
   	Message: Less than 1 values on [ dcat:accessURL Literal("https://www.kadaster.nl/-/brt-top10nl-download") ; dcat:license Literal("https://creativecommons.org/publicdomain/zero/1.0/") ; dcat:mediaType Literal("application/zip") ; dcterms:format Literal("application/zip") ; rdf:type dcat:Distribution ; rdfs:label Literal("BRT TOP10NL - Download") ]->dct:license
   
 Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
- - Shape _:na23f70178b8545a1a64a0a82c70db84fb4: *none*
- - Shape dcatapnl-sh:DatasetShape: *none*
- - Shape dcatapnl-sh:DataServiceShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:DataService
- - Shape dcatapnl-sh:DatasetSeriesShape: *none*
+ - Shape _:ndab422e586fe40619b540bc22f89bc1fb3: *none*
+ - Shape _:ndab422e586fe40619b540bc22f89bc1fb4: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape: *none*
- - Shape dcatapnl-sh:CatalogShape: *none*
- - Shape dcatapnl-sh:DistributionShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution,<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution
- - Shape _:na23f70178b8545a1a64a0a82c70db84fb3: *none*
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
  - Shape dcatapnl-sh:CatalogRecordShape: *none*
+ - Shape dcatapnl-sh:DataServiceShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:DataService
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
+ - Shape dcatapnl-sh:DatasetShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution,<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution
  - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
+ - Shape dcatapnl-sh:DatasetSeriesShape: *none*
+ - Shape dcatapnl-sh:CatalogShape: *none*
 
 === End SHACL ===
 
