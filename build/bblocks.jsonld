@@ -112,12 +112,12 @@
   "name": "Building Blocks - OGC Building Blocks for DCAT-AP-NL 3.0",
   "abstract": "These building blocks are an experimental implementation of DCAT-AP-NL.\n",
   "description": "The purpose of this collection is to experiment with the building block approach and to showcase how\nthis potentially can add value.\n",
-  "modified": "2025-09-11T12:56:56.318443",
+  "modified": "2025-10-20T18:23:38.993898",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"7706428cacea50013f04585b5be2d7d29b7b2d9b",
-      "shortCommitId": "\"770642",
-      "date": "2025-08-25T11:10:01+00:00\""
+      "commitId": "\"451179d92066ae8647ef31351a79eb2ecabd2992",
+      "shortCommitId": "\"451179",
+      "date": "2025-10-17T10:50:40+00:00\""
     }
   },
   "gitRepository": "https://github.com/Geonovum/bblock-dcat-ap-nl",
@@ -145,7 +145,7 @@
       "itemClass": "model",
       "register": "geonovum-building-blocks",
       "version": "0.1",
-      "dateOfLastChange": "2025-09-11",
+      "dateOfLastChange": "2025-10-20",
       "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
       "dependsOn": [
         "ogc.geo.geodcat.dcat-ap"
@@ -181,7 +181,6 @@
       "sourceFiles": "https://geonovum.github.io/bblock-dcat-ap-nl/_sources/dcat-ap-nl/",
       "rdfData": [],
       "validationPassed": true,
-      "testOutputs": "https://github.com/Geonovum/bblock-dcat-ap-nl/blob/master/build/tests/bbr/dcat/dcat-ap-nl/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
@@ -211,7 +210,7 @@
       "itemClass": "model",
       "register": "geonovum-building-blocks",
       "version": "0.1",
-      "dateOfLastChange": "2025-09-11",
+      "dateOfLastChange": "2025-10-20",
       "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
       "dependsOn": [
         "geonovum.bbr.dcat.dcat-ap-nl",

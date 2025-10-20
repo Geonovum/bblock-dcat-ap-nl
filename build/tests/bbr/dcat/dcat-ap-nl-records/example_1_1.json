@@ -39,6 +39,7 @@
     "http://modellen.geostandaarden.nl/dcat-ap-nl/"
   ],
   "properties": {
+    "a": "dcat:Dataset",
     "type": "Dataset",
     "title": "BRT TOP10NL",
     "accessRights": [
@@ -46,7 +47,6 @@
       "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
     ],
     "identifier": "2482250f-3b00-4439-9f93-f3118229b201",
-    "license": "https://creativecommons.org/publicdomain/zero/1.0/",
     "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
     "keywords": [
       "BRT",
@@ -58,27 +58,37 @@
       "Topografische kaart",
       "basisset NOVEX"
     ],
-    "theme": [
+    "themes": [
       {
-        "a": "skos:Concept",
-        "source": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national",
-        "prefLabel": {
-          "nl": "Nationale datasets"
-        }
+        "concepts": [
+          {
+            "id": "Nationale datasets",
+            "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
+          }
+        ],
+        "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
       },
       {
-        "a": "skos:Concept",
-        "source": "http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy",
-        "prefLabel": {
-          "nl": "Hydrografie"
-        }
+        "concepts": [
+          {
+            "id": "Geografie",
+            "url": "http://data.europa.eu/bna/c_dd310000"
+          },
+          {
+            "id": "Aardobservatie en milieu",
+            "url": "http://data.europa.eu/bna/c_dd313021"
+          }
+        ],
+        "scheme": "http://data.europa.eu/bna/administrative-themes"
       },
       {
-        "a": "skos:Concept",
-        "source": "http://data.europa.eu/bna/c_dd313021",
-        "prefLabel": {
-          "nl": "Aardobservatie en milieu"
-        }
+        "concepts": [
+          {
+            "id": "Hydrografie",
+            "url": "http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy"
+          }
+        ],
+        "scheme": "http://www.eionet.europa.eu/gemet/inspire-themes"
       }
     ],
     "distribution": [
@@ -107,19 +117,37 @@
         "endpointURL": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "servesDataset": "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201",
         "license": "http://creativecommons.org/licenses/by/4.0/deed.nl",
+        "publisher": {
+          "organizationName": {
+            "nl": "Kadaster"
+          },
+          "website": "https://www.kadaster.nl"
+        },
         "accessRights": [
           "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
           "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
         ],
+        "contacten": [
+          {
+            "contactPoint": {
+              "organization-name": {
+                "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+              },
+              "hasEmail": "mailto:dpi-gi@kadaster.nl"
+            }
+          }
+        ],
         "endpointDescription": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "identifier": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
-        "theme": [
+        "themes": [
           {
-            "a": "skos:Concept",
-            "source": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national",
-            "prefLabel": {
-              "nl": "Nationale datasets"
-            }
+            "concepts": [
+              {
+                "id": "Nationale datasets",
+                "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
+              }
+            ],
+            "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
           }
         ]
       }

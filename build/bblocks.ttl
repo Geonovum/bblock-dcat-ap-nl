@@ -9,18 +9,18 @@
 
 <https://geonovum.github.io/bblock-dcat-ap-nl/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Nc346f413bb6c4b2fb3b2e4a8f7cf13c9 ;
+    prov:wasAttributedTo _:Nad281385efcb4fb5a7fa9433f9869988 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-09-11T12:56:59.403815"^^xsd:dateTime ;
-            prov:startedAtTime "2025-09-11T12:56:59.340294"^^xsd:dateTime ;
+            prov:endedAtTime "2025-10-20T18:23:42.884059"^^xsd:dateTime ;
+            prov:startedAtTime "2025-10-20T18:23:42.814137"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:872b984c64784143ab503746dad0552819ff1c44" ;
+                    dct:hasVersion "git:0055c8164d4cc030821fcc629b78f487c3568335" ;
                     rdfs:seeAlso <https://geonovum.github.io/bblock-dcat-ap-nl/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:Nc346f413bb6c4b2fb3b2e4a8f7cf13c9 ] .
+            prov:wasAssociatedWith _:Nad281385efcb4fb5a7fa9433f9869988 ] .
 
 <https://geonovum.github.io/geonovum.bbr.dcat.dcat-ap-nl-records> a skos:Concept,
         dcat:Dataset,
@@ -28,14 +28,14 @@
     rdfs:label "DCAT-AP-NL profile 3.0 - Records binding" ;
     dct:abstract "DCAT-AP-NL 3.0 (Dutch profile of DCAT-AP) bound to OGC API Records"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-08-29T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-ap-nl-records" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl-records/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-ap-nl-records" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl-records/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-09-11"^^xsd:date ;
+    dct:modified "2025-10-20"^^xsd:date ;
     dct:source <https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/> ;
     skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
     dcat:keyword "DCAT",
@@ -62,14 +62,14 @@
     rdfs:label "DCAT-AP-NL profile 3.0" ;
     dct:abstract "DCAT-AP-NL 3.0 (Dutch profile of DCAT-AP)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-04-02T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-ap-nl" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-09-11"^^xsd:date ;
+    dct:modified "2025-10-20"^^xsd:date ;
     dct:source <https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/> ;
     skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
     dcat:keyword "DCAT",
@@ -100,9 +100,9 @@ this potentially can add value.
     bblocks:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> .
 
-_:Nc346f413bb6c4b2fb3b2e4a8f7cf13c9 a prov:Agent,
+_:Nad281385efcb4fb5a7fa9433f9869988 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.4.2" ;
+    dct:hasVersion "0.4.6" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
