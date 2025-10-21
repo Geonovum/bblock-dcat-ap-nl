@@ -18,7 +18,7 @@
       "link": "https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/"
     }
   ],
-  "shaclShapes": [  "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-SHACL.ttl",
+  "shaclShapes": [  
                     "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl" ],
   "scope": "dev",
   "tags": ["DCAT","DCAT-AP-NL", "Records", "profile"],

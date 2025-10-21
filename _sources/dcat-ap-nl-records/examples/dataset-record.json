@@ -43,6 +43,28 @@
       ],
       "identifier" : "2482250f-3b00-4439-9f93-f3118229b201",
       "accrualPeriodicity" : "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+      "contactpunt": {
+              "a": "vcard:Individual",
+              "fn": "InfoDesk" ,
+              "organization-name": {
+                "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+              },
+              "hasEmail": "mailto:dpi-gi@kadaster.nl"
+            },
+      "creator":{
+         "a": "foaf:Agent",
+         "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+         "name": {
+           "nl": "Kadaster"
+          }
+        },
+        "publisher":{
+         "a": "foaf:Agent",
+         "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+         "name": {
+           "nl": "Kadaster"
+          }
+        },
       "keywords": [
         "BRT",
         "Basisregistratie Topografie",
@@ -53,45 +75,27 @@
         "Topografische kaart",
         "basisset NOVEX" 
       ],
-      "themes": [
+      "themas": [
          {
-          "concepts": [
-            {
-              "id": "Nationale datasets",
               "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
-            }],
-            "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
             },
-            {
-         "concepts": [
            {
-            "id": "Geografie",
             "url": "http://data.europa.eu/bna/c_dd310000"
            },
            {
-            "id": "Aardobservatie en milieu",
             "url": "http://data.europa.eu/bna/c_dd313021"
-           }  
-          ],
-          "scheme": "http://data.europa.eu/bna/administrative-themes"
-        },
-        {
-          "concepts": [
+           },
           {
-              "id": "Hydrografie",
               "url": "http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy"
             }
           ],
-          "scheme": "http://www.eionet.europa.eu/gemet/inspire-themes"
-        } 
-      ],
       "distribution": [
         {
           "a": "dcat:Distribution",
           "title": "BRT TOP10NL - Download",
           "accessURL": "https://www.kadaster.nl/-/brt-top10nl-download",
           "format": "application/zip",
-          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
           "mediaType": "application/zip"
         },
         {
@@ -99,7 +103,7 @@
           "title": "BRT TOP10NL - WFS",
           "accessURL": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
           "format": "OGC:WFS-2.0.0-http-get-capabilities",
-          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
           "mediaType": "application/xml"
         }
       ],
@@ -110,7 +114,7 @@
           "description": "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen .",
           "endpointURL": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "servesDataset": "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201",
-          "license": "http://creativecommons.org/licenses/by/4.0/deed.nl",
+          "licentie": "http://creativecommons.org/licenses/by/4.0/deed.nl",
           "publisher": {
             "organizationName": {
               "nl": "Kadaster"
@@ -120,27 +124,22 @@
             "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
             "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
           ],
-          "contacten":[
-            {
-            "contactPoint": {
-            "organization-name": {
-              "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+          "contactpunt": {
+              "a": "vcard:Individual",
+              "fn": "InfoDesk" ,
+              "organization-name": {
+                "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
               },
               "hasEmail": "mailto:dpi-gi@kadaster.nl"
-            }
-            }
-          ],
+            },
           "endpointDescription": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "identifier": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
-          "themes": [
+          "themas": [
           {
-          "concepts": [
-            {
-              "id": "Nationale datasets",
               "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
-            }],
-            "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
-            }]
+            }
+          ]
+            
         }
       ]
 

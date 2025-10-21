@@ -5,6 +5,7 @@
       "dcat": "http://www.w3.org/ns/dcat#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
       "a": "@type" 
     },
     {
@@ -26,38 +27,67 @@
     },
     {"dataservice": "dcat:DataService" },
     {"accessRights": "dct:accessRights" },
-    {"license": "dct:license" },
+    {"licentie": "dct:license" },
     {"publisher": {
       "@container": "@set",
       "@id": "dct:publisher",
       "@type": "@id"
     }},
-    {"contacten": {
-      "@container": "@set",
-      "@id": "dcat:contactPoint",
-      "@context": {
-        "fn": {
+    {
+    "contactpunt": {
+        "@id": "dcat:contactPoint"
+        },
+    
+    "fn": {
       "@id": "vcard:fn",
-      "@container": "@set"
+      "@language": "nl" },
+    "organization-name": {
+      "@id": "vcard:organization-name",
+      "@container": "@language" 
     },
     "hasEmail": {
       "@id": "vcard:hasEmail",
+      "@type": "@id" 
+    }
+    },
+    {
+      "creator": "dct:creator",
+    "publisher": "dct:publisher",
+    "a": {
+      "@id": "@type"
+    },
+    
+    "orgtype": {
+      "@id": "dct:type",
       "@type": "@id"
     },
-    "hasURL": {
-      "@id": "vcard:hasURL",
-      "@type": "@id"
+    
+    "name": {
+      "@id": "foaf:name",
+      
+      "@container": "@language" 
+    }
     },
-    "organization-name": {
-      "@id": "vcard:organization-name",
-      "@container": "@set"
-    }
-      }
-    }
-  },
     {"endpointURL": "dcat:endpointURL" },
     {"servesDataset": "dcat:servesDataset" },
     {"identifier": "dct:identifier" },
-    {"endpointDescription": "dcat:endpointDescription" }
+    {"endpointDescription": "dcat:endpointDescription" },
+    
+    {
+    "themas": {
+      "@id": "dcat:theme",
+     "@nest": "nested_themes" 
+    },
+    
+   "nested_themes": {
+     "@id": "@null",
+      "@container": "@set" 
+    },
+    
+    "url": {
+       "@id": "dcat:theme",
+     "@type": "@id" 
+    }
+  }
   ]
 }
