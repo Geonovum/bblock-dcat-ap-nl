@@ -160,37 +160,46 @@
     "format": "dct:format",
     "dataservice": "dcat:DataService",
     "accessRights": "dct:accessRights",
-    "publisher": {
-      "@container": "@set",
-      "@id": "dct:publisher",
+    "licentie": "dct:license",
+    "publisher": "dct:publisher",
+    "contactpunt": "dcat:contactPoint",
+    "fn": {
+      "@id": "vcard:fn",
+      "@language": "nl"
+    },
+    "organization-name": {
+      "@id": "vcard:organization-name",
+      "@container": "@language"
+    },
+    "hasEmail": {
+      "@id": "vcard:hasEmail",
       "@type": "@id"
     },
-    "contacten": {
-      "@container": "@set",
-      "@id": "dcat:contactPoint",
-      "@context": {
-        "fn": {
-          "@id": "vcard:fn",
-          "@container": "@set"
-        },
-        "hasEmail": {
-          "@id": "vcard:hasEmail",
-          "@type": "@id"
-        },
-        "hasURL": {
-          "@id": "vcard:hasURL",
-          "@type": "@id"
-        },
-        "organization-name": {
-          "@id": "vcard:organization-name",
-          "@container": "@set"
-        }
-      }
+    "creator": "dct:creator",
+    "orgtype": {
+      "@id": "dct:type",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "foaf:name",
+      "@container": "@language"
     },
     "endpointURL": "dcat:endpointURL",
     "servesDataset": "dcat:servesDataset",
     "identifier": "dct:identifier",
     "endpointDescription": "dcat:endpointDescription",
+    "themas": {
+      "@id": "dcat:theme",
+      "@nest": "nested_themes"
+    },
+    "nested_themes": {
+      "@id": "@null",
+      "@container": "@set"
+    },
+    "url": {
+      "@id": "dcat:theme",
+      "@type": "@id"
+    },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

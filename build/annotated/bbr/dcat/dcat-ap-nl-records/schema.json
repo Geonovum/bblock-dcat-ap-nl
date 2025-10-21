@@ -15,43 +15,52 @@
     "format": "http://purl.org/dc/terms/format",
     "dataservice": "http://www.w3.org/ns/dcat#DataService",
     "accessRights": "http://purl.org/dc/terms/accessRights",
-    "license": "http://purl.org/dc/terms/license",
-    "publisher": {
-      "x-jsonld-container": "@set",
-      "x-jsonld-id": "http://purl.org/dc/terms/publisher",
+    "licentie": "http://purl.org/dc/terms/license",
+    "publisher": "http://purl.org/dc/terms/publisher",
+    "contactpunt": "http://www.w3.org/ns/dcat#contactPoint",
+    "fn": {
+      "x-jsonld-id": "http://www.w3.org/2006/vcard/ns#fn",
+      "x-jsonld-language": "nl"
+    },
+    "organization-name": {
+      "x-jsonld-id": "http://www.w3.org/2006/vcard/ns#organization-name",
+      "x-jsonld-container": "@language"
+    },
+    "hasEmail": {
+      "x-jsonld-id": "http://www.w3.org/2006/vcard/ns#hasEmail",
       "x-jsonld-type": "@id"
     },
-    "contacten": {
-      "x-jsonld-container": "@set",
-      "x-jsonld-id": "http://www.w3.org/ns/dcat#contactPoint",
-      "x-jsonld-context": {
-        "fn": {
-          "@id": "http://www.w3.org/2006/vcard/ns#fn",
-          "@container": "@set"
-        },
-        "hasEmail": {
-          "@id": "http://www.w3.org/2006/vcard/ns#hasEmail",
-          "@type": "@id"
-        },
-        "hasURL": {
-          "@id": "http://www.w3.org/2006/vcard/ns#hasURL",
-          "@type": "@id"
-        },
-        "organization-name": {
-          "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-          "@container": "@set"
-        }
-      }
+    "creator": "http://purl.org/dc/terms/creator",
+    "orgtype": {
+      "x-jsonld-id": "http://purl.org/dc/terms/type",
+      "x-jsonld-type": "@id"
+    },
+    "name": {
+      "x-jsonld-id": "http://xmlns.com/foaf/0.1/name",
+      "x-jsonld-container": "@language"
     },
     "endpointURL": "http://www.w3.org/ns/dcat#endpointURL",
     "servesDataset": "http://www.w3.org/ns/dcat#servesDataset",
     "identifier": "http://purl.org/dc/terms/identifier",
-    "endpointDescription": "http://www.w3.org/ns/dcat#endpointDescription"
+    "endpointDescription": "http://www.w3.org/ns/dcat#endpointDescription",
+    "themas": {
+      "x-jsonld-id": "http://www.w3.org/ns/dcat#theme",
+      "x-jsonld-nest": "nested_themes"
+    },
+    "nested_themes": {
+      "x-jsonld-id": "@null",
+      "x-jsonld-container": "@set"
+    },
+    "url": {
+      "x-jsonld-id": "http://www.w3.org/ns/dcat#theme",
+      "x-jsonld-type": "@id"
+    }
   },
   "x-jsonld-prefixes": {
     "dct": "http://purl.org/dc/terms/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "skos": "http://www.w3.org/2004/02/skos/core#"
   }
 }

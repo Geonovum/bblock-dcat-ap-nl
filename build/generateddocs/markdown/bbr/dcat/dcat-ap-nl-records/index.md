@@ -75,6 +75,28 @@ can find under the 'Semantic Uplift' section of this building block.
       ],
       "identifier" : "2482250f-3b00-4439-9f93-f3118229b201",
       "accrualPeriodicity" : "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+      "contactpunt": {
+              "a": "vcard:Individual",
+              "fn": "InfoDesk" ,
+              "organization-name": {
+                "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+              },
+              "hasEmail": "mailto:dpi-gi@kadaster.nl"
+            },
+      "creator":{
+         "a": "foaf:Agent",
+         "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+         "name": {
+           "nl": "Kadaster"
+          }
+        },
+        "publisher":{
+         "a": "foaf:Agent",
+         "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+         "name": {
+           "nl": "Kadaster"
+          }
+        },
       "keywords": [
         "BRT",
         "Basisregistratie Topografie",
@@ -85,45 +107,27 @@ can find under the 'Semantic Uplift' section of this building block.
         "Topografische kaart",
         "basisset NOVEX" 
       ],
-      "themes": [
+      "themas": [
          {
-          "concepts": [
-            {
-              "id": "Nationale datasets",
               "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
-            }],
-            "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
             },
-            {
-         "concepts": [
            {
-            "id": "Geografie",
             "url": "http://data.europa.eu/bna/c_dd310000"
            },
            {
-            "id": "Aardobservatie en milieu",
             "url": "http://data.europa.eu/bna/c_dd313021"
-           }  
-          ],
-          "scheme": "http://data.europa.eu/bna/administrative-themes"
-        },
-        {
-          "concepts": [
+           },
           {
-              "id": "Hydrografie",
               "url": "http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy"
             }
           ],
-          "scheme": "http://www.eionet.europa.eu/gemet/inspire-themes"
-        } 
-      ],
       "distribution": [
         {
           "a": "dcat:Distribution",
           "title": "BRT TOP10NL - Download",
           "accessURL": "https://www.kadaster.nl/-/brt-top10nl-download",
           "format": "application/zip",
-          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
           "mediaType": "application/zip"
         },
         {
@@ -131,7 +135,7 @@ can find under the 'Semantic Uplift' section of this building block.
           "title": "BRT TOP10NL - WFS",
           "accessURL": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
           "format": "OGC:WFS-2.0.0-http-get-capabilities",
-          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
           "mediaType": "application/xml"
         }
       ],
@@ -142,7 +146,7 @@ can find under the 'Semantic Uplift' section of this building block.
           "description": "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen .",
           "endpointURL": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "servesDataset": "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201",
-          "license": "http://creativecommons.org/licenses/by/4.0/deed.nl",
+          "licentie": "http://creativecommons.org/licenses/by/4.0/deed.nl",
           "publisher": {
             "organizationName": {
               "nl": "Kadaster"
@@ -152,27 +156,22 @@ can find under the 'Semantic Uplift' section of this building block.
             "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
             "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
           ],
-          "contacten":[
-            {
-            "contactPoint": {
-            "organization-name": {
-              "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+          "contactpunt": {
+              "a": "vcard:Individual",
+              "fn": "InfoDesk" ,
+              "organization-name": {
+                "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
               },
               "hasEmail": "mailto:dpi-gi@kadaster.nl"
-            }
-            }
-          ],
+            },
           "endpointDescription": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "identifier": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
-          "themes": [
+          "themas": [
           {
-          "concepts": [
-            {
-              "id": "Nationale datasets",
               "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
-            }],
-            "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
-            }]
+            }
+          ]
+            
         }
       ]
 
@@ -239,6 +238,28 @@ can find under the 'Semantic Uplift' section of this building block.
     ],
     "identifier": "2482250f-3b00-4439-9f93-f3118229b201",
     "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+    "contactpunt": {
+      "a": "vcard:Individual",
+      "fn": "InfoDesk",
+      "organization-name": {
+        "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+      },
+      "hasEmail": "mailto:dpi-gi@kadaster.nl"
+    },
+    "creator": {
+      "a": "foaf:Agent",
+      "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+      "name": {
+        "nl": "Kadaster"
+      }
+    },
+    "publisher": {
+      "a": "foaf:Agent",
+      "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+      "name": {
+        "nl": "Kadaster"
+      }
+    },
     "keywords": [
       "BRT",
       "Basisregistratie Topografie",
@@ -249,37 +270,18 @@ can find under the 'Semantic Uplift' section of this building block.
       "Topografische kaart",
       "basisset NOVEX"
     ],
-    "themes": [
+    "themas": [
       {
-        "concepts": [
-          {
-            "id": "Nationale datasets",
-            "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
-          }
-        ],
-        "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
+        "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
       },
       {
-        "concepts": [
-          {
-            "id": "Geografie",
-            "url": "http://data.europa.eu/bna/c_dd310000"
-          },
-          {
-            "id": "Aardobservatie en milieu",
-            "url": "http://data.europa.eu/bna/c_dd313021"
-          }
-        ],
-        "scheme": "http://data.europa.eu/bna/administrative-themes"
+        "url": "http://data.europa.eu/bna/c_dd310000"
       },
       {
-        "concepts": [
-          {
-            "id": "Hydrografie",
-            "url": "http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy"
-          }
-        ],
-        "scheme": "http://www.eionet.europa.eu/gemet/inspire-themes"
+        "url": "http://data.europa.eu/bna/c_dd313021"
+      },
+      {
+        "url": "http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy"
       }
     ],
     "distribution": [
@@ -288,7 +290,7 @@ can find under the 'Semantic Uplift' section of this building block.
         "title": "BRT TOP10NL - Download",
         "accessURL": "https://www.kadaster.nl/-/brt-top10nl-download",
         "format": "application/zip",
-        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
         "mediaType": "application/zip"
       },
       {
@@ -296,7 +298,7 @@ can find under the 'Semantic Uplift' section of this building block.
         "title": "BRT TOP10NL - WFS",
         "accessURL": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
         "format": "OGC:WFS-2.0.0-http-get-capabilities",
-        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
         "mediaType": "application/xml"
       }
     ],
@@ -307,7 +309,7 @@ can find under the 'Semantic Uplift' section of this building block.
         "description": "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen .",
         "endpointURL": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "servesDataset": "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201",
-        "license": "http://creativecommons.org/licenses/by/4.0/deed.nl",
+        "licentie": "http://creativecommons.org/licenses/by/4.0/deed.nl",
         "publisher": {
           "organizationName": {
             "nl": "Kadaster"
@@ -318,27 +320,19 @@ can find under the 'Semantic Uplift' section of this building block.
           "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
           "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
         ],
-        "contacten": [
-          {
-            "contactPoint": {
-              "organization-name": {
-                "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
-              },
-              "hasEmail": "mailto:dpi-gi@kadaster.nl"
-            }
-          }
-        ],
+        "contactpunt": {
+          "a": "vcard:Individual",
+          "fn": "InfoDesk",
+          "organization-name": {
+            "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+          },
+          "hasEmail": "mailto:dpi-gi@kadaster.nl"
+        },
         "endpointDescription": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "identifier": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
-        "themes": [
+        "themas": [
           {
-            "concepts": [
-              {
-                "id": "Nationale datasets",
-                "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
-              }
-            ],
-            "scheme": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope"
+            "url": "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national"
           }
         ]
       }
@@ -353,11 +347,12 @@ can find under the 'Semantic Uplift' section of this building block.
 ```ttl
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201> a dcat:Dataset ;
@@ -367,9 +362,15 @@ can find under the 'Semantic Uplift' section of this building block.
     dcterms:accrualPeriodicity "http://publications.europa.eu/resource/authority/frequency/ANNUAL" ;
     dcterms:conformsTo <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
         <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
+    dcterms:creator [ a foaf:Agent ;
+            dcterms:type <http://purl.org/adms/publishertype/LocalAuthority> ;
+            foaf:name "Kadaster"@nl ] ;
     dcterms:format "Dataset",
         "Feature" ;
     dcterms:identifier "2482250f-3b00-4439-9f93-f3118229b201" ;
+    dcterms:publisher [ a foaf:Agent ;
+            dcterms:type <http://purl.org/adms/publishertype/LocalAuthority> ;
+            foaf:name "Kadaster"@nl ] ;
     dcterms:temporal [ time:hasTime ( "1924-08-17T00:00:00Z" ".." ) ] ;
     dcat:DataService [ a dcat:DataService ;
             rdfs:label "BRT TOP10NL OGC API Features" ;
@@ -377,27 +378,32 @@ can find under the 'Semantic Uplift' section of this building block.
                 "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations" ;
             dcterms:description "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen ." ;
             dcterms:identifier "https://api.pdok.nl/brt/top10nl/ogc/v1/api" ;
+            dcterms:license "http://creativecommons.org/licenses/by/4.0/deed.nl" ;
             dcterms:publisher [ ] ;
-            dcat:contactPoint [ ] ;
+            dcat:contactPoint [ a vcard:Individual ;
+                    vcard:fn "InfoDesk"@nl ;
+                    vcard:hasEmail <mailto:dpi-gi@kadaster.nl> ;
+                    vcard:organization-name "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"@nl ] ;
             dcat:endpointDescription "https://api.pdok.nl/brt/top10nl/ogc/v1/api" ;
             dcat:endpointURL "https://api.pdok.nl/brt/top10nl/ogc/v1/api" ;
-            dcat:license "http://creativecommons.org/licenses/by/4.0/deed.nl" ;
             dcat:servesDataset "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201" ;
-            rec:themes [ rec:concept [ dcterms:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ;
-                            rec:conceptID "Nationale datasets"^^xsd:string ] ;
-                    rec:scheme "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope" ] ] ;
+            dcat:theme [ dcat:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ] ] ;
+    dcat:contactPoint [ a vcard:Individual ;
+            vcard:fn "InfoDesk"@nl ;
+            vcard:hasEmail <mailto:dpi-gi@kadaster.nl> ;
+            vcard:organization-name "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"@nl ] ;
     dcat:distribution [ a dcat:Distribution ;
-            rdfs:label "BRT TOP10NL - Download" ;
-            dcterms:format "application/zip" ;
-            dcat:accessURL "https://www.kadaster.nl/-/brt-top10nl-download" ;
-            dcat:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-            dcat:mediaType "application/zip" ],
-        [ a dcat:Distribution ;
             rdfs:label "BRT TOP10NL - WFS" ;
             dcterms:format "OGC:WFS-2.0.0-http-get-capabilities" ;
+            dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
             dcat:accessURL "https://geodata.nationaalgeoregister.nl/brt/wfs?" ;
-            dcat:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-            dcat:mediaType "application/xml" ] ;
+            dcat:mediaType "application/xml" ],
+        [ a dcat:Distribution ;
+            rdfs:label "BRT TOP10NL - Download" ;
+            dcterms:format "application/zip" ;
+            dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+            dcat:accessURL "https://www.kadaster.nl/-/brt-top10nl-download" ;
+            dcat:mediaType "application/zip" ] ;
     dcat:keyword "BRT",
         "Basisregistratie Topografie",
         "Kadaster",
@@ -406,19 +412,12 @@ can find under the 'Semantic Uplift' section of this building block.
         "Topografie",
         "Topografische kaart",
         "basisset NOVEX" ;
+    dcat:theme [ dcat:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ],
+        [ dcat:theme <http://data.europa.eu/bna/c_dd310000> ],
+        [ dcat:theme <http://data.europa.eu/bna/c_dd313021> ],
+        [ dcat:theme <http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy> ] ;
     geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates ( ( ( 3.3e+00 5.36e+01 ) ( 7.24e+00 5.36e+01 ) ( 7.24e+00 5.073e+01 ) ( 3.3e+00 5.073e+01 ) ( 3.3e+00 5.36e+01 ) ) ) ] ;
-    rec:themes [ rec:concept [ dcterms:theme <http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy> ;
-                    rec:conceptID "Hydrografie"^^xsd:string ] ;
-            rec:scheme "http://www.eionet.europa.eu/gemet/inspire-themes" ],
-        [ rec:concept [ dcterms:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ;
-                    rec:conceptID "Nationale datasets"^^xsd:string ] ;
-            rec:scheme "http://inspire.ec.europa.eu/metadata-codelist/SpatialScope" ],
-        [ rec:concept [ dcterms:theme <http://data.europa.eu/bna/c_dd313021> ;
-                    rec:conceptID "Aardobservatie en milieu"^^xsd:string ],
-                [ dcterms:theme <http://data.europa.eu/bna/c_dd310000> ;
-                    rec:conceptID "Geografie"^^xsd:string ] ;
-            rec:scheme "http://data.europa.eu/bna/administrative-themes" ] .
+            geojson:coordinates ( ( ( 3.3e+00 5.36e+01 ) ( 7.24e+00 5.36e+01 ) ( 7.24e+00 5.073e+01 ) ( 3.3e+00 5.073e+01 ) ( 3.3e+00 5.36e+01 ) ) ) ] .
 
 
 ```
@@ -440,35 +439,43 @@ x-jsonld-extra-terms:
   format: http://purl.org/dc/terms/format
   dataservice: http://www.w3.org/ns/dcat#DataService
   accessRights: http://purl.org/dc/terms/accessRights
-  license: http://purl.org/dc/terms/license
-  publisher:
-    x-jsonld-container: '@set'
-    x-jsonld-id: http://purl.org/dc/terms/publisher
+  licentie: http://purl.org/dc/terms/license
+  publisher: http://purl.org/dc/terms/publisher
+  contactpunt: http://www.w3.org/ns/dcat#contactPoint
+  fn:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#fn
+    x-jsonld-language: nl
+  organization-name:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#organization-name
+    x-jsonld-container: '@language'
+  hasEmail:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#hasEmail
     x-jsonld-type: '@id'
-  contacten:
-    x-jsonld-container: '@set'
-    x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
-    x-jsonld-context:
-      fn:
-        '@id': http://www.w3.org/2006/vcard/ns#fn
-        '@container': '@set'
-      hasEmail:
-        '@id': http://www.w3.org/2006/vcard/ns#hasEmail
-        '@type': '@id'
-      hasURL:
-        '@id': http://www.w3.org/2006/vcard/ns#hasURL
-        '@type': '@id'
-      organization-name:
-        '@id': http://www.w3.org/2006/vcard/ns#organization-name
-        '@container': '@set'
+  creator: http://purl.org/dc/terms/creator
+  orgtype:
+    x-jsonld-id: http://purl.org/dc/terms/type
+    x-jsonld-type: '@id'
+  name:
+    x-jsonld-id: http://xmlns.com/foaf/0.1/name
+    x-jsonld-container: '@language'
   endpointURL: http://www.w3.org/ns/dcat#endpointURL
   servesDataset: http://www.w3.org/ns/dcat#servesDataset
   identifier: http://purl.org/dc/terms/identifier
   endpointDescription: http://www.w3.org/ns/dcat#endpointDescription
+  themas:
+    x-jsonld-id: http://www.w3.org/ns/dcat#theme
+    x-jsonld-nest: nested_themes
+  nested_themes:
+    x-jsonld-id: '@null'
+    x-jsonld-container: '@set'
+  url:
+    x-jsonld-id: http://www.w3.org/ns/dcat#theme
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
   dct: http://purl.org/dc/terms/
   dcat: http://www.w3.org/ns/dcat#
   vcard: http://www.w3.org/2006/vcard/ns#
+  foaf: http://xmlns.com/foaf/0.1/
   skos: http://www.w3.org/2004/02/skos/core#
 
 ```
@@ -644,37 +651,46 @@ Links to the schema:
     "format": "dct:format",
     "dataservice": "dcat:DataService",
     "accessRights": "dct:accessRights",
-    "publisher": {
-      "@container": "@set",
-      "@id": "dct:publisher",
+    "licentie": "dct:license",
+    "publisher": "dct:publisher",
+    "contactpunt": "dcat:contactPoint",
+    "fn": {
+      "@id": "vcard:fn",
+      "@language": "nl"
+    },
+    "organization-name": {
+      "@id": "vcard:organization-name",
+      "@container": "@language"
+    },
+    "hasEmail": {
+      "@id": "vcard:hasEmail",
       "@type": "@id"
     },
-    "contacten": {
-      "@container": "@set",
-      "@id": "dcat:contactPoint",
-      "@context": {
-        "fn": {
-          "@id": "vcard:fn",
-          "@container": "@set"
-        },
-        "hasEmail": {
-          "@id": "vcard:hasEmail",
-          "@type": "@id"
-        },
-        "hasURL": {
-          "@id": "vcard:hasURL",
-          "@type": "@id"
-        },
-        "organization-name": {
-          "@id": "vcard:organization-name",
-          "@container": "@set"
-        }
-      }
+    "creator": "dct:creator",
+    "orgtype": {
+      "@id": "dct:type",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "foaf:name",
+      "@container": "@language"
     },
     "endpointURL": "dcat:endpointURL",
     "servesDataset": "dcat:servesDataset",
     "identifier": "dct:identifier",
     "endpointDescription": "dcat:endpointDescription",
+    "themas": {
+      "@id": "dcat:theme",
+      "@nest": "nested_themes"
+    },
+    "nested_themes": {
+      "@id": "@null",
+      "@container": "@set"
+    },
+    "url": {
+      "@id": "dcat:theme",
+      "@type": "@id"
+    },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
