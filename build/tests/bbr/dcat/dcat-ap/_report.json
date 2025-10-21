@@ -1,0 +1,47 @@
+{
+  "title": "Validation report for geonovum.bbr.dcat.dcat-ap - DCAT-AP 3.0 profile (copy)",
+  "bblockName": "DCAT-AP 3.0 profile (copy)",
+  "bblockId": "geonovum.bbr.dcat.dcat-ap",
+  "generated": "2025-10-21T17:50:35.385113+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/bbr/dcat/dcat-ap/example_1_1.ttl",
+        "url": "https://geonovum.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/dcat-ap/example_1_1.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 64,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
+}

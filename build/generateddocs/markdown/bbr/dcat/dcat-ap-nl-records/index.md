@@ -75,14 +75,14 @@ can find under the 'Semantic Uplift' section of this building block.
       ],
       "identifier" : "2482250f-3b00-4439-9f93-f3118229b201",
       "accrualPeriodicity" : "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
-      "contactpunt": {
+      "contactpunt": [{
               "a": "vcard:Individual",
               "fn": "InfoDesk" ,
               "organization-name": {
                 "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
               },
               "hasEmail": "mailto:dpi-gi@kadaster.nl"
-            },
+            }],
       "creator":{
          "a": "foaf:Agent",
          "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
@@ -123,11 +123,11 @@ can find under the 'Semantic Uplift' section of this building block.
           ],
       "distribution": [
         {
-          "a": "dcat:Distribution",
+          "a": "dcat:Distribution", 
           "title": "BRT TOP10NL - Download",
           "accessURL": "https://www.kadaster.nl/-/brt-top10nl-download",
           "format": "application/zip",
-          "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
           "mediaType": "application/zip"
         },
         {
@@ -135,7 +135,7 @@ can find under the 'Semantic Uplift' section of this building block.
           "title": "BRT TOP10NL - WFS",
           "accessURL": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
           "format": "OGC:WFS-2.0.0-http-get-capabilities",
-          "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license": "https://creativecommons.org/publicdomain/zero/1.0/",
           "mediaType": "application/xml"
         }
       ],
@@ -146,24 +146,26 @@ can find under the 'Semantic Uplift' section of this building block.
           "description": "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen .",
           "endpointURL": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "servesDataset": "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201",
-          "licentie": "http://creativecommons.org/licenses/by/4.0/deed.nl",
-          "publisher": {
-            "organizationName": {
-              "nl": "Kadaster"
-            },
-            "website": "https://www.kadaster.nl"          },
+          "license": "http://creativecommons.org/licenses/by/4.0/deed.nl",
           "accessRights" : [
             "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
             "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
           ],
-          "contactpunt": {
+           "publisher":{
+         "a": "foaf:Agent",
+         "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+         "name": {
+           "nl": "Kadaster"
+          }
+        },
+          "contactpunt": [{
               "a": "vcard:Individual",
               "fn": "InfoDesk" ,
               "organization-name": {
                 "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
               },
               "hasEmail": "mailto:dpi-gi@kadaster.nl"
-            },
+            }],
           "endpointDescription": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "identifier": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
           "themas": [
@@ -238,14 +240,16 @@ can find under the 'Semantic Uplift' section of this building block.
     ],
     "identifier": "2482250f-3b00-4439-9f93-f3118229b201",
     "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
-    "contactpunt": {
-      "a": "vcard:Individual",
-      "fn": "InfoDesk",
-      "organization-name": {
-        "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
-      },
-      "hasEmail": "mailto:dpi-gi@kadaster.nl"
-    },
+    "contactpunt": [
+      {
+        "a": "vcard:Individual",
+        "fn": "InfoDesk",
+        "organization-name": {
+          "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+        },
+        "hasEmail": "mailto:dpi-gi@kadaster.nl"
+      }
+    ],
     "creator": {
       "a": "foaf:Agent",
       "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
@@ -290,7 +294,7 @@ can find under the 'Semantic Uplift' section of this building block.
         "title": "BRT TOP10NL - Download",
         "accessURL": "https://www.kadaster.nl/-/brt-top10nl-download",
         "format": "application/zip",
-        "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
         "mediaType": "application/zip"
       },
       {
@@ -298,7 +302,7 @@ can find under the 'Semantic Uplift' section of this building block.
         "title": "BRT TOP10NL - WFS",
         "accessURL": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
         "format": "OGC:WFS-2.0.0-http-get-capabilities",
-        "licentie": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
         "mediaType": "application/xml"
       }
     ],
@@ -309,25 +313,28 @@ can find under the 'Semantic Uplift' section of this building block.
         "description": "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen .",
         "endpointURL": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "servesDataset": "http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201",
-        "licentie": "http://creativecommons.org/licenses/by/4.0/deed.nl",
-        "publisher": {
-          "organizationName": {
-            "nl": "Kadaster"
-          },
-          "website": "https://www.kadaster.nl"
-        },
+        "license": "http://creativecommons.org/licenses/by/4.0/deed.nl",
         "accessRights": [
           "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
           "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
         ],
-        "contactpunt": {
-          "a": "vcard:Individual",
-          "fn": "InfoDesk",
-          "organization-name": {
-            "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
-          },
-          "hasEmail": "mailto:dpi-gi@kadaster.nl"
+        "publisher": {
+          "a": "foaf:Agent",
+          "orgtype": "http://purl.org/adms/publishertype/LocalAuthority",
+          "name": {
+            "nl": "Kadaster"
+          }
         },
+        "contactpunt": [
+          {
+            "a": "vcard:Individual",
+            "fn": "InfoDesk",
+            "organization-name": {
+              "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
+            },
+            "hasEmail": "mailto:dpi-gi@kadaster.nl"
+          }
+        ],
         "endpointDescription": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "identifier": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
         "themas": [
@@ -379,7 +386,9 @@ can find under the 'Semantic Uplift' section of this building block.
             dcterms:description "TOP10NL is een digitaal objectgericht topografisch bestand wat ten grondslag ligt aan de topografische kaartseries 1:10.000 en 1:25.000 en wat veelvuldig in diverse GIS- en CAD-systemen wordt gebruikt voor ondergrond, analyse-, en beheers- en planningsactiviteiten. Heeft u een vermoedelijke fout in TOP10NL geconstateerd? Doe dan een melding op https://www.verbeterdekaart.nl of via de Terugmelding REST API: https://www.pdok.nl/restful-api/-/article/brt-terugmeldingen ." ;
             dcterms:identifier "https://api.pdok.nl/brt/top10nl/ogc/v1/api" ;
             dcterms:license "http://creativecommons.org/licenses/by/4.0/deed.nl" ;
-            dcterms:publisher [ ] ;
+            dcterms:publisher [ a foaf:Agent ;
+                    dcterms:type <http://purl.org/adms/publishertype/LocalAuthority> ;
+                    foaf:name "Kadaster"@nl ] ;
             dcat:contactPoint [ a vcard:Individual ;
                     vcard:fn "InfoDesk"@nl ;
                     vcard:hasEmail <mailto:dpi-gi@kadaster.nl> ;
@@ -414,8 +423,8 @@ can find under the 'Semantic Uplift' section of this building block.
         "basisset NOVEX" ;
     dcat:theme [ dcat:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ],
         [ dcat:theme <http://data.europa.eu/bna/c_dd310000> ],
-        [ dcat:theme <http://data.europa.eu/bna/c_dd313021> ],
-        [ dcat:theme <http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy> ] ;
+        [ dcat:theme <http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy> ],
+        [ dcat:theme <http://data.europa.eu/bna/c_dd313021> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 3.3e+00 5.36e+01 ) ( 7.24e+00 5.36e+01 ) ( 7.24e+00 5.073e+01 ) ( 3.3e+00 5.073e+01 ) ( 3.3e+00 5.36e+01 ) ) ) ] .
 
@@ -439,7 +448,6 @@ x-jsonld-extra-terms:
   format: http://purl.org/dc/terms/format
   dataservice: http://www.w3.org/ns/dcat#DataService
   accessRights: http://purl.org/dc/terms/accessRights
-  licentie: http://purl.org/dc/terms/license
   publisher: http://purl.org/dc/terms/publisher
   contactpunt: http://www.w3.org/ns/dcat#contactPoint
   fn:
@@ -611,10 +619,6 @@ Links to the schema:
             "id": {
               "@type": "xsd:string",
               "@id": "rec:conceptID"
-            },
-            "url": {
-              "@type": "@id",
-              "@id": "dct:theme"
             }
           }
         },
@@ -632,8 +636,8 @@ Links to the schema:
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
-    "rights": "dcat:rights",
+    "license": "dct:license",
+    "accessrights": "dct:accessRights",
     "linkTemplates": "rec:hasLinkTemplate",
     "variables": {
       "@container": "@id",
@@ -651,7 +655,6 @@ Links to the schema:
     "format": "dct:format",
     "dataservice": "dcat:DataService",
     "accessRights": "dct:accessRights",
-    "licentie": "dct:license",
     "publisher": "dct:publisher",
     "contactpunt": "dcat:contactPoint",
     "fn": {

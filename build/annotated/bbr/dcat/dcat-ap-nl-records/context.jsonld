@@ -120,10 +120,6 @@
             "id": {
               "@type": "xsd:string",
               "@id": "rec:conceptID"
-            },
-            "url": {
-              "@type": "@id",
-              "@id": "dct:theme"
             }
           }
         },
@@ -141,8 +137,8 @@
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
-    "rights": "dcat:rights",
+    "license": "dct:license",
+    "accessrights": "dct:accessRights",
     "linkTemplates": "rec:hasLinkTemplate",
     "variables": {
       "@container": "@id",
@@ -160,7 +156,6 @@
     "format": "dct:format",
     "dataservice": "dcat:DataService",
     "accessRights": "dct:accessRights",
-    "licentie": "dct:license",
     "publisher": "dct:publisher",
     "contactpunt": "dcat:contactPoint",
     "fn": {
