@@ -1,0 +1,88 @@
+{
+  "@context": [
+    {
+      "dct": "http://purl.org/dc/terms/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "a": "@type" 
+    },
+    {
+        "accrualPeriodicity": {
+        "@id": "dct:accrualPeriodicity"
+      }
+    },
+    {
+      "distribution": "dcat:distribution"
+    },
+    {
+    "accessURL": "dcat:accessURL"
+    },
+    {
+    "mediaType": "dcat:mediaType"
+    },
+    {
+    "format": "dct:format"
+    },
+    {"dataservice": "dcat:DataService" },
+    {"accessRights": "dct:accessRights" },
+    {"publisher": {
+      "@container": "@set",
+      "@id": "dct:publisher",
+      "@type": "@id"
+    }},
+    {
+  "contactpunt": "dcat:contactPoint"
+    },
+    {
+    "fn": {
+      "@id": "vcard:fn",
+      "@language": "nl" },
+    "organization-name": {
+      "@id": "vcard:organization-name",
+      "@container": "@language" 
+    },
+    "hasEmail": {
+      "@id": "vcard:hasEmail",
+      "@type": "@id" 
+    }
+    },
+    {
+      "creator": "dct:creator",
+    "publisher": "dct:publisher",
+    "a": {
+      "@id": "@type"
+    },
+    
+    "orgtype": {
+      "@id": "dct:type",
+      "@type": "@id"
+    },
+    
+    "name": {
+      "@id": "foaf:name",
+      
+      "@container": "@language" 
+    }
+    },
+    {"endpointURL": "dcat:endpointURL" },
+    {"servesDataset": "dcat:servesDataset" },
+    {"identifier": "dct:identifier" },
+    {"endpointDescription": "dcat:endpointDescription" },
+    {
+    "themas": {
+      "@id": "dcat:theme",
+      "@nest": "nested_themes"
+    },
+      "nested_themes": {
+        "@id": "@null",
+        "@container": "@set"
+       },
+        "url": {
+          "@id": "dcat:theme",
+          "@type": "@id"
+        }
+  }
+  ]
+}
