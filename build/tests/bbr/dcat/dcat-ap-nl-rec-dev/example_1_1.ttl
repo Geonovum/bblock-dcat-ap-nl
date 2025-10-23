@@ -1,0 +1,100 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <dcterms:> .
+@prefix ns2: <dqv:> .
+@prefix ns3: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ogc:record:generated-id> a "http://www.w3.org/ns/dcat#Dataset",
+        "http://www.w3.org/ns/dcat#Resource",
+        "http://www.w3.org/ns/prov#Entity" ;
+    ns1:accessRights <http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply> ;
+    ns1:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/DAILY> ;
+    ns1:conformsTo [ a "http://purl.org/dc/terms/Standard" ;
+            ns1:issued "2010-12-08" ;
+            ns1:title [ ] ] ;
+    ns1:created "2013-02-18" ;
+    ns1:creator [ foaf:name "Kadaster"@nl ] ;
+    ns1:description [ ] ;
+    ns1:identifier "1fa33d90-79cb-11e2-b92a-0800200c9a66" ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/DUT> ;
+    ns1:provenance [ a "http://purl.org/dc/terms/ProvenanceStatement" ;
+            ns1:description [ ] ] ;
+    ns1:publisher [ foaf:name "Klantcontactcenter"@nl ] ;
+    ns1:spatial [ a "http://purl.org/dc/terms/Location" ;
+            skos:prefLabel [ ] ],
+        [ a "http://purl.org/dc/terms/Location" ;
+            dcat:bbox [ dct:format "Polygon" ;
+                    geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ] ;
+    ns1:temporal [ dcat:endDate "2025-12-31" ;
+            dcat:startDate "1996-01-01" ] ;
+    ns1:title [ ] ;
+    ns2:hasQualityMeasurement [ a "http://www.w3.org/ns/dqv#QualityMeasurement" ;
+            ns2:isMeasurementOf <http://data.europa.eu/930/spatialResolutionAsScale> ;
+            ns2:value 1e-03 ] ;
+    dct:conformsTo <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
+        <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
+    dct:format "Feature" ;
+    rdfs:seeAlso [ dct:type "application/xml" ;
+            ns3:relation <http://www.iana.org/assignments/relation/access> ;
+            oa:hasTarget <https://service.pdok.nl/lv/bag/wms/v2_0?request=getCapabilities&service=WMS> ],
+        [ dct:type "application/xml" ;
+            ns3:relation <http://www.iana.org/assignments/relation/access> ;
+            oa:hasTarget <https://service.pdok.nl/lv/bag/atom/bag.xml> ] ;
+    dcat:contactPoint [ ] ;
+    dcat:keyword [ ],
+        [ ],
+        [ ],
+        [ ],
+        [ ],
+        [ ],
+        [ ] ;
+    dcat:landingPage <https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/>,
+        <https://labs.kadaster.nl/cases/bag-ld> ;
+    foaf:isPrimaryTopicOf [ a "http://www.w3.org/ns/dcat#CatalogRecord" ;
+            ns1:identifier "aa3b5e6e-7baa-40c0-8972-3353e927ec2f" ;
+            ns1:language "http://publications.europa.eu/resource/authority/language/DUT" ;
+            ns1:modified "2024-08-26" ;
+            dcat:contactPoint [ a "http://www.w3.org/2006/vcard/ns#Individual" ;
+                    vcard:fn [ ] ;
+                    vcard:hasAddress [ a "http://www.w3.org/2006/vcard/ns#Address" ;
+                            vcard:country-name "Nederland" ;
+                            vcard:locality "Apeldoorn" ;
+                            vcard:postal-code "7311 KZ" ;
+                            vcard:region "Gelderland" ;
+                            vcard:street-address "Hofstraat 110" ] ;
+                    vcard:hasEmail "mailto:dpi-gi@kadaster.nl" ;
+                    vcard:hasURL "https://www.kadaster.nl" ;
+                    vcard:organization-name [ ] ] ;
+            foaf:primaryTopic "http://kadaster/1fa33d90-79cb-11e2-b92a-0800200c9a66" ] ;
+    rec:themes [ skos:prefLabel [ ] ],
+        [ skos:prefLabel [ ] ],
+        [ skos:prefLabel [ ] ],
+        [ skos:prefLabel [ ] ],
+        [ skos:prefLabel [ ] ] .
+
+<http://data.europa.eu/930/spatialResolutionAsScale> a "http://www.w3.org/ns/dqv#Metric" .
+
+<http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply> a "http://purl.org/dc/terms/LicenseDocument",
+        "http://purl.org/dc/terms/RightsStatement" .
+
+<http://publications.europa.eu/resource/authority/frequency/DAILY> a "http://purl.org/dc/terms/Frequency" .
+
+<http://publications.europa.eu/resource/authority/language/DUT> a "http://purl.org/dc/terms/LinguisticSystem" .
+
+<https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/> a "http://xmlns.com/foaf/0.1/Document" ;
+    ns1:description [ ] ;
+    ns1:title [ ] .
+
+<https://labs.kadaster.nl/cases/bag-ld> a "http://xmlns.com/foaf/0.1/Document" ;
+    ns1:description [ ] ;
+    ns1:title [ ] .
+

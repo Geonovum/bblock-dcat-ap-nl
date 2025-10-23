@@ -1,21 +1,21 @@
 {
-  "title": "Validation report for geonovum.bbr.dcat.dcat-ap-nl-records - DCAT-AP-NL profile 3.0 - Records binding",
-  "bblockName": "DCAT-AP-NL profile 3.0 - Records binding",
-  "bblockId": "geonovum.bbr.dcat.dcat-ap-nl-records",
-  "generated": "2025-10-23T12:50:25.753844+00:00",
-  "result": true,
+  "title": "Validation report for geonovum.bbr.dcat.dcat-ap-nl-rec-dev - DCAT-AP-NL profile 3.0 - Records binding Experimental",
+  "bblockName": "DCAT-AP-NL profile 3.0 - Records binding Experimental",
+  "bblockId": "geonovum.bbr.dcat.dcat-ap-nl-rec-dev",
+  "generated": "2025-10-23T12:50:25.136852+00:00",
+  "result": false,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/bbr/dcat/dcat-ap-nl-records/example_1_1.json",
-        "url": "https://geonovum.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/dcat-ap-nl-records/example_1_1.json",
+        "filename": "build/tests/bbr/dcat/dcat-ap-nl-rec-dev/example_1_1.json",
+        "url": "https://geonovum.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/dcat-ap-nl-rec-dev/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 128,
+              "size": 129,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -52,9 +52,11 @@
           "entries": [
             {
               "op": "validation",
-              "result": true,
-              "isError": false,
-              "message": "Validation passed"
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "{'nl': 'gebouw', 'en': 'building'} is not of type 'string'",
+              "isError": true,
+              "message": "ValidationError: {'nl': 'gebouw', 'en': 'building'} is not of type 'string'\n\nFailed validating 'type' in schema['allOf'][0]['allOf'][0]['properties']['properties']['properties']['keywords']['items']:\n    {'type': 'string'}\n\nOn instance['properties']['keywords'][0]:\n    {'en': 'building', 'nl': 'gebouw'}"
             }
           ]
         },
@@ -72,41 +74,34 @@
             {
               "shaclFile": "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl",
               "focusNodes": {
-                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
+                "_:n7576c9cb0f314607999897f7c97d22f1b3": {
                   "nodes": []
                 },
                 "dcatapnl-sh:DataServiceShape": {
-                  "nodes": [
-                    "<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:DataService"
-                  ]
+                  "nodes": []
+                },
+                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
+                  "nodes": []
                 },
                 "dcatapnl-sh:TemporalLiteralShape": {
                   "nodes": []
                 },
                 "dcatapnl-sh:DistributionShape": {
-                  "nodes": [
-                    "<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution",
-                    "<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution"
-                  ]
+                  "nodes": []
                 },
                 "dcatapnl-sh:DatasetShape": {
-                  "nodes": [
-                    "<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>"
-                  ]
+                  "nodes": []
                 },
-                "_:n895b5722de9a4d9cb982236b2c70f041b4": {
+                "_:n7576c9cb0f314607999897f7c97d22f1b4": {
                   "nodes": []
                 },
                 "dcatapnl-sh:CatalogShape": {
                   "nodes": []
                 },
-                "_:n895b5722de9a4d9cb982236b2c70f041b3": {
-                  "nodes": []
-                },
                 "dcatapnl-sh:CatalogRecordShape": {
-                  "nodes": []
-                },
-                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
                   "nodes": []
                 },
                 "dcatapnl-sh:DatasetSeriesShape": {
@@ -114,7 +109,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n - Shape dcatapnl-sh:DataServiceShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:DataService\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:DistributionShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution,<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution\n - Shape dcatapnl-sh:DatasetShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>\n - Shape _:n895b5722de9a4d9cb982236b2c70f041b4: *none*\n - Shape dcatapnl-sh:CatalogShape: *none*\n - Shape _:n895b5722de9a4d9cb982236b2c70f041b3: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n"
+              "message": "Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape _:n7576c9cb0f314607999897f7c97d22f1b3: *none*\n - Shape dcatapnl-sh:DataServiceShape: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:DistributionShape: *none*\n - Shape dcatapnl-sh:DatasetShape: *none*\n - Shape _:n7576c9cb0f314607999897f7c97d22f1b4: *none*\n - Shape dcatapnl-sh:CatalogShape: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: *none*\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -141,7 +136,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 1,
-    "failed": 0
+    "passed": 0,
+    "failed": 1
   }
 }

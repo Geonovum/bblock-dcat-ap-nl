@@ -1,5 +1,5 @@
 Validation report for geonovum.bbr.dcat.dcat-ap-nl - DCAT-AP-NL profile 3.0
-Generated 2025-10-21T17:50:35.615016+00:00
+Generated 2025-10-23T12:50:24.429532+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl created
@@ -11,16 +11,16 @@ Validation result for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/re
   Conforms: True
   
 Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
- - Shape _:n2d830a170874439193079549f58e013fb4: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
+ - Shape _:ne6383ffcbd6c478d99054bce9d262b7eb3: *none*
+ - Shape dcatapnl-sh:DataServiceShape: exampleMS:1T2p3o4B-dataservice-WMS
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: exampleMS:1T2p3o4B-dist-SHP
  - Shape dcatapnl-sh:DatasetShape: exampleMS:1T2p3o4B
  - Shape dcatapnl-sh:CatalogShape: *none*
+ - Shape _:ne6383ffcbd6c478d99054bce9d262b7eb4: *none*
  - Shape dcatapnl-sh:CatalogRecordShape: exampleMS:1T2p3o4B-rec
- - Shape dcatapnl-sh:DistributionShape: exampleMS:1T2p3o4B-dist-SHP
- - Shape _:n2d830a170874439193079549f58e013fb3: *none*
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
- - Shape dcatapnl-sh:DataServiceShape: exampleMS:1T2p3o4B-dataservice-WMS
- - Shape dcatapnl-sh:TemporalLiteralShape: *none*
  - Shape dcatapnl-sh:DatasetSeriesShape: *none*
 
 === End SHACL ===

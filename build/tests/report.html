@@ -51,9 +51,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2025-10-21T17:50:36.595914+00:00</small>
-                <p class="summary fw-semibold text-success">
-                    Number of passing building blocks: 3 / 3 (100%)
+            <small class="datetime">Generated at 2025-10-23T12:50:25.768161+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 3 / 4 (75%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -157,16 +157,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
- - Shape _:n2d830a170874439193079549f58e013fb4: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
+ - Shape _:ne6383ffcbd6c478d99054bce9d262b7eb3: *none*
+ - Shape dcatapnl-sh:DataServiceShape: exampleMS:1T2p3o4B-dataservice-WMS
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: exampleMS:1T2p3o4B-dist-SHP
  - Shape dcatapnl-sh:DatasetShape: exampleMS:1T2p3o4B
  - Shape dcatapnl-sh:CatalogShape: *none*
+ - Shape _:ne6383ffcbd6c478d99054bce9d262b7eb4: *none*
  - Shape dcatapnl-sh:CatalogRecordShape: exampleMS:1T2p3o4B-rec
- - Shape dcatapnl-sh:DistributionShape: exampleMS:1T2p3o4B-dist-SHP
- - Shape _:n2d830a170874439193079549f58e013fb3: *none*
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
- - Shape dcatapnl-sh:DataServiceShape: exampleMS:1T2p3o4B-dataservice-WMS
- - Shape dcatapnl-sh:TemporalLiteralShape: *none*
  - Shape dcatapnl-sh:DatasetSeriesShape: *none*
 </div>
                                                     </div>
@@ -202,6 +202,90 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="geonovum.bbr.dcat.dcat-ap-nl-rec-dev" id="bblock-geonovum.bbr.dcat.dcat-ap-nl-rec-dev">
+                            <h2 class="accordion-header bblock-title">
+                                <button class="accordion-button " type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-geonovum\.bbr\.dcat\.dcat-ap-nl-rec-dev">
+                                    <div class="flex-fill">
+                                        DCAT-AP-NL profile 3.0 - Records binding Experimental
+                                        <small class="ms-2 bblock-id">geonovum.bbr.dcat.dcat-ap-nl-rec-dev</small>
+                                    </div>
+
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (0% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-geonovum.bbr.dcat.dcat-ap-nl-rec-dev">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 0 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item ">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-4"
+                                                            aria-expanded="false" aria-controls="uid-4"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="bbr/dcat/dcat-ap-nl-rec-dev/example_1_1.json" target="_blank">example_1_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-4">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: {&#x27;nl&#x27;: &#x27;gebouw&#x27;, &#x27;en&#x27;: &#x27;building&#x27;} is not of type &#x27;string&#x27;
+
+Failed validating &#x27;type&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;keywords&#x27;][&#x27;items&#x27;]:
+    {&#x27;type&#x27;: &#x27;string&#x27;}
+
+On instance[&#x27;properties&#x27;][&#x27;keywords&#x27;][0]:
+    {&#x27;en&#x27;: &#x27;building&#x27;, &#x27;nl&#x27;: &#x27;gebouw&#x27;}</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
+ - Shape _:n7576c9cb0f314607999897f7c97d22f1b3: *none*
+ - Shape dcatapnl-sh:DataServiceShape: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: *none*
+ - Shape dcatapnl-sh:DatasetShape: *none*
+ - Shape _:n7576c9cb0f314607999897f7c97d22f1b4: *none*
+ - Shape dcatapnl-sh:CatalogShape: *none*
+ - Shape dcatapnl-sh:CatalogRecordShape: *none*
+ - Shape dcatapnl-sh:DatasetSeriesShape: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl:
+ - Shape &lt;https://www.ogc.org/rules/rec/#testVarExists&gt;: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="accordion-item bblock-report" data-bblock-id="geonovum.bbr.dcat.dcat-ap-nl-records" id="bblock-geonovum.bbr.dcat.dcat-ap-nl-records">
                             <h2 class="accordion-header bblock-title">
                                 <button class="accordion-button collapsed" type="button"
@@ -227,8 +311,8 @@
                                             <div class="card-body">
                                                 <div class="card-title mb-0">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-4"
-                                                            aria-expanded="false" aria-controls="uid-4"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-5"
+                                                            aria-expanded="false" aria-controls="uid-5"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -239,7 +323,7 @@
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-4">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-5">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
@@ -254,16 +338,16 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
- - Shape dcatapnl-sh:DatasetShape: &lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;
- - Shape dcatapnl-sh:CatalogShape: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
- - Shape dcatapnl-sh:CatalogRecordShape: *none*
- - Shape _:n5ec12b4c38174b6088fc2cd4c046dfcfb4: *none*
- - Shape dcatapnl-sh:DistributionShape: &lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;/dcat:distribution,&lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;/dcat:distribution
  - Shape dcatapnl-sh:DataServiceShape: &lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;/dcat:DataService
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
- - Shape _:n5ec12b4c38174b6088fc2cd4c046dfcfb3: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: &lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;/dcat:distribution,&lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;/dcat:distribution
+ - Shape dcatapnl-sh:DatasetShape: &lt;http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201&gt;
+ - Shape _:n895b5722de9a4d9cb982236b2c70f041b4: *none*
+ - Shape dcatapnl-sh:CatalogShape: *none*
+ - Shape _:n895b5722de9a4d9cb982236b2c70f041b3: *none*
+ - Shape dcatapnl-sh:CatalogRecordShape: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
  - Shape dcatapnl-sh:DatasetSeriesShape: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl:

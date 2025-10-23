@@ -2,7 +2,7 @@
   "title": "Validation report for geonovum.bbr.dcat.dcat-ap-nl - DCAT-AP-NL profile 3.0",
   "bblockName": "DCAT-AP-NL profile 3.0",
   "bblockId": "geonovum.bbr.dcat.dcat-ap-nl",
-  "generated": "2025-10-21T17:50:35.617367+00:00",
+  "generated": "2025-10-23T12:50:24.432145+00:00",
   "result": true,
   "items": [
     {
@@ -49,8 +49,27 @@
             {
               "shaclFile": "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl",
               "focusNodes": {
-                "_:n2d830a170874439193079549f58e013fb4": {
+                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
                   "nodes": []
+                },
+                "_:ne6383ffcbd6c478d99054bce9d262b7eb3": {
+                  "nodes": []
+                },
+                "dcatapnl-sh:DataServiceShape": {
+                  "nodes": [
+                    "exampleMS:1T2p3o4B-dataservice-WMS"
+                  ]
+                },
+                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "dcatapnl-sh:TemporalLiteralShape": {
+                  "nodes": []
+                },
+                "dcatapnl-sh:DistributionShape": {
+                  "nodes": [
+                    "exampleMS:1T2p3o4B-dist-SHP"
+                  ]
                 },
                 "dcatapnl-sh:DatasetShape": {
                   "nodes": [
@@ -60,39 +79,20 @@
                 "dcatapnl-sh:CatalogShape": {
                   "nodes": []
                 },
+                "_:ne6383ffcbd6c478d99054bce9d262b7eb4": {
+                  "nodes": []
+                },
                 "dcatapnl-sh:CatalogRecordShape": {
                   "nodes": [
                     "exampleMS:1T2p3o4B-rec"
                   ]
-                },
-                "dcatapnl-sh:DistributionShape": {
-                  "nodes": [
-                    "exampleMS:1T2p3o4B-dist-SHP"
-                  ]
-                },
-                "_:n2d830a170874439193079549f58e013fb3": {
-                  "nodes": []
-                },
-                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
-                  "nodes": []
-                },
-                "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "dcatapnl-sh:DataServiceShape": {
-                  "nodes": [
-                    "exampleMS:1T2p3o4B-dataservice-WMS"
-                  ]
-                },
-                "dcatapnl-sh:TemporalLiteralShape": {
-                  "nodes": []
                 },
                 "dcatapnl-sh:DatasetSeriesShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape _:n2d830a170874439193079549f58e013fb4: *none*\n - Shape dcatapnl-sh:DatasetShape: exampleMS:1T2p3o4B\n - Shape dcatapnl-sh:CatalogShape: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: exampleMS:1T2p3o4B-rec\n - Shape dcatapnl-sh:DistributionShape: exampleMS:1T2p3o4B-dist-SHP\n - Shape _:n2d830a170874439193079549f58e013fb3: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n - Shape dcatapnl-sh:DataServiceShape: exampleMS:1T2p3o4B-dataservice-WMS\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n"
+              "message": "Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape _:ne6383ffcbd6c478d99054bce9d262b7eb3: *none*\n - Shape dcatapnl-sh:DataServiceShape: exampleMS:1T2p3o4B-dataservice-WMS\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:DistributionShape: exampleMS:1T2p3o4B-dist-SHP\n - Shape dcatapnl-sh:DatasetShape: exampleMS:1T2p3o4B\n - Shape dcatapnl-sh:CatalogShape: *none*\n - Shape _:ne6383ffcbd6c478d99054bce9d262b7eb4: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: exampleMS:1T2p3o4B-rec\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n"
             }
           ]
         }

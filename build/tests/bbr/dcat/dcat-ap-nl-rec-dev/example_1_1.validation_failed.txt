@@ -1,5 +1,5 @@
-Validation report for geonovum.bbr.dcat.dcat-ap-nl-records - DCAT-AP-NL profile 3.0 - Records binding
-Generated 2025-10-23T12:50:25.753749+00:00
+Validation report for geonovum.bbr.dcat.dcat-ap-nl-rec-dev - DCAT-AP-NL profile 3.0 - Records binding Experimental
+Generated 2025-10-23T12:50:25.136757+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -8,7 +8,15 @@ Output Turtle example_1_1.ttl created
 === End Files ===
 
 === JSON Schema ===
-Validation passed
+
+** Validation error **
+ValidationError: {'nl': 'gebouw', 'en': 'building'} is not of type 'string'
+
+Failed validating 'type' in schema['allOf'][0]['allOf'][0]['properties']['properties']['properties']['keywords']['items']:
+    {'type': 'string'}
+
+On instance['properties']['keywords'][0]:
+    {'en': 'building', 'nl': 'gebouw'}
 === End JSON Schema ===
 
 === SHACL ===
@@ -17,16 +25,16 @@ Validation result for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/re
   Conforms: True
   
 Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
+ - Shape _:n7576c9cb0f314607999897f7c97d22f1b3: *none*
+ - Shape dcatapnl-sh:DataServiceShape: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
- - Shape dcatapnl-sh:DataServiceShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:DataService
- - Shape dcatapnl-sh:TemporalLiteralShape: *none*
- - Shape dcatapnl-sh:DistributionShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution,<http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>/dcat:distribution
- - Shape dcatapnl-sh:DatasetShape: <http://example.com/records/2482250f-3b00-4439-9f93-f3118229b201>
- - Shape _:n895b5722de9a4d9cb982236b2c70f041b4: *none*
- - Shape dcatapnl-sh:CatalogShape: *none*
- - Shape _:n895b5722de9a4d9cb982236b2c70f041b3: *none*
- - Shape dcatapnl-sh:CatalogRecordShape: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: *none*
+ - Shape dcatapnl-sh:DatasetShape: *none*
+ - Shape _:n7576c9cb0f314607999897f7c97d22f1b4: *none*
+ - Shape dcatapnl-sh:CatalogShape: *none*
+ - Shape dcatapnl-sh:CatalogRecordShape: *none*
  - Shape dcatapnl-sh:DatasetSeriesShape: *none*
 
 Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/records-ontology/rules.shacl:

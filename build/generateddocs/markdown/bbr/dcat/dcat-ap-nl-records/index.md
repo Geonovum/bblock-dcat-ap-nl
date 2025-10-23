@@ -182,7 +182,21 @@ can find under the 'Semantic Uplift' section of this building block.
     
   ],
   "links": [
-   
+   {
+      "rel": "access",
+      "href": "https://www.kadaster.nl/-/brt-top10nl-download",
+      "type": "application/zip"
+    },
+    {
+      "rel": "access",
+      "href": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
+      "type": "application/xml"
+    },
+    {
+      "rel": "service",
+      "href": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
+      "type": "application/json"
+    }
   ]
 }
 ```
@@ -346,7 +360,23 @@ can find under the 'Semantic Uplift' section of this building block.
     ]
   },
   "linkTemplates": [],
-  "links": []
+  "links": [
+    {
+      "rel": "access",
+      "href": "https://www.kadaster.nl/-/brt-top10nl-download",
+      "type": "application/zip"
+    },
+    {
+      "rel": "access",
+      "href": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
+      "type": "application/xml"
+    },
+    {
+      "rel": "service",
+      "href": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
+      "type": "application/json"
+    }
+  ]
 }
 ```
 
@@ -356,6 +386,8 @@ can find under the 'Semantic Uplift' section of this building block.
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -379,6 +411,15 @@ can find under the 'Semantic Uplift' section of this building block.
             dcterms:type <http://purl.org/adms/publishertype/LocalAuthority> ;
             foaf:name "Kadaster"@nl ] ;
     dcterms:temporal [ time:hasTime ( "1924-08-17T00:00:00Z" ".." ) ] ;
+    rdfs:seeAlso [ dcterms:type "application/zip" ;
+            ns1:relation <http://www.iana.org/assignments/relation/access> ;
+            oa:hasTarget <https://www.kadaster.nl/-/brt-top10nl-download> ],
+        [ dcterms:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/service> ;
+            oa:hasTarget <https://api.pdok.nl/brt/top10nl/ogc/v1/api> ],
+        [ dcterms:type "application/xml" ;
+            ns1:relation <http://www.iana.org/assignments/relation/access> ;
+            oa:hasTarget <https://geodata.nationaalgeoregister.nl/brt/wfs?> ] ;
     dcat:DataService [ a dcat:DataService ;
             rdfs:label "BRT TOP10NL OGC API Features" ;
             dcterms:accessRights "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
@@ -421,10 +462,10 @@ can find under the 'Semantic Uplift' section of this building block.
         "Topografie",
         "Topografische kaart",
         "basisset NOVEX" ;
-    dcat:theme [ dcat:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ],
+    dcat:theme [ dcat:theme <http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy> ],
+        [ dcat:theme <http://data.europa.eu/bna/c_dd313021> ],
         [ dcat:theme <http://data.europa.eu/bna/c_dd310000> ],
-        [ dcat:theme <http://www.eionet.europa.eu/gemet/nl/inspire-theme/hy> ],
-        [ dcat:theme <http://data.europa.eu/bna/c_dd313021> ] ;
+        [ dcat:theme <http://inspire.ec.europa.eu/metadata-codelist/SpatialScope/national> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 3.3e+00 5.36e+01 ) ( 7.24e+00 5.36e+01 ) ( 7.24e+00 5.073e+01 ) ( 3.3e+00 5.073e+01 ) ( 3.3e+00 5.36e+01 ) ) ) ] .
 
