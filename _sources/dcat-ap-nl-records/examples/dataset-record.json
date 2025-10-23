@@ -150,6 +150,20 @@
     
   ],
   "links": [
-   
+   {
+      "rel": "access",
+      "href": "https://www.kadaster.nl/-/brt-top10nl-download",
+      "type": "application/zip"
+    },
+    {
+      "rel": "access",
+      "href": "https://geodata.nationaalgeoregister.nl/brt/wfs?",
+      "type": "application/xml"
+    },
+    {
+      "rel": "service",
+      "href": "https://api.pdok.nl/brt/top10nl/ogc/v1/api",
+      "type": "application/json"
+    }
   ]
 }
