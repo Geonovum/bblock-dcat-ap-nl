@@ -1,0 +1,56 @@
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+$id: 'https://geonovum-labs.bbr.dcat.dataservice-records.json'
+title: DCAT DataService OGC API record definition
+description: DCAT DataService OGC API record definition
+
+allOf:
+  - $ref: bblocks://ogc.geo.geodcat.dcat-records
+
+properties:
+  properties:
+     type: object
+     required:
+        - type
+     properties:
+        type:
+          type: string
+          enum:
+          - DataService
+  links:
+    type: array
+    minItems: 1
+    items:
+      $ref: '#/definitions/Link'
+  # linkTemplates:
+  #   type: array
+  #   items:
+  #     $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/linkTemplate.yaml'  
+
+definitions:
+  Link:
+    title: Link object definition
+    description: Link object definition including distribution
+    type: object
+    required:
+      - href
+    properties:
+      href:
+        type: string
+        format: uri
+      rel:
+        type: string
+      type:
+        type: string
+      title:
+        type: string
+  LanguageMap:
+    type: object
+    description: A language-mapped string where keys are BCP 47 language tags and values are the localized strings.
+    patternProperties:
+      ^[a-zA-Z]{2,8}(-[a-zA-Z0-9]{2,8})*$:
+        type: string
+    additionalProperties: false
+  MultilingualString:
+    oneOf:
+      - type: string
+      - $ref: '#/definitions/LanguageMap'

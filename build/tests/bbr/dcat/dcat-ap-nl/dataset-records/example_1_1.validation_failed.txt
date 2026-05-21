@@ -1,0 +1,70 @@
+Validation report for geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records - DCAT-AP-NL-Dataset/Records binding
+Generated 2026-05-21T14:28:24.517627+00:00
+=== Files ===
+Using examples/bomen.geojson from examples
+=== End Files ===
+
+=== Unknown errors ===
+
+** Validation error **
+Traceback (most recent call last):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 967, in resolve_fragment
+    document = document[part]
+,KeyError: 'definitions'
+,
+During handling of the above exception, another exception occurred:
+
+,Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validation/json_.py", line 200, in validate
+    validate_json(json_doc, schema_validator)
+,  File "/src/ogc/bblocks/validation/json_.py", line 44, in validate_json
+    error = jsonschema.exceptions.best_match(validator.iter_errors(instance))
+,  File "/venv/lib/python3.10/site-packages/jsonschema/exceptions.py", line 384, in best_match
+    best = next(errors, None)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 362, in allOf
+    yield from validator.descend(instance, subschema, schema_path=index)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 298, in ref
+    yield from validator.descend(instance, resolved)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 332, in properties
+    yield from validator.descend(
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 76, in items
+    yield from validator.descend(
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 305, in descend
+    for error in self.evolve(schema=schema).iter_errors(instance):
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 288, in iter_errors
+    for error in errors:
+,  File "/venv/lib/python3.10/site-packages/jsonschema/_validators.py", line 294, in ref
+    scope, resolved = validator.resolver.resolve(ref)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 895, in resolve
+    match = self._find_in_subschemas(url)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 884, in _find_in_subschemas
+    subschema = self.resolve_fragment(subschema, fragment)
+,  File "/venv/lib/python3.10/site-packages/jsonschema/validators.py", line 969, in resolve_fragment
+    raise exceptions.RefResolutionError(
+,jsonschema.exceptions.RefResolutionError: Unresolvable JSON pointer: 'definitions/Link'
+,
+During handling of the above exception, another exception occurred:
+
+,Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validate.py", line 199, in _validate_resource
+    result = validator.validate(filename, output_filename, report,
+,  File "/src/ogc/bblocks/validation/json_.py", line 221, in validate
+    'errorMessage': e.message,
+,AttributeError: 'RefResolutionError' object has no attribute 'message'
+
+=== End Unknown errors ===
+
