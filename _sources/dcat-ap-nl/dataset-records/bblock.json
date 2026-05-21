@@ -10,7 +10,7 @@
   "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
   "dependsOn": [
     "ogc.geo.geodcat.dcat-ap",
-    "ogc.geo.geodcat.dcat-records"
+    "geonovum-labs.bbr.dcat.dcat-dataset-records"
   ],
   "sources": [
     {

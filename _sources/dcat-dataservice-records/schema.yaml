@@ -1,7 +1,7 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema'
-$id: 'https://geonovum-labs.bbr.dcat.dataset-records.json'
-title: DCAT OGC API record definition
-description: DCAT Dataset OGC API record definition
+$id: 'https://geonovum-labs.bbr.dcat.dataservice-records.json'
+title: DCAT DataService OGC API record definition
+description: DCAT DataService OGC API record definition
 
 allOf:
   - $ref: bblocks://ogc.geo.geodcat.dcat-records
@@ -15,7 +15,7 @@ properties:
         type:
           type: string
           enum:
-          - Dataset
+          - DataService
   links:
     type: array
     minItems: 1
@@ -43,24 +43,6 @@ definitions:
         type: string
       title:
         type: string
-      distribution:
-        type: object
-        description: Available distribution of the dataset via this link.
-        properties:
-          title:
-            $ref: '#/definitions/MultilingualString'
-          description:
-            $ref: '#/definitions/MultilingualString'
-          accessURL:
-            type: string
-            format: uri
-          downloadURL:
-            type: string
-            format: uri
-          format:
-            type: string
-          license:
-            type: string
   LanguageMap:
     type: object
     description: A language-mapped string where keys are BCP 47 language tags and values are the localized strings.
