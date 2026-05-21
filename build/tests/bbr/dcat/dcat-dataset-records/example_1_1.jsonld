@@ -42,7 +42,7 @@
   "properties": {
     "created": "2024-09-30",
     "updated": "2024-12-06T09:49:52Z",
-    "type": "dataset",
+    "type": "Dataset",
     "title": "Bomen",
     "description": "Subset van bomen in de omgeving van Sloten (Amsterdam)",
     "providers": [

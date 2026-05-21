@@ -1,155 +1,99 @@
 
-# DCAT-Dataset/Records binding (Schema)
+# DCAT-DataService/Records binding (Schema)
 
-`geonovum-labs.bbr.dcat.dcat-dataset-records` *v0.1*
+`geonovum-labs.bbr.dcat.dcat-dataservice-records` *v0.1*
 
-DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataset. This is the baseline for semantic equivalence of OGC API records and a DCAT Dataset.
+DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataservice. This is the baseline for semantic equivalence of OGC API records and a DCAT DataService.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
-## DCAT baseline bound to OGC API records schema
+## DCAT DataService baseline bound to OGC API records schema
 
-This building block defines a binding from OGC API Records schema to the DCAT Vocabulary.
+This building block defines a binding from OGC API Records schema to the DCAT DataService Class.
 
-The JSON-LD context is derived from the [JSON-LD context for DCAT-AP](https://semiceu.github.io/DCAT-AP/releases/3.0.0/context/dcat-ap.jsonld).
 
-It uses the context for a dcat:Dataset as the basis for a Record.
-
-Main differences with the ogc-incubator version are the explicit definition of dcat:Distribution in the links section and multilingual properties.
 
 __NOTE:__ Still work in progress !! context mapping is not complete for example
+
+![dcat-classes](./assets/dcat-classes.png)
 ## Examples
 
-### DCAT Dataset with OGC API Records in JSON
-An example based on the Bomen metadata record . 
+### DCAT DataService with OGC API Records in JSON
+An example based on the BAG API metadata record . 
 Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 #### json
 ```json
 {
-    "id": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83",
-    "conformsTo": [
-        "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
-    ],
-    "type": "Feature",
-    "time": {
-        "interval": [
-        "2024-09-30",
-        "9999-12-31"
-    ],
-    "resolution": "P1D"
-    },
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-            [
-                [
-          2.4807,
-          53.7187
-        ],
-        [
-          7.9685,
-          53.7187
-        ],
-        [
-          7.9685,
-          50.6058
-        ],
-        [
-          2.4807,
-          50.6058
-        ],
-        [
-          2.4807,
-          53.7187
-        ]
-            ]
-        ]
-    },
-    "properties": {
-        "created": "2024-09-30",
-        "updated": "2024-12-06T09:49:52Z",
-        "type": "Dataset",
-        "title": "Bomen",
-        "description": "Subset van bomen in de omgeving van Sloten (Amsterdam)",
-        "providers": [
-            {
-                "contactInfo": {
-                    "address": {
-                        "office": {}
-                    },
-                    "email": {
-                        "office": "opendata@amsterdam.nl"
-                    }
-                },
-                "name": null,
-                "roles": [
-                    {
-                        "name": "pointOfContact"
-                    }
-                ]
-            }
-        ],
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83"
-            }
-        ],
-        "themes": [
-            {
-                "concepts": [
-                    {
-                        "id": "Boom",
-                        "url": "https://definities.geostandaarden.nl/ibro/id/begrip/boom"
-                    },
-                    {
-                        "id": "Park",
-                        "url": "https://definities.geostandaarden.nl/ibro/id/begrip/park"
-                    }
-                ],
-                "scheme": "https://definities.geostandaarden.nl/ibro/nl/"
-            }
-        ]
-    },
-    "links": [
-        {
-            "href": "http://localhost:5000/collections/bomen",
-            "rel": "access",
-            "title": "Bomen",
-            "type": "OGC API Features",
-            "distribution":{
-                "type": "dcat:Distribution",
-                    "title": {
-                        "nl": "Bomen (OGC API Features)"
-                    },
-                "description": {
-                    "nl": "API"
-                    },
-                "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
-            }
-        }
+  "type": "Feature",
+  "conformsTo": [
+    "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
+  ],
+  "id": "urn:ogc:record:bag-api",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [ 2.4807, 53.7187 ],
+        [ 7.9685, 53.7187 ],
+        [ 7.9685, 50.6058 ],
+        [ 2.4807, 50.6058 ],  
+        [ 2.4807, 53.7187 ]
+      ]
     ]
+  },
+  "properties": {
+    "type": "DataService",
+    "contactPoint": {
+      "organizationName": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement",
+      "email": "mailto:dpi-gi@kadaster.nl"
+    },
+    "accessRights": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
+    "created": "2013-02-18",
+    "description": "De gegevens bestaan uit BAG-panden en een deelselectie van BAG-gegevens van deze panden en de zich daarin bevindende verblijfsobjecten. Ook de ligplaatsen en standplaatsen zijn hierin opgenomen met een deelselectie van BAG-gegevens. De gegevens van de nummeraanduiding zijn in deze services onderdeel van de adresseerbare objecten, hierbij wordt slechts 1 adres opgenomen, dus objecten met meerdere adressen (hoofd- en nevenadressen) zijn niet compleet. In deze services zitten dus niet alle BAG adressen. Aangezien niet alle BAG gegevens worden geleverd, adviseren wij u om de actuele gegevens in één van de BAG producten te controleren. Raadpleeg de BAG Viewer voor enkele bevragingen van BAG gegevens. Een overzicht van alle beschikbare producten kunt u vinden op de website https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag . De BAG WMS, BAG WFS en BAG API Individuele bevragingen zijn expliciet niet bedoeld voor bulkbevragingen waarmee veel gegevens in één keer worden opgevraagd en in een database worden verwerkt. Wilt u in één keer meer gegevens opvragen, dan raden wij u aan om gebruik te maken van onze BAG Geopackage (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-geopackage) of BAG extract (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-2.0-extract). De BAG Geopackage en de BAG extract kunt u downloaden via de Atom downloadservice: https://service.pdok.nl/lv/bag/atom/bag.xml . Deze dataset wordt ook gebruikt voor het ontsluiten van het INSPIRE thema Gebouwen. Het betreft gebouwcontouren, constructieve onderdelen van gebouwen en ruimtelijke barrieres. Dit betreft niet-geharmoniseerde data uit de basisregistratie Adressen en Gebouwen (BAG). De service wordt dagelijks geactualiseerd.",
+    "identifier": "5c075a13-9194-4ad3-bf37-e46a0f4727bc",
+    "language": {
+      "code": "http://publications.europa.eu/resource/authority/language/DUT",
+      "name": "Dutch"
+    },
+    "provenance": {
+      "description": "Ontwikkeld uit de Basisregistratie Adressen en Gebouwen (BAG)"
+    },
+    "title": "BAG OGC API Features",
+    "publisher": {
+      "name": "Klantcontactcenter",
+      "email": "mailto:bag@kadaster.nl"
+    },
+    "creator": {
+      "name": "Kadaster",
+      "email": null
+    },
+    "keywords": [
+      "building",
+      "base registry"
+    ],
+    "servesDataset": "urn:ogc:record:bag-dataset"
+  },
+  "links": [
+    {
+      "rel": "related",
+      "href": "https://bag-dataset",
+      "type": "Dataset"
+    }
+  ]
 }
 ```
 
 #### jsonld
 ```jsonld
 {
-  "@context": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/context.jsonld",
-  "id": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83",
+  "@context": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/context.jsonld",
+  "type": "Feature",
   "conformsTo": [
     "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
   ],
-  "type": "Feature",
-  "time": {
-    "interval": [
-      "2024-09-30",
-      "9999-12-31"
-    ],
-    "resolution": "P1D"
-  },
+  "id": "urn:ogc:record:bag-api",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -178,67 +122,42 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
     ]
   },
   "properties": {
-    "created": "2024-09-30",
-    "updated": "2024-12-06T09:49:52Z",
-    "type": "Dataset",
-    "title": "Bomen",
-    "description": "Subset van bomen in de omgeving van Sloten (Amsterdam)",
-    "providers": [
-      {
-        "contactInfo": {
-          "address": {
-            "office": {}
-          },
-          "email": {
-            "office": "opendata@amsterdam.nl"
-          }
-        },
-        "name": null,
-        "roles": [
-          {
-            "name": "pointOfContact"
-          }
-        ]
-      }
+    "type": "DataService",
+    "contactPoint": {
+      "organizationName": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement",
+      "email": "mailto:dpi-gi@kadaster.nl"
+    },
+    "accessRights": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
+    "created": "2013-02-18",
+    "description": "De gegevens bestaan uit BAG-panden en een deelselectie van BAG-gegevens van deze panden en de zich daarin bevindende verblijfsobjecten. Ook de ligplaatsen en standplaatsen zijn hierin opgenomen met een deelselectie van BAG-gegevens. De gegevens van de nummeraanduiding zijn in deze services onderdeel van de adresseerbare objecten, hierbij wordt slechts 1 adres opgenomen, dus objecten met meerdere adressen (hoofd- en nevenadressen) zijn niet compleet. In deze services zitten dus niet alle BAG adressen. Aangezien niet alle BAG gegevens worden geleverd, adviseren wij u om de actuele gegevens in \u00e9\u00e9n van de BAG producten te controleren. Raadpleeg de BAG Viewer voor enkele bevragingen van BAG gegevens. Een overzicht van alle beschikbare producten kunt u vinden op de website https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag . De BAG WMS, BAG WFS en BAG API Individuele bevragingen zijn expliciet niet bedoeld voor bulkbevragingen waarmee veel gegevens in \u00e9\u00e9n keer worden opgevraagd en in een database worden verwerkt. Wilt u in \u00e9\u00e9n keer meer gegevens opvragen, dan raden wij u aan om gebruik te maken van onze BAG Geopackage (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-geopackage) of BAG extract (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-2.0-extract). De BAG Geopackage en de BAG extract kunt u downloaden via de Atom downloadservice: https://service.pdok.nl/lv/bag/atom/bag.xml . Deze dataset wordt ook gebruikt voor het ontsluiten van het INSPIRE thema Gebouwen. Het betreft gebouwcontouren, constructieve onderdelen van gebouwen en ruimtelijke barrieres. Dit betreft niet-geharmoniseerde data uit de basisregistratie Adressen en Gebouwen (BAG). De service wordt dagelijks geactualiseerd.",
+    "identifier": "5c075a13-9194-4ad3-bf37-e46a0f4727bc",
+    "language": {
+      "code": "http://publications.europa.eu/resource/authority/language/DUT",
+      "name": "Dutch"
+    },
+    "provenance": {
+      "description": "Ontwikkeld uit de Basisregistratie Adressen en Gebouwen (BAG)"
+    },
+    "title": "BAG OGC API Features",
+    "publisher": {
+      "name": "Klantcontactcenter",
+      "email": "mailto:bag@kadaster.nl"
+    },
+    "creator": {
+      "name": "Kadaster",
+      "email": null
+    },
+    "keywords": [
+      "building",
+      "base registry"
     ],
-    "externalIds": [
-      {
-        "scheme": "default",
-        "value": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83"
-      }
-    ],
-    "themes": [
-      {
-        "concepts": [
-          {
-            "id": "Boom",
-            "url": "https://definities.geostandaarden.nl/ibro/id/begrip/boom"
-          },
-          {
-            "id": "Park",
-            "url": "https://definities.geostandaarden.nl/ibro/id/begrip/park"
-          }
-        ],
-        "scheme": "https://definities.geostandaarden.nl/ibro/nl/"
-      }
-    ]
+    "servesDataset": "urn:ogc:record:bag-dataset"
   },
   "links": [
     {
-      "href": "http://localhost:5000/collections/bomen",
-      "rel": "access",
-      "title": "Bomen",
-      "type": "OGC API Features",
-      "distribution": {
-        "type": "dcat:Distribution",
-        "title": {
-          "nl": "Bomen (OGC API Features)"
-        },
-        "description": {
-          "nl": "API"
-        },
-        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
-      }
+      "rel": "related",
+      "href": "https://bag-dataset",
+      "type": "Dataset"
     }
   ]
 }
@@ -254,35 +173,24 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
-@prefix thns: <https://w3id.org/ogc/stac/themes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83> a <file:///github/workspace/Dataset>,
+<urn:ogc:record:bag-api> a <file:///github/workspace/DataService>,
         geojson:Feature ;
     dct:conformsTo <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
-    dct:created "2024-09-30" ;
-    dct:description "Subset van bomen in de omgeving van Sloten (Amsterdam)" ;
-    dct:modified "2024-12-06T09:49:52Z" ;
-    dct:temporal [ ] ;
-    dct:title "Bomen" ;
-    rdfs:seeAlso [ dct:title "Bomen" ;
-            ns1:relation <http://www.iana.org/assignments/relation/access> ;
-            dcat:distribution [ a dcat:Distribution ;
-                    dct:description [ ] ;
-                    dct:title [ ] ;
-                    dcat:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ] ;
-            oa:hasTarget <http://localhost:5000/collections/bomen> ] ;
+    dct:created "2013-02-18" ;
+    dct:description "De gegevens bestaan uit BAG-panden en een deelselectie van BAG-gegevens van deze panden en de zich daarin bevindende verblijfsobjecten. Ook de ligplaatsen en standplaatsen zijn hierin opgenomen met een deelselectie van BAG-gegevens. De gegevens van de nummeraanduiding zijn in deze services onderdeel van de adresseerbare objecten, hierbij wordt slechts 1 adres opgenomen, dus objecten met meerdere adressen (hoofd- en nevenadressen) zijn niet compleet. In deze services zitten dus niet alle BAG adressen. Aangezien niet alle BAG gegevens worden geleverd, adviseren wij u om de actuele gegevens in één van de BAG producten te controleren. Raadpleeg de BAG Viewer voor enkele bevragingen van BAG gegevens. Een overzicht van alle beschikbare producten kunt u vinden op de website https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag . De BAG WMS, BAG WFS en BAG API Individuele bevragingen zijn expliciet niet bedoeld voor bulkbevragingen waarmee veel gegevens in één keer worden opgevraagd en in een database worden verwerkt. Wilt u in één keer meer gegevens opvragen, dan raden wij u aan om gebruik te maken van onze BAG Geopackage (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-geopackage) of BAG extract (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-2.0-extract). De BAG Geopackage en de BAG extract kunt u downloaden via de Atom downloadservice: https://service.pdok.nl/lv/bag/atom/bag.xml . Deze dataset wordt ook gebruikt voor het ontsluiten van het INSPIRE thema Gebouwen. Het betreft gebouwcontouren, constructieve onderdelen van gebouwen en ruimtelijke barrieres. Dit betreft niet-geharmoniseerde data uit de basisregistratie Adressen en Gebouwen (BAG). De service wordt dagelijks geactualiseerd." ;
+    dct:title "BAG OGC API Features" ;
+    rdfs:seeAlso [ a <file:///github/workspace/Dataset> ;
+            ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            oa:hasTarget <https://bag-dataset> ] ;
+    dcat:keyword "base registry",
+        "building" ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
-    rec:scopedIdentifier [ rec:id "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83" ;
-            rec:scheme "default" ] ;
-    rec:themes [ thns:concepts <https://definities.geostandaarden.nl/ibro/id/begrip/boom>,
-                <https://definities.geostandaarden.nl/ibro/id/begrip/park> ;
-            thns:scheme "https://definities.geostandaarden.nl/ibro/nl/" ] .
-
-<https://definities.geostandaarden.nl/ibro/id/begrip/boom> thns:id "Boom"^^xsd:string .
-
-<https://definities.geostandaarden.nl/ibro/id/begrip/park> thns:id "Park"^^xsd:string .
+    rec:language [ skos:prefLabel "Dutch" ;
+            rec:languageCode "http://publications.europa.eu/resource/authority/language/DUT" ] .
 
 
 ```
@@ -291,9 +199,9 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://geonovum-labs.bbr.dcat.dataset-records.json
-title: DCAT OGC API record definition
-description: DCAT Dataset OGC API record definition
+$id: https://geonovum-labs.bbr.dcat.dataservice-records.json
+title: DCAT DataService OGC API record definition
+description: DCAT DataService OGC API record definition
 allOf:
 - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.yaml
 properties:
@@ -305,7 +213,7 @@ properties:
       type:
         type: string
         enum:
-        - Dataset
+        - DataService
         x-jsonld-id: '@type'
     x-jsonld-id: '@nest'
   links:
@@ -317,6 +225,19 @@ properties:
     x-jsonld-extra-terms:
       hreflang: http://purl.org/dc/terms/language
       length: http://purl.org/dc/terms/extent
+      distribution:
+        x-jsonld-context:
+          mediaType: https://www.opengis.net/def/ogc-api/records/mediaType
+          name: https://www.opengis.net/def/ogc-api/records/name
+          description: https://www.opengis.net/def/ogc-api/records/description
+          license: https://www.opengis.net/def/ogc-api/records/license
+          accessRights: https://www.opengis.net/def/ogc-api/records/accessRights
+          conformsTo:
+            '@container': '@set'
+            '@id': http://purl.org/dc/terms/conformsTo
+            '@type': '@id'
+        x-jsonld-id: http://www.w3.org/ns/dcat#distribution
+        x-jsonld-type: '@id'
 definitions:
   Link:
     title: Link object definition
@@ -342,31 +263,6 @@ definitions:
         type: string
         x-jsonld-container: '@set'
         x-jsonld-id: http://purl.org/dc/terms/title
-      distribution:
-        type: object
-        description: Available distribution of the dataset via this link.
-        properties:
-          title:
-            $ref: '#/definitions/MultilingualString'
-            x-jsonld-container: '@set'
-            x-jsonld-id: http://purl.org/dc/terms/title
-          description:
-            $ref: '#/definitions/MultilingualString'
-            x-jsonld-container: '@set'
-            x-jsonld-id: http://purl.org/dc/terms/description
-          accessURL:
-            type: string
-            format: uri
-          downloadURL:
-            type: string
-            format: uri
-          format:
-            type: string
-          license:
-            type: string
-            x-jsonld-id: http://www.w3.org/ns/dcat#license
-        x-jsonld-id: http://www.w3.org/ns/dcat#distribution
-        x-jsonld-type: '@id'
   LanguageMap:
     type: object
     description: A language-mapped string where keys are BCP 47 language tags and
@@ -429,6 +325,9 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/hasLinkTemplate
   created: http://purl.org/dc/terms/created
   updated: http://purl.org/dc/terms/modified
+  description:
+    x-jsonld-container: '@set'
+    x-jsonld-id: http://purl.org/dc/terms/description
   keywords:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#keyword
@@ -481,6 +380,7 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
+  license: http://www.w3.org/ns/dcat#license
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'
@@ -511,8 +411,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.json)
-* JSON version: [schema.json](https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml)
+* YAML version: [schema.yaml](https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.json)
+* JSON version: [schema.json](https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml)
 
 
 # JSON-LD Context
@@ -558,12 +458,19 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
+        "hreflang": "dct:language",
+        "length": "dct:extent",
         "distribution": {
+          "@context": {
+            "mediaType": "rec:mediaType",
+            "name": "rec:name",
+            "description": "rec:description",
+            "license": "rec:license",
+            "accessRights": "rec:accessRights"
+          },
           "@id": "dcat:distribution",
           "@type": "@id"
-        },
-        "hreflang": "dct:language",
-        "length": "dct:extent"
+        }
       },
       "@id": "rdfs:seeAlso"
     },
@@ -716,7 +623,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/context.jsonld)
+[context.jsonld](https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/context.jsonld)
 
 ## Sources
 
@@ -728,5 +635,5 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: [https://github.com/NielsHoffmann/bblock-dcat-ap-nl](https://github.com/NielsHoffmann/bblock-dcat-ap-nl)
-* Path: `_sources/dcat-dataset-records`
+* Path: `_sources/dcat-dataservice-records`
 

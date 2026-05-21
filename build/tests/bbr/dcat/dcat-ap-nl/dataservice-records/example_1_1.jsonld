@@ -115,7 +115,7 @@
     {
       "rel": "related",
       "href": "https://bag-dataset",
-      "type": null
+      "type": "Dataset"
     }
   ]
 }

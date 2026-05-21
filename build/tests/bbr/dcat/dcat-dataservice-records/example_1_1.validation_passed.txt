@@ -1,7 +1,7 @@
-Validation report for geonovum-labs.bbr.dcat.dcat-dataset-records - DCAT-Dataset/Records binding
-Generated 2026-05-21T14:28:23.036108+00:00
+Validation report for geonovum-labs.bbr.dcat.dcat-dataservice-records - DCAT-DataService/Records binding
+Generated 2026-05-21T14:28:22.603430+00:00
 === Files ===
-Using examples/bomen.geojson from examples
+Using examples/bag-api.geojson from examples
 JSON-LD context is present - uplifting
 Output JSON-LD example_1_1.jsonld created
 Output Turtle example_1_1.ttl created
@@ -18,7 +18,7 @@ Validation result for https://opengeospatial.github.io/bblocks/registereditems/g
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureShape: <file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>
+ - Shape geojson:FeatureShape: <urn:ogc:record:bag-api>
  - Shape geojson:GeometryShape: *none*
  - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*

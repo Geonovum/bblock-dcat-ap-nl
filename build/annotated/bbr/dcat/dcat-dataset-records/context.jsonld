@@ -38,9 +38,11 @@
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:format",
+        "distribution": {
+          "@id": "dcat:distribution",
+          "@type": "@id"
+        },
         "hreflang": "dct:language",
-        "title": "rdfs:label",
         "length": "dct:extent"
       },
       "@id": "rdfs:seeAlso"
@@ -167,11 +169,11 @@
         "@vocab": "https://www.opengis.net/def/ogc-api/records/"
       }
     },
+    "rights": "dcat:rights",
     "href": {
       "@type": "@id",
       "@id": "oa:hasTarget"
     },
-    "rights": "dcat:rights",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

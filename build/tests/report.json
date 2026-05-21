@@ -1,86 +1,16 @@
 {
   "summary": {
-    "total": 9,
-    "passed": 6,
-    "failed": 3,
+    "total": 6,
+    "passed": 4,
+    "failed": 2,
     "result": false
   },
   "bblocks": {
-    "geonovum-labs.bbr.dcat.pois": {
-      "title": "Validation report for geonovum-labs.bbr.dcat.pois - Example for a poi dataset",
-      "bblockName": "Example for a poi dataset",
-      "bblockId": "geonovum-labs.bbr.dcat.pois",
-      "generated": "2026-05-11T21:07:05.564056+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/dcat/pois/example_1_1.json",
-            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/pois/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using ./examples/pois.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
     "geonovum-labs.bbr.dcat.transforms.xslt-example": {
       "title": "Validation report for geonovum-labs.bbr.dcat.transforms.xslt-example - XSLT Transforms example",
       "bblockName": "XSLT Transforms example",
       "bblockId": "geonovum-labs.bbr.dcat.transforms.xslt-example",
-      "generated": "2026-05-11T21:07:05.570252+00:00",
+      "generated": "2026-05-21T14:28:22.077841+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -94,7 +24,7 @@
       "title": "Validation report for geonovum-labs.bbr.dcat.transforms.xslt2 - XSLT2 Transforms example",
       "bblockName": "XSLT2 Transforms example",
       "bblockId": "geonovum-labs.bbr.dcat.transforms.xslt2",
-      "generated": "2026-05-11T21:07:05.588404+00:00",
+      "generated": "2026-05-21T14:28:22.097407+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -104,19 +34,19 @@
         "failed": 0
       }
     },
-    "geonovum-labs.bbr.dcat.tripping": {
-      "title": "Validation report for geonovum-labs.bbr.dcat.tripping - Example for a kayak trip dataset",
-      "bblockName": "Example for a kayak trip dataset",
-      "bblockId": "geonovum-labs.bbr.dcat.tripping",
-      "generated": "2026-05-11T21:07:06.115653+00:00",
+    "geonovum-labs.bbr.dcat.dcat-dataservice-records": {
+      "title": "Validation report for geonovum-labs.bbr.dcat.dcat-dataservice-records - DCAT-DataService/Records binding",
+      "bblockName": "DCAT-DataService/Records binding",
+      "bblockId": "geonovum-labs.bbr.dcat.dcat-dataservice-records",
+      "generated": "2026-05-21T14:28:22.603505+00:00",
       "result": true,
       "items": [
         {
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/bbr/dcat/tripping/example_1_1.json",
-            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/tripping/example_1_1.json",
+            "filename": "build/tests/bbr/dcat/dcat-dataservice-records/example_1_1.json",
+            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/dcat-dataservice-records/example_1_1.json",
             "exampleIndex": 1,
             "snippetIndex": 1,
             "language": "application/json"
@@ -129,7 +59,7 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using ./examples/example-trip.json from examples"
+                  "message": "Using examples/bag-api.geojson from examples"
                 },
                 {
                   "op": "jsonld-uplift",
@@ -146,7 +76,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 3,
+                  "size": 50,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -163,6 +93,60 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<urn:ogc:record:bag-api>"
+                      ]
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <urn:ogc:record:bag-api>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
+                  "focusNodes": {
+                    "rec:testAllVarsInTemplate": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n - Shape rec:testAllVarsInTemplate: *none*\n"
+                }
+              ]
             }
           ]
         }
@@ -174,172 +158,11 @@
         "failed": 0
       }
     },
-    "geonovum-labs.bbr.dcat.contact": {
-      "title": "Validation report for geonovum-labs.bbr.dcat.contact - contact test",
-      "bblockName": "contact test",
-      "bblockId": "geonovum-labs.bbr.dcat.contact",
-      "generated": "2026-05-11T21:07:06.224525+00:00",
-      "result": false,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/dcat/contact/example_1_1.ttl",
-            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/contact/example_1_1.ttl",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "text/turtle"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/contactpoint.ttl from examples"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 7,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/dcat/contact/example_2_1.json",
-            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/contact/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": false,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/contact-dcat.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 5,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": false,
-                  "exception": "ValidationError",
-                  "errorMessage": "{'contactpunt': [{'a': 'vcard:Individual', 'fn': 'InfoDesk', 'organization-name': {'nl': 'Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement'}, 'hasEmail': 'mailto:dpi-gi@kadaster.nl'}]} is not valid under any of the given schemas",
-                  "isError": true,
-                  "message": "ValidationError: {'contactpunt': [{'a': 'vcard:Individual', 'fn': 'InfoDesk', 'organization-name': {'nl': 'Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement'}, 'hasEmail': 'mailto:dpi-gi@kadaster.nl'}]} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema['allOf'][0]:\n    {'$comment': 'Adapted from '\n                 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/contact.yaml',\n     'anyOf': [{'required': ['name']}, {'required': ['organization']}],\n     'description': 'Identification of, and means of communication with, '\n                    'person responsible\\n'\n                    'for the resource.',\n     'properties': {'addresses': {'description': 'Physical location at '\n                                                 'which contact can be '\n                                                 'made.',\n                                  'items': {'properties': {'administrativeArea': {'description': 'State '\n                                                                                                 'or '\n                                                                                                 'province '\n                                                                                                 'of '\n                                                                                                 'the '\n                                                                                                 'location.',\n                                                                                  'type': 'string'},\n                                                           'city': {'description': 'City '\n                                                                                   'for '\n                                                                                   'the '\n                                                                                   'location.',\n                                                                    'type': 'string'},\n                                                           'country': {'description': 'Country '\n                                                                                      'of '\n                                                                                      'the '\n                                                                                      'physical '\n                                                                                      'address.  '\n                                                                                      'ISO '\n                                                                                      '3166-1 '\n                                                                                      'is '\n                                                                                      'recommended.',\n                                                                       'type': 'string'},\n                                                           'deliveryPoint': {'description': 'Address '\n                                                                                            'lines '\n                                                                                            'for '\n                                                                                            'the '\n                                                                                            'location.',\n                                                                             'items': {'type': 'string'},\n                                                                             'type': 'array'},\n                                                           'postalCode': {'description': 'ZIP '\n                                                                                         'or '\n                                                                                         'other '\n                                                                                         'postal '\n                                                                                         'code.',\n                                                                          'type': 'string'},\n                                                           'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                                                                     'description': 'The '\n                                                                                    'type '\n                                                                                    'of '\n                                                                                    'address '\n                                                                                    '(e.g. '\n                                                                                    'office, '\n                                                                                    'home, '\n                                                                                    'etc.).'}},\n                                            'type': 'object'},\n                                  'type': 'array'},\n                    'contactInstructions': {'description': 'Supplemental '\n                                                           'instructions '\n                                                           'on how or when '\n                                                           'to contact '\n                                                           'the\\n'\n                                                           'responsible '\n                                                           'party.',\n                                            'type': 'string'},\n                    'emails': {'description': 'Email addresses at which '\n                                              'contact can be made.',\n                               'items': {'properties': {'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                                                                  'description': 'The '\n                                                                                 'type '\n                                                                                 'of '\n                                                                                 'email '\n                                                                                 '(e.g. '\n                                                                                 'home, '\n                                                                                 'work, '\n                                                                                 'etc.).'},\n                                                        'value': {'description': 'The '\n                                                                                 'value '\n                                                                                 'is '\n                                                                                 'the '\n                                                                                 'email '\n                                                                                 'number '\n                                                                                 'itself.',\n                                                                  'format': 'email',\n                                                                  'type': 'string'}},\n                                         'required': ['value'],\n                                         'type': 'object'},\n                               'type': 'array'},\n                    'hoursOfService': {'description': 'Time period when '\n                                                      'the contact can be '\n                                                      'contacted.',\n                                       'example': 'Hours: Mo-Fr 10am-7pm '\n                                                  'Sa 10am-22pm Su '\n                                                  '10am-21pm',\n                                       'type': 'string'},\n                    'identifier': {'description': 'A value uniquely '\n                                                  'identifying a contact.',\n                                   'type': 'string'},\n                    'links': {'description': 'On-line information about '\n                                             'the contact.',\n                              'items': {'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'},\n                                                  {'required': ['type'],\n                                                   'type': 'object'}]},\n                              'type': 'array'},\n                    'logo': {'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'},\n                                       {'properties': {'rel': {'enum': ['icon']}},\n                                        'required': ['rel', 'type'],\n                                        'type': 'object'}],\n                             'description': 'Graphic identifying a '\n                                            'contact. The link relation '\n                                            'should be `icon` and the '\n                                            'media type should be an image '\n                                            'media type.'},\n                    'name': {'description': 'The name of the responsible '\n                                            'person.',\n                             'type': 'string'},\n                    'organization': {'description': 'Organization/affiliation '\n                                                    'of the contact.',\n                                     'type': 'string'},\n                    'phones': {'description': 'Telephone numbers at which '\n                                              'contact can be made.',\n                               'items': {'properties': {'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                                                                  'description': 'The '\n                                                                                 'type '\n                                                                                 'of '\n                                                                                 'phone '\n                                                                                 'number '\n                                                                                 '(e.g. '\n                                                                                 'home, '\n                                                                                 'work, '\n                                                                                 'fax, '\n                                                                                 'etc.).'},\n                                                        'value': {'description': 'The '\n                                                                                 'value '\n                                                                                 'is '\n                                                                                 'the '\n                                                                                 'phone '\n                                                                                 'number '\n                                                                                 'itself.',\n                                                                  'example': '+14165550142',\n                                                                  'pattern': '^\\\\+[1-9]{1}[0-9]{3,14}$',\n                                                                  'type': 'string'}},\n                                         'required': ['value'],\n                                         'type': 'object'},\n                               'type': 'array'},\n                    'position': {'description': 'The name of the role or '\n                                                'position of the '\n                                                'responsible person taken '\n                                                \"from the organization's \"\n                                                'formal organizational '\n                                                'hierarchy or chart.',\n                                 'type': 'string'},\n                    'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                              'description': 'The set of named duties, job '\n                                             'functions and/or permissions '\n                                             'associated with this '\n                                             'contact. (e.g. developer, '\n                                             'administrator, etc.).'}},\n     'type': 'object'}\n\nOn instance:\n    {'contactpunt': [{'a': 'vcard:Individual',\n                      'fn': 'InfoDesk',\n                      'hasEmail': 'mailto:dpi-gi@kadaster.nl',\n                      'organization-name': {'nl': 'Directie Operatie, '\n                                                  'Dienstverlening en '\n                                                  'Registratie, afdeling '\n                                                  'Data-, Proces- en '\n                                                  'Informatiemanagement'}}]}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/dcat/contact/example_3_1.json",
-            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/contact/example_3_1.json",
-            "exampleIndex": 3,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": false,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/contact-oapr.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_3_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_3_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_3_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_3_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": false,
-                  "exception": "ValidationError",
-                  "errorMessage": "{'contacts': [{'name': 'World Ozone and Ultraviolet Radiation Data Centre', 'links': [{'href': 'https://woudc.org', 'rel': 'about', 'type': 'text/html'}], 'roles': ['publisher']}]} is not valid under any of the given schemas",
-                  "isError": true,
-                  "message": "ValidationError: {'contacts': [{'name': 'World Ozone and Ultraviolet Radiation Data Centre', 'links': [{'href': 'https://woudc.org', 'rel': 'about', 'type': 'text/html'}], 'roles': ['publisher']}]} is not valid under any of the given schemas\n\nFailed validating 'anyOf' in schema['allOf'][0]:\n    {'$comment': 'Adapted from '\n                 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/contact.yaml',\n     'anyOf': [{'required': ['name']}, {'required': ['organization']}],\n     'description': 'Identification of, and means of communication with, '\n                    'person responsible\\n'\n                    'for the resource.',\n     'properties': {'addresses': {'description': 'Physical location at '\n                                                 'which contact can be '\n                                                 'made.',\n                                  'items': {'properties': {'administrativeArea': {'description': 'State '\n                                                                                                 'or '\n                                                                                                 'province '\n                                                                                                 'of '\n                                                                                                 'the '\n                                                                                                 'location.',\n                                                                                  'type': 'string'},\n                                                           'city': {'description': 'City '\n                                                                                   'for '\n                                                                                   'the '\n                                                                                   'location.',\n                                                                    'type': 'string'},\n                                                           'country': {'description': 'Country '\n                                                                                      'of '\n                                                                                      'the '\n                                                                                      'physical '\n                                                                                      'address.  '\n                                                                                      'ISO '\n                                                                                      '3166-1 '\n                                                                                      'is '\n                                                                                      'recommended.',\n                                                                       'type': 'string'},\n                                                           'deliveryPoint': {'description': 'Address '\n                                                                                            'lines '\n                                                                                            'for '\n                                                                                            'the '\n                                                                                            'location.',\n                                                                             'items': {'type': 'string'},\n                                                                             'type': 'array'},\n                                                           'postalCode': {'description': 'ZIP '\n                                                                                         'or '\n                                                                                         'other '\n                                                                                         'postal '\n                                                                                         'code.',\n                                                                          'type': 'string'},\n                                                           'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                                                                     'description': 'The '\n                                                                                    'type '\n                                                                                    'of '\n                                                                                    'address '\n                                                                                    '(e.g. '\n                                                                                    'office, '\n                                                                                    'home, '\n                                                                                    'etc.).'}},\n                                            'type': 'object'},\n                                  'type': 'array'},\n                    'contactInstructions': {'description': 'Supplemental '\n                                                           'instructions '\n                                                           'on how or when '\n                                                           'to contact '\n                                                           'the\\n'\n                                                           'responsible '\n                                                           'party.',\n                                            'type': 'string'},\n                    'emails': {'description': 'Email addresses at which '\n                                              'contact can be made.',\n                               'items': {'properties': {'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                                                                  'description': 'The '\n                                                                                 'type '\n                                                                                 'of '\n                                                                                 'email '\n                                                                                 '(e.g. '\n                                                                                 'home, '\n                                                                                 'work, '\n                                                                                 'etc.).'},\n                                                        'value': {'description': 'The '\n                                                                                 'value '\n                                                                                 'is '\n                                                                                 'the '\n                                                                                 'email '\n                                                                                 'number '\n                                                                                 'itself.',\n                                                                  'format': 'email',\n                                                                  'type': 'string'}},\n                                         'required': ['value'],\n                                         'type': 'object'},\n                               'type': 'array'},\n                    'hoursOfService': {'description': 'Time period when '\n                                                      'the contact can be '\n                                                      'contacted.',\n                                       'example': 'Hours: Mo-Fr 10am-7pm '\n                                                  'Sa 10am-22pm Su '\n                                                  '10am-21pm',\n                                       'type': 'string'},\n                    'identifier': {'description': 'A value uniquely '\n                                                  'identifying a contact.',\n                                   'type': 'string'},\n                    'links': {'description': 'On-line information about '\n                                             'the contact.',\n                              'items': {'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'},\n                                                  {'required': ['type'],\n                                                   'type': 'object'}]},\n                              'type': 'array'},\n                    'logo': {'allOf': [{'$ref': 'https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml'},\n                                       {'properties': {'rel': {'enum': ['icon']}},\n                                        'required': ['rel', 'type'],\n                                        'type': 'object'}],\n                             'description': 'Graphic identifying a '\n                                            'contact. The link relation '\n                                            'should be `icon` and the '\n                                            'media type should be an image '\n                                            'media type.'},\n                    'name': {'description': 'The name of the responsible '\n                                            'person.',\n                             'type': 'string'},\n                    'organization': {'description': 'Organization/affiliation '\n                                                    'of the contact.',\n                                     'type': 'string'},\n                    'phones': {'description': 'Telephone numbers at which '\n                                              'contact can be made.',\n                               'items': {'properties': {'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                                                                  'description': 'The '\n                                                                                 'type '\n                                                                                 'of '\n                                                                                 'phone '\n                                                                                 'number '\n                                                                                 '(e.g. '\n                                                                                 'home, '\n                                                                                 'work, '\n                                                                                 'fax, '\n                                                                                 'etc.).'},\n                                                        'value': {'description': 'The '\n                                                                                 'value '\n                                                                                 'is '\n                                                                                 'the '\n                                                                                 'phone '\n                                                                                 'number '\n                                                                                 'itself.',\n                                                                  'example': '+14165550142',\n                                                                  'pattern': '^\\\\+[1-9]{1}[0-9]{3,14}$',\n                                                                  'type': 'string'}},\n                                         'required': ['value'],\n                                         'type': 'object'},\n                               'type': 'array'},\n                    'position': {'description': 'The name of the role or '\n                                                'position of the '\n                                                'responsible person taken '\n                                                \"from the organization's \"\n                                                'formal organizational '\n                                                'hierarchy or chart.',\n                                 'type': 'string'},\n                    'roles': {'$ref': 'https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/roles/schema.yaml',\n                              'description': 'The set of named duties, job '\n                                             'functions and/or permissions '\n                                             'associated with this '\n                                             'contact. (e.g. developer, '\n                                             'administrator, etc.).'}},\n     'type': 'object'}\n\nOn instance:\n    {'contacts': [{'links': [{'href': 'https://woudc.org',\n                              'rel': 'about',\n                              'type': 'text/html'}],\n                   'name': 'World Ozone and Ultraviolet Radiation Data '\n                           'Centre',\n                   'roles': ['publisher']}]}"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 3,
-        "passed": 1,
-        "failed": 2
-      }
-    },
     "geonovum-labs.bbr.dcat.dcat-dataset-records": {
       "title": "Validation report for geonovum-labs.bbr.dcat.dcat-dataset-records - DCAT-Dataset/Records binding",
       "bblockName": "DCAT-Dataset/Records binding",
       "bblockId": "geonovum-labs.bbr.dcat.dcat-dataset-records",
-      "generated": "2026-05-11T21:07:07.161784+00:00",
+      "generated": "2026-05-21T14:28:23.036197+00:00",
       "result": true,
       "items": [
         {
@@ -377,7 +200,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 57,
+                  "size": 61,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -401,23 +224,6 @@
               "entries": [
                 {
                   "op": "shacl-report",
-                  "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
-                  "focusNodes": {
-                    "rec:testAllVarsInTemplate": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n - Shape rec:testAllVarsInTemplate: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
                   "isError": false,
@@ -426,9 +232,6 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
                     "geojson:GeometryShape/sh:or/rdf:first": {
                       "nodes": []
                     },
@@ -437,6 +240,9 @@
                         "<file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>"
                       ]
                     },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
                     "geojson:LinkShape": {
                       "nodes": []
                     },
@@ -445,84 +251,8 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "geonovum-labs.bbr.dcat.uplift-example": {
-      "title": "Validation report for geonovum-labs.bbr.dcat.uplift-example - Semantic uplift example",
-      "bblockName": "Semantic uplift example",
-      "bblockId": "geonovum-labs.bbr.dcat.uplift-example",
-      "generated": "2026-05-11T21:07:07.873626+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/dcat/uplift-example/example_1_1.json",
-            "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/uplift-example/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using ./examples/ex.json from examples"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
                 },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 14,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
                 {
                   "op": "shacl-report",
                   "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
@@ -539,37 +269,6 @@
                   },
                   "isError": false,
                   "message": "Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n - Shape rec:testAllVarsInTemplate: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<https://data.overheid.nl/dataset/top10nl>"
-                      ]
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://data.overheid.nl/dataset/top10nl>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
                 }
               ]
             }
@@ -587,7 +286,7 @@
       "title": "Validation report for geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records - DCAT-AP-NL-DataService/Records binding",
       "bblockName": "DCAT-AP-NL-DataService/Records binding",
       "bblockId": "geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records",
-      "generated": "2026-05-11T21:07:08.779958+00:00",
+      "generated": "2026-05-21T14:28:23.944692+00:00",
       "result": false,
       "items": [
         {
@@ -607,6 +306,10 @@
               "title": "Files",
               "entries": [
                 {
+                  "isError": false,
+                  "message": "Using examples/bag-api.geojson from examples"
+                },
+                {
                   "op": "jsonld-uplift",
                   "isError": false,
                   "message": "JSON-LD context is present - uplifting"
@@ -621,7 +324,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 56,
+                  "size": 57,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -632,11 +335,12 @@
               "title": "JSON Schema",
               "entries": [
                 {
-                  "exception": "JSONDecodeError",
-                  "line": 103,
-                  "col": 5,
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "['http://www.w3.org/ns/dcat#DataService', 'http://www.w3.org/ns/prov#Entity'] is not of type 'string'",
                   "isError": true,
-                  "message": "Error parsing JSON example: Expecting property name enclosed in double quotes: line 103 column 5 (char 4193) on or near line 103 column 5"
+                  "message": "ValidationError: ['http://www.w3.org/ns/dcat#DataService', 'http://www.w3.org/ns/prov#Entity'] is not of type 'string'\n\nFailed validating 'type' in schema['allOf'][0]['allOf'][0]['allOf'][0]['properties']['properties']['properties']['type']:\n    {'description': 'The nature or genre of the resource. The value should '\n                    'be a code, convenient for filtering records. Where '\n                    'available, a link to the canonical URI of the record '\n                    \"type resource will be added to the 'links' property.\",\n     'maxLength': 64,\n     'type': 'string'}\n\nOn instance['properties']['type']:\n    ['http://www.w3.org/ns/dcat#DataService',\n     'http://www.w3.org/ns/prov#Entity']"
                 }
               ]
             },
@@ -647,28 +351,40 @@
                 {
                   "op": "shacl-report",
                   "shaclFile": "https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl",
-                  "graph": "@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix dcatapnl-sh: <http://modellen.geostandaarden.nl/dcat-ap-nl/id/shape/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:license\" ;\n            sh:resultPath dct:license ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_license_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointDescription\" ;\n            sh:resultPath dcat:endpointDescription ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_endpointDescription_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:theme\" ;\n            sh:resultPath dcat:theme ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_theme_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:publisher\" ;\n            sh:resultPath dct:publisher ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_publisher_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:accessRights\" ;\n            sh:resultPath dct:accessRights ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_accessRights_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:contactPoint\" ;\n            sh:resultPath dcat:contactPoint ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_contactPoint_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:identifier\" ;\n            sh:resultPath dct:identifier ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_identifier_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ] .\n\n",
+                  "graph": "@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix dcatapnl-sh: <http://modellen.geostandaarden.nl/dcat-ap-nl/id/shape/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:contactPoint\" ;\n            sh:resultPath dcat:contactPoint ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_contactPoint_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:theme\" ;\n            sh:resultPath dcat:theme ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_theme_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:publisher\" ;\n            sh:resultPath dct:publisher ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_publisher_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:identifier\" ;\n            sh:resultPath dct:identifier ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_identifier_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointDescription\" ;\n            sh:resultPath dcat:endpointDescription ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_endpointDescription_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Value is not of Node Kind sh:Literal\" ;\n            sh:resultPath dcat:keyword ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_keyword_nodeKind ;\n            sh:value [ ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:accessRights\" ;\n            sh:resultPath dct:accessRights ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_accessRights_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:license\" ;\n            sh:resultPath dct:license ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DataServiceShape_license_minCount ] .\n\n",
                   "isError": true,
                   "message": "Validation result for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:\n  Validation Report\n  Conforms: False\n  Results (14):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_accessRights_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:accessRights\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:accessRights\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_contactPoint_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:contactPoint\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:contactPoint\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_endpointDescription_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:endpointDescription\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointDescription\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_identifier_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:identifier\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:identifier\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_keyword_nodeKind\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind sh:Literal\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_license_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:license\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:license\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_publisher_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:publisher\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:publisher\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DataServiceShape_theme_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:theme\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:theme\n  "
                 },
                 {
                   "shaclFile": "https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl",
                   "focusNodes": {
-                    "dcatapnl-sh:TemporalLiteralShape": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:DatasetShape": {
-                      "nodes": []
-                    },
                     "dcatapnl-sh:DataServiceShape": {
                       "nodes": [
                         "<urn:ogc:record:generated-id>"
                       ]
                     },
-                    "dcatapnl-sh:DistributionShape": {
+                    "dcatapnl-sh:CatalogShape": {
                       "nodes": []
                     },
-                    "_:n6d3a3fff57a5493992c549165ae1c8b3b4": {
+                    "dcatapnl-sh:DatasetShape": {
+                      "nodes": []
+                    },
+                    "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "dcatapnl-sh:TemporalLiteralShape": {
+                      "nodes": []
+                    },
+                    "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
+                      "nodes": []
+                    },
+                    "_:n6fe3573813564eddabea41bd1a859f60b4": {
+                      "nodes": []
+                    },
+                    "_:n6fe3573813564eddabea41bd1a859f60b3": {
+                      "nodes": []
+                    },
+                    "dcatapnl-sh:DistributionShape": {
                       "nodes": []
                     },
                     "dcatapnl-sh:DatasetSeriesShape": {
@@ -676,22 +392,218 @@
                     },
                     "dcatapnl-sh:CatalogRecordShape": {
                       "nodes": []
-                    },
-                    "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape dcatapnl-sh:DataServiceShape: <urn:ogc:record:generated-id>\n - Shape dcatapnl-sh:CatalogShape: *none*\n - Shape dcatapnl-sh:DatasetShape: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape _:n6fe3573813564eddabea41bd1a859f60b4: *none*\n - Shape _:n6fe3573813564eddabea41bd1a859f60b3: *none*\n - Shape dcatapnl-sh:DistributionShape: *none*\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
+                  "graph": "@prefix dc1: <http://purl.org/dc/terms/> .\n@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix shacl: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a shacl:ValidationReport ;\n    shacl:conforms false ;\n    shacl:result [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value <http://modellen.geostandaarden.nl/dcat-ap-nl/> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:description ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointURL\" ;\n            shacl:resultPath dcat:endpointURL ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:MinCountConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:title ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97> ;\n            shacl:value [ ] ] .\n\n",
+                  "isError": true,
+                  "message": "Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (12):\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dc1:description\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:endpointURL\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointURL\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core>\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: <http://modellen.geostandaarden.nl/dcat-ap-nl/>\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dc1:title\n  \tMessage: Value is not of Node Kind shacl:Literal\n  "
+                },
+                {
+                  "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
+                  "focusNodes": {
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>": {
                       "nodes": []
                     },
-                    "dcatapnl-sh:CatalogShape": {
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape>": {
                       "nodes": []
                     },
-                    "_:n6d3a3fff57a5493992c549165ae1c8b3b3": {
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>": {
                       "nodes": []
                     },
-                    "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape>": {
+                      "nodes": [
+                        "<urn:ogc:record:generated-id>"
+                      ]
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape>": {
+                      "nodes": []
+                    },
+                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape>": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:DatasetShape: *none*\n - Shape dcatapnl-sh:DataServiceShape: <urn:ogc:record:generated-id>\n - Shape dcatapnl-sh:DistributionShape: *none*\n - Shape _:n6d3a3fff57a5493992c549165ae1c8b3b4: *none*\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape dcatapnl-sh:CatalogShape: *none*\n - Shape _:n6d3a3fff57a5493992c549165ae1c8b3b3: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape>: <urn:ogc:record:generated-id>\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape>: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
+                  "focusNodes": {
+                    ":DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "dcat:CatalogRecord": {
+                      "nodes": []
+                    },
+                    "dcat:Distribution": {
+                      "nodes": []
+                    },
+                    "dcat:Catalog": {
+                      "nodes": []
+                    },
+                    ":DateOrDateTimeDataType/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    ":DateOrDateTimeDataType": {
+                      "nodes": []
+                    },
+                    "dcat:Dataset": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:\n - Shape :DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first: *none*\n - Shape dcat:CatalogRecord: *none*\n - Shape dcat:Distribution: *none*\n - Shape dcat:Catalog: *none*\n - Shape :DateOrDateTimeDataType/sh:or/rdf:first: *none*\n - Shape :DateOrDateTimeDataType: *none*\n - Shape dcat:Dataset: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<urn:ogc:record:generated-id>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <urn:ogc:record:generated-id>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -709,214 +621,6 @@
                   },
                   "isError": false,
                   "message": "Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n - Shape rec:testAllVarsInTemplate: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>"
-                      ]
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <urn:ogc:record:generated-id>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
-                  "focusNodes": {
-                    "dcat:Dataset": {
-                      "nodes": []
-                    },
-                    ":DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "dcat:Catalog": {
-                      "nodes": []
-                    },
-                    "dcat:CatalogRecord": {
-                      "nodes": []
-                    },
-                    ":DateOrDateTimeDataType": {
-                      "nodes": []
-                    },
-                    "dcat:Distribution": {
-                      "nodes": []
-                    },
-                    ":DateOrDateTimeDataType/sh:or/rdf:first": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:\n - Shape dcat:Dataset: *none*\n - Shape :DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first: *none*\n - Shape dcat:Catalog: *none*\n - Shape dcat:CatalogRecord: *none*\n - Shape :DateOrDateTimeDataType: *none*\n - Shape dcat:Distribution: *none*\n - Shape :DateOrDateTimeDataType/sh:or/rdf:first: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
-                  "graph": "@prefix dc1: <http://purl.org/dc/terms/> .\n@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix shacl: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a shacl:ValidationReport ;\n    shacl:conforms false ;\n    shacl:result [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:title ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:description ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointURL\" ;\n            shacl:resultPath dcat:endpointURL ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:MinCountConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value <http://modellen.geostandaarden.nl/dcat-ap-nl/> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ] .\n\n",
-                  "isError": true,
-                  "message": "Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (12):\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dc1:description\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/83ad7325cc6681e43e44550c269847065a95a14f>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:endpointURL\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:endpointURL\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: <http://modellen.geostandaarden.nl/dcat-ap-nl/>\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core>\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/d5d74574f70f9a979535f3624608f88180dd0c97>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dc1:title\n  \tMessage: Value is not of Node Kind shacl:Literal\n  "
-                },
-                {
-                  "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
-                  "focusNodes": {
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape>": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>"
-                      ]
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape>: <urn:ogc:record:generated-id>\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>: *none*\n"
                 }
               ]
             }
@@ -934,7 +638,7 @@
       "title": "Validation report for geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records - DCAT-AP-NL-Dataset/Records binding",
       "bblockName": "DCAT-AP-NL-Dataset/Records binding",
       "bblockId": "geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records",
-      "generated": "2026-05-11T21:07:14.550786+00:00",
+      "generated": "2026-05-21T14:28:24.517702+00:00",
       "result": false,
       "items": [
         {
@@ -955,326 +659,18 @@
               "entries": [
                 {
                   "isError": false,
-                  "message": "Using examples/bag.geojson from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 73,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
+                  "message": "Using examples/bomen.geojson from examples"
                 }
               ]
             },
             {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
+              "name": "UNKNOWN",
+              "title": "Unknown errors",
               "entries": [
                 {
-                  "op": "validation",
-                  "result": false,
-                  "exception": "ValidationError",
-                  "errorMessage": "{'type': 'Polygon', 'coordinates': [[[2.4807, 53.7187], [7.9685, 53.7187], [7.9685, 50.6058], [2.4807, 50.6058], [2.4807, 53.7187]]]} is valid under each of {'$ref': 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/geometryGeoJSON.yaml'}, {'type': 'object', 'nullable': True}",
+                  "exception": "AttributeError",
                   "isError": true,
-                  "message": "ValidationError: {'type': 'Polygon', 'coordinates': [[[2.4807, 53.7187], [7.9685, 53.7187], [7.9685, 50.6058], [2.4807, 50.6058], [2.4807, 53.7187]]]} is valid under each of {'$ref': 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/geometryGeoJSON.yaml'}, {'type': 'object', 'nullable': True}\n\nFailed validating 'oneOf' in schema['properties']['geometry']:\n    {'oneOf': [{'nullable': True, 'type': 'object'},\n               {'$ref': 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/geometryGeoJSON.yaml'}]}\n\nOn instance['geometry']:\n    {'coordinates': [[[2.4807, 53.7187],\n                      [7.9685, 53.7187],\n                      [7.9685, 50.6058],\n                      [2.4807, 50.6058],\n                      [2.4807, 53.7187]]],\n     'type': 'Polygon'}"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl",
-                  "graph": "@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix dcatapnl-sh: <http://modellen.geostandaarden.nl/dcat-ap-nl/id/shape/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a dcat:Distribution ;\n                    dct:description [ ] ;\n                    dct:title [ ] ;\n                    dcat:license \"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\" ] ;\n            sh:resultMessage \"Less than 1 values on [ dcat:license Literal(\\\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\\\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dct:license\" ;\n            sh:resultPath dct:license ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DistributionShape_license_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode [ a dcat:Distribution ;\n                    dct:description [ ] ;\n                    dct:title [ ] ;\n                    dcat:license \"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\" ] ;\n            sh:resultMessage \"Less than 1 values on [ dcat:license Literal(\\\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\\\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dct:license\" ;\n            sh:resultPath dct:license ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DistributionShape_license_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:accessRights\" ;\n            sh:resultPath dct:accessRights ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DatasetShape_accessRights_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:contactPoint\" ;\n            sh:resultPath dcat:contactPoint ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DatasetShape_contactPoint_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:publisher\" ;\n            sh:resultPath dct:publisher ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DatasetShape_publisher_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dcat:theme\" ;\n            sh:resultPath dcat:theme ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DatasetShape_theme_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:identifier\" ;\n            sh:resultPath dct:identifier ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DatasetShape_identifier_minCount ],\n        [ a sh:ValidationResult ;\n            sh:focusNode <urn:ogc:record:generated-id> ;\n            sh:resultMessage \"Less than 1 values on <urn:ogc:record:generated-id>->dct:creator\" ;\n            sh:resultPath dct:creator ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape dcatapnl-sh:DatasetShape_creator_minCount ] .\n\n",
-                  "isError": true,
-                  "message": "Validation result for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:\n  Validation Report\n  Conforms: False\n  Results (8):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DatasetShape_accessRights_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:accessRights\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:accessRights\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DatasetShape_contactPoint_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:contactPoint\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:contactPoint\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DatasetShape_creator_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:creator\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:creator\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DatasetShape_identifier_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:identifier\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:identifier\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DatasetShape_publisher_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dct:publisher\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dct:publisher\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DatasetShape_theme_minCount\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tResult Path: dcat:theme\n  \tMessage: Less than 1 values on <urn:ogc:record:generated-id>->dcat:theme\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DistributionShape_license_minCount\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tResult Path: dct:license\n  \tMessage: Less than 1 values on [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dct:license\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: dcatapnl-sh:DistributionShape_license_minCount\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tResult Path: dct:license\n  \tMessage: Less than 1 values on [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dct:license\n  "
-                },
-                {
-                  "shaclFile": "https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl",
-                  "focusNodes": {
-                    "dcatapnl-sh:TemporalLiteralShape": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:DatasetShape": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>"
-                      ]
-                    },
-                    "dcatapnl-sh:DataServiceShape": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:DistributionShape": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution",
-                        "<urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution"
-                      ]
-                    },
-                    "dcatapnl-sh:DatasetSeriesShape": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "_:n3b6eaac6ad80492185864490de76f9c5b3": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:CatalogRecordShape": {
-                      "nodes": []
-                    },
-                    "_:n3b6eaac6ad80492185864490de76f9c5b4": {
-                      "nodes": []
-                    },
-                    "dcatapnl-sh:CatalogShape": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:\n - Shape dcatapnl-sh:TemporalLiteralShape: *none*\n - Shape dcatapnl-sh:DatasetShape: <urn:ogc:record:generated-id>\n - Shape dcatapnl-sh:DataServiceShape: *none*\n - Shape dcatapnl-sh:DistributionShape: <urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution,<urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution\n - Shape dcatapnl-sh:DatasetSeriesShape: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*\n - Shape _:n3b6eaac6ad80492185864490de76f9c5b3: *none*\n - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*\n - Shape dcatapnl-sh:CatalogRecordShape: *none*\n - Shape _:n3b6eaac6ad80492185864490de76f9c5b4: *none*\n - Shape dcatapnl-sh:CatalogShape: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl",
-                  "focusNodes": {
-                    "rec:testAllVarsInTemplate": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl:\n - Shape rec:testAllVarsInTemplate: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>"
-                      ]
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <urn:ogc:record:generated-id>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl",
-                  "focusNodes": {
-                    ":DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "dcat:Dataset": {
-                      "nodes": []
-                    },
-                    ":DateOrDateTimeDataType/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "dcat:Catalog": {
-                      "nodes": []
-                    },
-                    "dcat:CatalogRecord": {
-                      "nodes": []
-                    },
-                    ":DateOrDateTimeDataType": {
-                      "nodes": []
-                    },
-                    "dcat:Distribution": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:\n - Shape :DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first: *none*\n - Shape dcat:Dataset: *none*\n - Shape :DateOrDateTimeDataType/sh:or/rdf:first: *none*\n - Shape dcat:Catalog: *none*\n - Shape dcat:CatalogRecord: *none*\n - Shape :DateOrDateTimeDataType: *none*\n - Shape dcat:Distribution: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
-                  "graph": "@prefix dc1: <http://purl.org/dc/terms/> .\n@prefix dcat: <http://www.w3.org/ns/dcat#> .\n@prefix ns1: <dcterms:> .\n@prefix shacl: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a shacl:ValidationReport ;\n    shacl:conforms false ;\n    shacl:result [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode _:N9cc12a13c5154fad8d056a761a893212 ;\n            shacl:resultMessage \"Less than 1 values on [ dcat:license Literal(\\\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\\\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dcat:accessURL\" ;\n            shacl:resultPath dcat:accessURL ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:MinCountConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode _:N9cc12a13c5154fad8d056a761a893212 ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:title ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode _:Nc25d2a2289b54de08a9177e197ea4fa9 ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:description ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value [ a \"http://purl.org/dc/terms/Standard\" ;\n                    ns1:issued \"2010-12-08\" ;\n                    ns1:title [ ] ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode _:Nc25d2a2289b54de08a9177e197ea4fa9 ;\n            shacl:resultMessage \"Less than 1 values on [ dcat:license Literal(\\\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\\\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dcat:accessURL\" ;\n            shacl:resultPath dcat:accessURL ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:MinCountConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:description ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/6cae9880e515253132af1452a38a8a5827165149> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode _:Nc25d2a2289b54de08a9177e197ea4fa9 ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:title ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode _:N9cc12a13c5154fad8d056a761a893212 ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:description ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dcat:keyword ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857> ;\n            shacl:value [ ] ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value does not have class dc1:Standard\" ;\n            shacl:resultPath dc1:conformsTo ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:ClassConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac> ;\n            shacl:value <http://modellen.geostandaarden.nl/dcat-ap-nl/> ],\n        [ a shacl:ValidationResult ;\n            shacl:focusNode <urn:ogc:record:generated-id> ;\n            shacl:resultMessage \"Value is not of Node Kind shacl:Literal\" ;\n            shacl:resultPath dc1:title ;\n            shacl:resultSeverity shacl:Violation ;\n            shacl:sourceConstraintComponent shacl:NodeKindConstraintComponent ;\n            shacl:sourceShape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97> ;\n            shacl:value [ ] ] .\n\n_:N9cc12a13c5154fad8d056a761a893212 a dcat:Distribution ;\n    dc1:description [ ] ;\n    dc1:title [ ] ;\n    dcat:license \"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\" .\n\n_:Nc25d2a2289b54de08a9177e197ea4fa9 a dcat:Distribution ;\n    dc1:description [ ] ;\n    dc1:title [ ] ;\n    dcat:license \"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\" .\n\n",
-                  "isError": true,
-                  "message": "Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (18):\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/5bc739112726cd993c279f81380611cafc3a9857>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dcat:keyword\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/6cae9880e515253132af1452a38a8a5827165149>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dc1:description\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: <http://modellen.geostandaarden.nl/dcat-ap-nl/>\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ns2:issued Literal(\"2010-12-08\") ; ns2:title [ ] ; rdf:type Literal(\"http://purl.org/dc/terms/Standard\") ]\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core>\n  \tResult Path: dc1:conformsTo\n  \tMessage: Value does not have class dc1:Standard\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/d5d74574f70f9a979535f3624608f88180dd0c97>\n  \tFocus Node: <urn:ogc:record:generated-id>\n  \tValue Node: [ ]\n  \tResult Path: dc1:title\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149>\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tValue Node: [ ]\n  \tResult Path: dc1:description\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149>\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tValue Node: [ ]\n  \tResult Path: dc1:description\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97>\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tValue Node: [ ]\n  \tResult Path: dc1:title\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97>\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tValue Node: [ ]\n  \tResult Path: dc1:title\n  \tMessage: Value is not of Node Kind shacl:Literal\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19>\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tResult Path: dcat:accessURL\n  \tMessage: Less than 1 values on [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dcat:accessURL\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: shacl:Violation\n  \tSource Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19>\n  \tFocus Node: [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]\n  \tResult Path: dcat:accessURL\n  \tMessage: Less than 1 values on [ dcat:license Literal(\"http://creativecommons.org/publicdomain/mark/1.0/deed.nl\") ; dct:description [ ] ; dct:title [ ] ; rdf:type dcat:Distribution ]->dcat:accessURL\n  "
-                },
-                {
-                  "shaclFile": "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
-                  "focusNodes": {
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape>": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>"
-                      ]
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>": {
-                      "nodes": []
-                    },
-                    "<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>": {
-                      "nodes": [
-                        "<urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution",
-                        "<urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape>: <urn:ogc:record:generated-id>\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#odrl:PolicyShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:AttributionShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:durationShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#vcard:KindShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:StandardShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#ChecksumAlgorithmShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:decimalShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:ResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:MediaTypeOrExtentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:LiteralShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:RightsStatementShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:nonNegativeIntegerShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#locn:GeometryShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#prov:ActivityShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#rdfs:ResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RoleShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:hexBinaryShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:ProvenanceStatementShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TemporalLiteralShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:mediaTypeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#eli:LegalResourceShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:DocumentShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape>: *none*\n - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>: <urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution,<urn:ogc:record:generated-id>/rdfs:seeAlso/dcat:distribution\n"
+                  "message": "Traceback (most recent call last):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 967, in resolve_fragment\n    document = document[part]\n,KeyError: 'definitions'\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validation/json_.py\", line 200, in validate\n    validate_json(json_doc, schema_validator)\n,  File \"/src/ogc/bblocks/validation/json_.py\", line 44, in validate_json\n    error = jsonschema.exceptions.best_match(validator.iter_errors(instance))\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/exceptions.py\", line 384, in best_match\n    best = next(errors, None)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 362, in allOf\n    yield from validator.descend(instance, subschema, schema_path=index)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 298, in ref\n    yield from validator.descend(instance, resolved)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 332, in properties\n    yield from validator.descend(\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 76, in items\n    yield from validator.descend(\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 305, in descend\n    for error in self.evolve(schema=schema).iter_errors(instance):\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 288, in iter_errors\n    for error in errors:\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/_validators.py\", line 294, in ref\n    scope, resolved = validator.resolver.resolve(ref)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 895, in resolve\n    match = self._find_in_subschemas(url)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 884, in _find_in_subschemas\n    subschema = self.resolve_fragment(subschema, fragment)\n,  File \"/venv/lib/python3.10/site-packages/jsonschema/validators.py\", line 969, in resolve_fragment\n    raise exceptions.RefResolutionError(\n,jsonschema.exceptions.RefResolutionError: Unresolvable JSON pointer: 'definitions/Link'\n,\nDuring handling of the above exception, another exception occurred:\n\n,Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 199, in _validate_resource\n    result = validator.validate(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/json_.py\", line 221, in validate\n    'errorMessage': e.message,\n,AttributeError: 'RefResolutionError' object has no attribute 'message'\n"
                 }
               ]
             }

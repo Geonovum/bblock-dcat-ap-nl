@@ -17,22 +17,28 @@ __NOTE:__ Still work in progress !! context mapping is not complete for example
 ## Examples
 
 ### DCAT-AP-NL with OGC API Records in JSON
-An example based on the BAG metadata record from the NGR. 
+An example based on the Bomen metadata record . 
 Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 #### json
 ```json
 {
-  "type": "Feature",
-  "conformsTo": [
-    "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core",
-    "http://modellen.geostandaarden.nl/dcat-ap-nl/"
-  ],
-  "id": "urn:ogc:record:generated-id",
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-      [
-        [
+    "id": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83",
+    "conformsTo": [
+        "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
+    ],
+    "type": "Feature",
+    "time": {
+        "interval": [
+        "2024-09-30",
+        "9999-12-31"
+    ],
+    "resolution": "P1D"
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
           2.4807,
           53.7187
         ],
@@ -52,417 +58,74 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
           2.4807,
           53.7187
         ]
-      ]
-    ]
-  },
-  "properties": {
-    "type": [
-      "http://www.w3.org/ns/dcat#Dataset",
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "contactPoint": {
-      "organizationName": {
-        "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
-      },
-      "email": "mailto:dpi-gi@kadaster.nl"
-    },
-    "accrualPeriodicity":  "http://publications.europa.eu/resource/authority/frequency/DAILY",
-    "accessRights": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
-    "conformsTo": {
-      "rdf:type": "http://purl.org/dc/terms/Standard",
-      "dcterms:issued": "2010-12-08",
-      "dcterms:title": {
-        "nl": "VERORDENING (EU) Nr. 1089/2010 VAN DE COMMISSIE van 23 november 2010 ter uitvoering van Richtlijn 2007/2/EG van het Europees Parlement en de Raad betreffende de interoperabiliteit van verzamelingen ruimtelijke gegevens en van diensten met betrekking tot ruimtelijke gegevens"
-      }
-    },
-    "created": "2013-02-18",
-    "description": {
-      "nl": "De gegevens bestaan uit BAG-panden en een deelselectie van BAG-gegevens van deze panden en de zich daarin bevindende verblijfsobjecten. Ook de ligplaatsen en standplaatsen zijn hierin opgenomen met een deelselectie van BAG-gegevens. De gegevens van de nummeraanduiding zijn in deze services onderdeel van de adresseerbare objecten, hierbij wordt slechts 1 adres opgenomen, dus objecten met meerdere adressen (hoofd- en nevenadressen) zijn niet compleet. In deze services zitten dus niet alle BAG adressen. Aangezien niet alle BAG gegevens worden geleverd, adviseren wij u om de actuele gegevens in één van de BAG producten te controleren. Raadpleeg de BAG Viewer voor enkele bevragingen van BAG gegevens. Een overzicht van alle beschikbare producten kunt u vinden op de website https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag . De BAG WMS, BAG WFS en BAG API Individuele bevragingen zijn expliciet niet bedoeld voor bulkbevragingen waarmee veel gegevens in één keer worden opgevraagd en in een database worden verwerkt. Wilt u in één keer meer gegevens opvragen, dan raden wij u aan om gebruik te maken van onze BAG Geopackage (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-geopackage) of BAG extract (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-2.0-extract). De BAG Geopackage en de BAG extract kunt u downloaden via de Atom downloadservice: https://service.pdok.nl/lv/bag/atom/bag.xml . Deze dataset wordt ook gebruikt voor het ontsluiten van het INSPIRE thema Gebouwen. Het betreft gebouwcontouren, constructieve onderdelen van gebouwen en ruimtelijke barrieres. Dit betreft niet-geharmoniseerde data uit de basisregistratie Adressen en Gebouwen (BAG). De service wordt dagelijks geactualiseerd."
-    },
-    "identifier": "1fa33d90-79cb-11e2-b92a-0800200c9a66",
-    "language": "http://publications.europa.eu/resource/authority/language/DUT",
-    "provenance": {
-      "description": {
-        "nl": "Ontwikkeld uit de Basisregistratie Adressen en Gebouwen (BAG)"
-      }
-    },
-    "spatial": [
-      {
-        "prefLabel": {
-          "nl": "Nederland"
-        }
-      },
-      {
-        "bbox": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                2.4807,
-                53.7187
-              ],
-              [
-                7.9685,
-                53.7187
-              ],
-              [
-                7.9685,
-                50.6058
-              ],
-              [
-                2.4807,
-                50.6058
-              ],
-              [
-                2.4807,
-                53.7187
-              ]
             ]
-          ]
-        }
-      }
-    ],
-    "temporal": {
-      "dcat:startDate": "1996-01-01",
-      "dcat:endDate": "2025-12-31"
-    },
-    "title": {
-      "nl": "Basisregistratie Adressen en gebouwen (BAG)"
-    },
-    "publisher": {
-      "name": {
-        "nl": "Klantcontactcenter"
-      },
-      "email": "mailto:bag@kadaster.nl"
-    },
-    "creator": {
-      "name": {
-        "nl": "Kadaster"
-      },
-      "email": null
-    },
-    "keywords": [
-      {
-        "nl": "gebouw",
-        "en": "building"
-      },
-      {
-        "nl": "ligplaats"
-      },
-      {
-        "nl": "nummeraanduiding"
-      },
-      {
-        "nl": "pand"
-      },
-      {
-        "nl": "standplaats"
-      },
-      {
-        "nl": "verblijfsobject"
-      },
-      {
-        "nl": "woonplaats"
-      }
-    ],
-    "themes": [
-      {
-        "Concept": "http://publications.europa.eu/resource/authority/data-theme/ECON",
-        "prefLabel": {
-          "nl": "Economie en financiën"
-        }
-      },
-      {
-        "Concept": "http://publications.europa.eu/resource/authority/data-theme/REGI",
-        "prefLabel": {
-          "nl": "Regio's en steden"
-        }
-      }
-    ]
-  },
-  "links": [
-    {
-      "rel": "access",
-      "href": "https://service.pdok.nl/lv/bag/wms/v2_0?request=getCapabilities&service=WMS",
-      "type": null,
-      "distribution":{
-        "type": "dcat:Distribution",
-        "title": {
-          "nl": "BAG (WMS)"
-        },
-        "description": {
-          "nl": "accessPoint"
-        },
-        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
-      }
-    },
-    {
-      "rel": "access",
-      "href": "https://service.pdok.nl/lv/bag/atom/bag.xml",
-      "type": null,
-      "distribution":{
-        "type": "dcat:Distribution",
-        "title": {
-          "nl": "BAG download Geopackage"
-        },
-        "description": {
-          "nl": "accessPoint"
-        },
-        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
-      }
-    }
-  ]
-}
-```
-
-#### jsonld
-```jsonld
-{
-  "@context": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld",
-  "type": "Feature",
-  "conformsTo": [
-    "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core",
-    "http://modellen.geostandaarden.nl/dcat-ap-nl/"
-  ],
-  "id": "urn:ogc:record:generated-id",
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-      [
-        [
-          2.4807,
-          53.7187
-        ],
-        [
-          7.9685,
-          53.7187
-        ],
-        [
-          7.9685,
-          50.6058
-        ],
-        [
-          2.4807,
-          50.6058
-        ],
-        [
-          2.4807,
-          53.7187
         ]
-      ]
+    },
+    "properties": {
+        "created": "2024-09-30",
+        "updated": "2024-12-06T09:49:52Z",
+        "type": "Dataset",
+        "title": "Bomen",
+        "description": "Subset van bomen in de omgeving van Sloten (Amsterdam)",
+        "providers": [
+            {
+                "contactInfo": {
+                    "address": {
+                        "office": {}
+                    },
+                    "email": {
+                        "office": "opendata@amsterdam.nl"
+                    }
+                },
+                "name": null,
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    }
+                ]
+            }
+        ],
+        "externalIds": [
+            {
+                "scheme": "default",
+                "value": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83"
+            }
+        ],
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "Boom",
+                        "url": "https://definities.geostandaarden.nl/ibro/id/begrip/boom"
+                    },
+                    {
+                        "id": "Park",
+                        "url": "https://definities.geostandaarden.nl/ibro/id/begrip/park"
+                    }
+                ],
+                "scheme": "https://definities.geostandaarden.nl/ibro/nl/"
+            }
+        ]
+    },
+    "links": [
+        {
+            "href": "http://localhost:5000/collections/bomen",
+            "rel": "access",
+            "title": "Bomen",
+            "type": "OGC API Features",
+            "distribution":{
+                "type": "dcat:Distribution",
+                    "title": {
+                        "nl": "Bomen (OGC API Features)"
+                    },
+                "description": {
+                    "nl": "API"
+                    },
+                "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
+            }
+        }
     ]
-  },
-  "properties": {
-    "type": [
-      "http://www.w3.org/ns/dcat#Dataset",
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "contactPoint": {
-      "organizationName": {
-        "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
-      },
-      "email": "mailto:dpi-gi@kadaster.nl"
-    },
-    "accrualPeriodicity": "http://publications.europa.eu/resource/authority/frequency/DAILY",
-    "accessRights": "http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse/noConditionsApply",
-    "conformsTo": {
-      "rdf:type": "http://purl.org/dc/terms/Standard",
-      "dcterms:issued": "2010-12-08",
-      "dcterms:title": {
-        "nl": "VERORDENING (EU) Nr. 1089/2010 VAN DE COMMISSIE van 23 november 2010 ter uitvoering van Richtlijn 2007/2/EG van het Europees Parlement en de Raad betreffende de interoperabiliteit van verzamelingen ruimtelijke gegevens en van diensten met betrekking tot ruimtelijke gegevens"
-      }
-    },
-    "created": "2013-02-18",
-    "description": {
-      "nl": "De gegevens bestaan uit BAG-panden en een deelselectie van BAG-gegevens van deze panden en de zich daarin bevindende verblijfsobjecten. Ook de ligplaatsen en standplaatsen zijn hierin opgenomen met een deelselectie van BAG-gegevens. De gegevens van de nummeraanduiding zijn in deze services onderdeel van de adresseerbare objecten, hierbij wordt slechts 1 adres opgenomen, dus objecten met meerdere adressen (hoofd- en nevenadressen) zijn niet compleet. In deze services zitten dus niet alle BAG adressen. Aangezien niet alle BAG gegevens worden geleverd, adviseren wij u om de actuele gegevens in \u00e9\u00e9n van de BAG producten te controleren. Raadpleeg de BAG Viewer voor enkele bevragingen van BAG gegevens. Een overzicht van alle beschikbare producten kunt u vinden op de website https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag . De BAG WMS, BAG WFS en BAG API Individuele bevragingen zijn expliciet niet bedoeld voor bulkbevragingen waarmee veel gegevens in \u00e9\u00e9n keer worden opgevraagd en in een database worden verwerkt. Wilt u in \u00e9\u00e9n keer meer gegevens opvragen, dan raden wij u aan om gebruik te maken van onze BAG Geopackage (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-geopackage) of BAG extract (https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-2.0-extract). De BAG Geopackage en de BAG extract kunt u downloaden via de Atom downloadservice: https://service.pdok.nl/lv/bag/atom/bag.xml . Deze dataset wordt ook gebruikt voor het ontsluiten van het INSPIRE thema Gebouwen. Het betreft gebouwcontouren, constructieve onderdelen van gebouwen en ruimtelijke barrieres. Dit betreft niet-geharmoniseerde data uit de basisregistratie Adressen en Gebouwen (BAG). De service wordt dagelijks geactualiseerd."
-    },
-    "identifier": "1fa33d90-79cb-11e2-b92a-0800200c9a66",
-    "language": "http://publications.europa.eu/resource/authority/language/DUT",
-    "provenance": {
-      "description": {
-        "nl": "Ontwikkeld uit de Basisregistratie Adressen en Gebouwen (BAG)"
-      }
-    },
-    "spatial": [
-      {
-        "prefLabel": {
-          "nl": "Nederland"
-        }
-      },
-      {
-        "bbox": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                2.4807,
-                53.7187
-              ],
-              [
-                7.9685,
-                53.7187
-              ],
-              [
-                7.9685,
-                50.6058
-              ],
-              [
-                2.4807,
-                50.6058
-              ],
-              [
-                2.4807,
-                53.7187
-              ]
-            ]
-          ]
-        }
-      }
-    ],
-    "temporal": {
-      "dcat:startDate": "1996-01-01",
-      "dcat:endDate": "2025-12-31"
-    },
-    "title": {
-      "nl": "Basisregistratie Adressen en gebouwen (BAG)"
-    },
-    "publisher": {
-      "name": {
-        "nl": "Klantcontactcenter"
-      },
-      "email": "mailto:bag@kadaster.nl"
-    },
-    "creator": {
-      "name": {
-        "nl": "Kadaster"
-      },
-      "email": null
-    },
-    "keywords": [
-      {
-        "nl": "gebouw",
-        "en": "building"
-      },
-      {
-        "nl": "ligplaats"
-      },
-      {
-        "nl": "nummeraanduiding"
-      },
-      {
-        "nl": "pand"
-      },
-      {
-        "nl": "standplaats"
-      },
-      {
-        "nl": "verblijfsobject"
-      },
-      {
-        "nl": "woonplaats"
-      }
-    ],
-    "themes": [
-      {
-        "Concept": "http://publications.europa.eu/resource/authority/data-theme/ECON",
-        "prefLabel": {
-          "nl": "Economie en financi\u00ebn"
-        }
-      },
-      {
-        "Concept": "http://publications.europa.eu/resource/authority/data-theme/REGI",
-        "prefLabel": {
-          "nl": "Regio's en steden"
-        }
-      }
-    ]
-  },
-  "links": [
-    {
-      "rel": "access",
-      "href": "https://service.pdok.nl/lv/bag/wms/v2_0?request=getCapabilities&service=WMS",
-      "type": null,
-      "distribution": {
-        "type": "dcat:Distribution",
-        "title": {
-          "nl": "BAG (WMS)"
-        },
-        "description": {
-          "nl": "accessPoint"
-        },
-        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
-      }
-    },
-    {
-      "rel": "access",
-      "href": "https://service.pdok.nl/lv/bag/atom/bag.xml",
-      "type": null,
-      "distribution": {
-        "type": "dcat:Distribution",
-        "title": {
-          "nl": "BAG download Geopackage"
-        },
-        "description": {
-          "nl": "accessPoint"
-        },
-        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
-      }
-    }
-  ]
 }
-```
-
-#### ttl
-```ttl
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <dcterms:> .
-@prefix oa: <http://www.w3.org/ns/oa#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<urn:ogc:record:generated-id> a dcat:Dataset,
-        prov:Entity,
-        geojson:Feature ;
-    dct:conformsTo [ a "http://purl.org/dc/terms/Standard" ;
-            ns2:issued "2010-12-08" ;
-            ns2:title [ ] ],
-        <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
-        <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
-    dct:created "2013-02-18" ;
-    dct:description [ ] ;
-    dct:title [ ] ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/access> ;
-            dcat:distribution [ a dcat:Distribution ;
-                    dct:description [ ] ;
-                    dct:title [ ] ;
-                    dcat:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ] ;
-            oa:hasTarget <https://service.pdok.nl/lv/bag/atom/bag.xml> ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/access> ;
-            dcat:distribution [ a dcat:Distribution ;
-                    dct:description [ ] ;
-                    dct:title [ ] ;
-                    dcat:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ] ;
-            oa:hasTarget <https://service.pdok.nl/lv/bag/wms/v2_0?request=getCapabilities&service=WMS> ] ;
-    dcat:keyword [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ] ;
-    geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
-    rec:language "http://publications.europa.eu/resource/authority/language/DUT" ;
-    rec:themes [ ],
-        [ ] .
-
-
 ```
 
 ## Schema
@@ -472,180 +135,8 @@ $schema: https://json-schema.org/draft/2020-12/schema
 $id: https://geonovum-labs.bbr.dcat.dataset-records.json
 title: DCAT OGC API record definition
 description: DCAT Dataset OGC API record definition
-required:
-- id
-- conformsTo
-properties:
-  id:
-    $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/id
-    x-jsonld-id: '@id'
-  conformsTo:
-    type: array
-    x-jsonld-container: '@set'
-    x-jsonld-id: http://purl.org/dc/terms/conformsTo
-    x-jsonld-type: '@id'
-  type:
-    $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/type
-    x-jsonld-id: '@type'
-  time:
-    oneOf:
-    - enum:
-      - null
-    - type: object
-      properties:
-        date:
-          type: string
-          pattern: ^\d{4}-\d{2}-\d{2}$
-        timestamp:
-          type: string
-          pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$
-        interval:
-          type: array
-          minItems: 2
-          maxItems: 2
-          items:
-            oneOf:
-            - type: string
-              pattern: ^\d{4}-\d{2}-\d{2}$
-            - type: string
-              pattern: ^\d{4}-\d{2}$
-            - type: string
-              pattern: ^\d{4}$
-            - type: string
-              pattern: ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$
-            - type: string
-              pattern: ^T\d{2}(:\d{2})?(:\d{2})?(?:\.\d+)?Z$
-            - type: string
-              enum:
-              - ..
-        resolution:
-          type: string
-          description: Minimum time period resolvable in the dataset, as an ISO 8601
-            duration
-          pattern: ^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$
-    x-jsonld-id: http://purl.org/dc/terms/temporal
-  geometry:
-    $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/geometry
-    x-jsonld-id: https://purl.org/geojson/vocab#geometry
-    x-jsonld-extra-terms:
-      coordinates:
-        x-jsonld-container: '@list'
-        x-jsonld-id: https://purl.org/geojson/vocab#coordinates
-  properties:
-    type: object
-    required:
-    - type
-    - title
-    - description
-    - created
-    properties:
-      type:
-        $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/type
-        x-jsonld-id: '@type'
-      title:
-        $ref: '#/definitions/MultilingualString'
-        description: A human-readable name given to the resource.
-        x-jsonld-container: '@set'
-        x-jsonld-id: http://purl.org/dc/terms/title
-      description:
-        $ref: '#/definitions/MultilingualString'
-        description: A free-text account of the resource.
-        x-jsonld-container: '@set'
-        x-jsonld-id: http://purl.org/dc/terms/description
-      keywords:
-        $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/keywords
-        x-jsonld-container: '@set'
-        x-jsonld-id: http://www.w3.org/ns/dcat#keyword
-      themes:
-        type: array
-        minItems: 1
-        items:
-          $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/theme.yaml
-        x-jsonld-container: '@set'
-        x-jsonld-id: https://www.opengis.net/def/ogc-api/records/themes
-    version:
-      type: string
-      description: The version or edition of a given dataset.
-    externalIds:
-      $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/externalIds
-    created:
-      $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/created
-    updated:
-      $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/updated
-    rights:
-      $ref: https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/rights
-    x-jsonld-id: '@nest'
-  links:
-    type: array
-    minItems: 1
-    items:
-      $ref: '#/definitions/Link'
-    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
-    x-jsonld-extra-terms:
-      hreflang: http://purl.org/dc/terms/language
-      length: http://purl.org/dc/terms/extent
-definitions:
-  Link:
-    title: Link object definition
-    description: Link object definition including distribution
-    type: object
-    required:
-    - href
-    properties:
-      href:
-        type: string
-        format: uri
-        x-jsonld-type: '@id'
-        x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
-      rel:
-        type: string
-        x-jsonld-id: http://www.iana.org/assignments/relation
-        x-jsonld-type: '@id'
-        x-jsonld-base: http://www.iana.org/assignments/relation/
-      type:
-        type: string
-        x-jsonld-id: '@type'
-      title:
-        type: string
-        x-jsonld-container: '@set'
-        x-jsonld-id: http://purl.org/dc/terms/title
-      distribution:
-        type: object
-        description: Available distribution of the dataset via this link.
-        properties:
-          title:
-            $ref: '#/definitions/MultilingualString'
-            x-jsonld-container: '@set'
-            x-jsonld-id: http://purl.org/dc/terms/title
-          description:
-            $ref: '#/definitions/MultilingualString'
-            x-jsonld-container: '@set'
-            x-jsonld-id: http://purl.org/dc/terms/description
-          accessURL:
-            type: string
-            format: uri
-          downloadURL:
-            type: string
-            format: uri
-          format:
-            type: string
-          license:
-            type: string
-            x-jsonld-id: http://www.w3.org/ns/dcat#license
-        x-jsonld-id: http://www.w3.org/ns/dcat#distribution
-        x-jsonld-type: '@id'
-  LanguageMap:
-    type: object
-    description: A language-mapped string where keys are BCP 47 language tags and
-      values are the localized strings.
-    patternProperties:
-      ^[a-zA-Z]{2,8}(-[a-zA-Z0-9]{2,8})*$:
-        type: string
-    additionalProperties: false
-  MultilingualString:
-    oneOf:
-    - type: string
-    - $ref: '#/definitions/LanguageMap'
+allOf:
+- $ref: https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -659,9 +150,48 @@ x-jsonld-extra-terms:
   features:
     x-jsonld-container: '@set'
     x-jsonld-id: https://purl.org/geojson/vocab#features
+  type: '@type'
+  id: '@id'
+  properties: '@nest'
+  geometry:
+    x-jsonld-context:
+      coordinates:
+        '@container': '@list'
+        '@id': https://purl.org/geojson/vocab#coordinates
+    x-jsonld-id: https://purl.org/geojson/vocab#geometry
   bbox:
     x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#bbox
+  links:
+    x-jsonld-context:
+      rel:
+        '@context':
+          '@base': http://www.iana.org/assignments/relation/
+        '@id': http://www.iana.org/assignments/relation
+        '@type': '@id'
+      type: http://purl.org/dc/terms/format
+      hreflang: http://purl.org/dc/terms/language
+      title: http://www.w3.org/2000/01/rdf-schema#label
+      length: http://purl.org/dc/terms/extent
+      distribution:
+        '@context':
+          mediaType: https://www.opengis.net/def/ogc-api/records/mediaType
+          name: https://www.opengis.net/def/ogc-api/records/name
+          description: https://www.opengis.net/def/ogc-api/records/description
+          license: http://www.w3.org/ns/dcat#license
+          accessRights: https://www.opengis.net/def/ogc-api/records/accessRights
+          conformsTo:
+            '@container': '@set'
+            '@id': http://purl.org/dc/terms/conformsTo
+            '@type': '@id'
+        '@id': http://www.w3.org/ns/dcat#distribution
+        '@type': '@id'
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+  conformsTo:
+    x-jsonld-container: '@set'
+    x-jsonld-id: http://purl.org/dc/terms/conformsTo
+    x-jsonld-type: '@id'
+  time: http://purl.org/dc/terms/temporal
   linkTemplates:
     x-jsonld-context:
       rel:
@@ -684,6 +214,15 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/hasLinkTemplate
   created: http://purl.org/dc/terms/created
   updated: http://purl.org/dc/terms/modified
+  title:
+    x-jsonld-container: '@set'
+    x-jsonld-id: http://purl.org/dc/terms/title
+  description:
+    x-jsonld-container: '@set'
+    x-jsonld-id: http://purl.org/dc/terms/description
+  keywords:
+    x-jsonld-container: '@set'
+    x-jsonld-id: http://www.w3.org/ns/dcat#keyword
   language:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/language
     x-jsonld-context:
@@ -707,6 +246,21 @@ x-jsonld-extra-terms:
     x-jsonld-context:
       scheme: https://www.opengis.net/def/ogc-api/records/scheme
       value: https://www.opengis.net/def/ogc-api/records/id
+  themes:
+    x-jsonld-container: '@set'
+    x-jsonld-id: https://www.opengis.net/def/ogc-api/records/themes
+    x-jsonld-context:
+      concepts:
+        '@id': https://w3id.org/ogc/stac/themes/concepts
+        '@context':
+          id:
+            '@type': http://www.w3.org/2001/XMLSchema#string
+            '@id': https://w3id.org/ogc/stac/themes/id
+          url:
+            '@type': '@id'
+            '@id': '@id'
+        '@container': '@set'
+      scheme: https://w3id.org/ogc/stac/themes/scheme
   formats:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/format
     x-jsonld-context:
@@ -718,6 +272,7 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
+  license: http://www.w3.org/ns/dcat#license
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'
@@ -725,6 +280,9 @@ x-jsonld-extra-terms:
     x-jsonld-context:
       '@base': http://example.com/variables/
       '@vocab': https://www.opengis.net/def/ogc-api/records/
+  href:
+    x-jsonld-type: '@id'
+    x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
   rights: http://www.w3.org/ns/dcat#rights
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
@@ -770,10 +328,46 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
+    "type": "@type",
+    "id": "@id",
+    "properties": "@nest",
+    "geometry": {
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      },
+      "@id": "geojson:geometry"
+    },
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
     },
+    "links": {
+      "@context": {
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "distribution": {
+          "@id": "dcat:distribution",
+          "@type": "@id"
+        },
+        "hreflang": "dct:language",
+        "length": "dct:extent"
+      },
+      "@id": "rdfs:seeAlso"
+    },
+    "conformsTo": {
+      "@container": "@set",
+      "@id": "dct:conformsTo",
+      "@type": "@id"
+    },
+    "time": "dct:temporal",
     "linkTemplates": {
       "@context": {
         "rel": {
@@ -802,6 +396,18 @@ Links to the schema:
     },
     "created": "dct:created",
     "updated": "dct:modified",
+    "title": {
+      "@container": "@set",
+      "@id": "dct:title"
+    },
+    "description": {
+      "@container": "@set",
+      "@id": "dct:description"
+    },
+    "keywords": {
+      "@container": "@set",
+      "@id": "dcat:keyword"
+    },
     "language": {
       "@id": "rec:language",
       "@context": {
@@ -833,6 +439,27 @@ Links to the schema:
         "value": "rec:id"
       }
     },
+    "themes": {
+      "@container": "@set",
+      "@id": "rec:themes",
+      "@context": {
+        "concepts": {
+          "@id": "thns:concepts",
+          "@context": {
+            "id": {
+              "@type": "xsd:string",
+              "@id": "thns:id"
+            },
+            "url": {
+              "@type": "@id",
+              "@id": "@id"
+            }
+          },
+          "@container": "@set"
+        },
+        "scheme": "thns:scheme"
+      }
+    },
     "formats": {
       "@id": "rec:format",
       "@context": {
@@ -847,6 +474,7 @@ Links to the schema:
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
+    "license": "dcat:license",
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
@@ -857,74 +485,18 @@ Links to the schema:
       }
     },
     "rights": "dcat:rights",
-    "id": "@id",
-    "conformsTo": {
-      "@container": "@set",
-      "@id": "dct:conformsTo",
-      "@type": "@id"
-    },
-    "type": "@type",
-    "time": "dct:temporal",
-    "geometry": {
-      "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      },
-      "@id": "geojson:geometry"
-    },
-    "title": {
-      "@container": "@set",
-      "@id": "dct:title"
-    },
-    "description": {
-      "@container": "@set",
-      "@id": "dct:description"
-    },
-    "keywords": {
-      "@container": "@set",
-      "@id": "dcat:keyword"
-    },
-    "themes": {
-      "@container": "@set",
-      "@id": "rec:themes"
-    },
-    "properties": "@nest",
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "distribution": {
-          "@context": {
-            "license": "dcat:license"
-          },
-          "@id": "dcat:distribution",
-          "@type": "@id"
-        },
-        "hreflang": "dct:language",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
+    "href": {
+      "@type": "@id",
+      "@id": "oa:hasTarget"
     },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "rec": "https://www.opengis.net/def/ogc-api/records/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "thns": "https://w3id.org/ogc/stac/themes/",
-    "oa": "http://www.w3.org/ns/oa#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "w3ctime": "http://www.w3.org/2006/time#",
@@ -932,6 +504,7 @@ Links to the schema:
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "thns": "https://w3id.org/ogc/stac/themes/",
     "@version": 1.1
   }
 }

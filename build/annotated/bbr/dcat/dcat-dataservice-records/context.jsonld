@@ -45,6 +45,7 @@
             "mediaType": "rec:mediaType",
             "name": "rec:name",
             "description": "rec:description",
+            "license": "rec:license",
             "accessRights": "rec:accessRights"
           },
           "@id": "dcat:distribution",

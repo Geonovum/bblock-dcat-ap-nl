@@ -1,16 +1,16 @@
 {
-  "title": "Validation report for geonovum-labs.bbr.dcat.dcat-dataset-records - DCAT-Dataset/Records binding",
-  "bblockName": "DCAT-Dataset/Records binding",
-  "bblockId": "geonovum-labs.bbr.dcat.dcat-dataset-records",
-  "generated": "2026-05-21T14:28:23.036197+00:00",
+  "title": "Validation report for geonovum-labs.bbr.dcat.dcat-dataservice-records - DCAT-DataService/Records binding",
+  "bblockName": "DCAT-DataService/Records binding",
+  "bblockId": "geonovum-labs.bbr.dcat.dcat-dataservice-records",
+  "generated": "2026-05-21T14:28:22.603505+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/bbr/dcat/dcat-dataset-records/example_1_1.json",
-        "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/dcat-dataset-records/example_1_1.json",
+        "filename": "build/tests/bbr/dcat/dcat-dataservice-records/example_1_1.json",
+        "url": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/tests/bbr/dcat/dcat-dataservice-records/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using examples/bomen.geojson from examples"
+              "message": "Using examples/bag-api.geojson from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 61,
+              "size": 50,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -77,7 +77,7 @@
                 },
                 "geojson:FeatureShape": {
                   "nodes": [
-                    "<file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>"
+                    "<urn:ogc:record:bag-api>"
                   ]
                 },
                 "geojson:GeometryShape": {
@@ -91,7 +91,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:FeatureShape: <urn:ogc:record:bag-api>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
             },
             {
               "op": "shacl-report",

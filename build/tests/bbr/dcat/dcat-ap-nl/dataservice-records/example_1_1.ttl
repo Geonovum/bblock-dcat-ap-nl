@@ -17,7 +17,8 @@
     dct:created "2013-02-18" ;
     dct:description [ ] ;
     dct:title [ ] ;
-    rdfs:seeAlso [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    rdfs:seeAlso [ a <file:///github/workspace/Dataset> ;
+            ns1:relation <http://www.iana.org/assignments/relation/related> ;
             oa:hasTarget <https://bag-dataset> ] ;
     dcat:keyword [ ],
         [ ],

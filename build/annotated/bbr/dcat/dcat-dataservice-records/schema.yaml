@@ -1,7 +1,7 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://geonovum-labs.bbr.dcat.dataset-records.json
-title: DCAT OGC API record definition
-description: DCAT Dataset OGC API record definition
+$id: https://geonovum-labs.bbr.dcat.dataservice-records.json
+title: DCAT DataService OGC API record definition
+description: DCAT DataService OGC API record definition
 allOf:
 - $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.yaml
 properties:
@@ -13,7 +13,7 @@ properties:
       type:
         type: string
         enum:
-        - Dataset
+        - DataService
         x-jsonld-id: '@type'
     x-jsonld-id: '@nest'
   links:
@@ -25,6 +25,19 @@ properties:
     x-jsonld-extra-terms:
       hreflang: http://purl.org/dc/terms/language
       length: http://purl.org/dc/terms/extent
+      distribution:
+        x-jsonld-context:
+          mediaType: https://www.opengis.net/def/ogc-api/records/mediaType
+          name: https://www.opengis.net/def/ogc-api/records/name
+          description: https://www.opengis.net/def/ogc-api/records/description
+          license: https://www.opengis.net/def/ogc-api/records/license
+          accessRights: https://www.opengis.net/def/ogc-api/records/accessRights
+          conformsTo:
+            '@container': '@set'
+            '@id': http://purl.org/dc/terms/conformsTo
+            '@type': '@id'
+        x-jsonld-id: http://www.w3.org/ns/dcat#distribution
+        x-jsonld-type: '@id'
 definitions:
   Link:
     title: Link object definition
@@ -50,31 +63,6 @@ definitions:
         type: string
         x-jsonld-container: '@set'
         x-jsonld-id: http://purl.org/dc/terms/title
-      distribution:
-        type: object
-        description: Available distribution of the dataset via this link.
-        properties:
-          title:
-            $ref: '#/definitions/MultilingualString'
-            x-jsonld-container: '@set'
-            x-jsonld-id: http://purl.org/dc/terms/title
-          description:
-            $ref: '#/definitions/MultilingualString'
-            x-jsonld-container: '@set'
-            x-jsonld-id: http://purl.org/dc/terms/description
-          accessURL:
-            type: string
-            format: uri
-          downloadURL:
-            type: string
-            format: uri
-          format:
-            type: string
-          license:
-            type: string
-            x-jsonld-id: http://www.w3.org/ns/dcat#license
-        x-jsonld-id: http://www.w3.org/ns/dcat#distribution
-        x-jsonld-type: '@id'
   LanguageMap:
     type: object
     description: A language-mapped string where keys are BCP 47 language tags and
@@ -137,6 +125,9 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/hasLinkTemplate
   created: http://purl.org/dc/terms/created
   updated: http://purl.org/dc/terms/modified
+  description:
+    x-jsonld-container: '@set'
+    x-jsonld-id: http://purl.org/dc/terms/description
   keywords:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#keyword
@@ -189,6 +180,7 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
+  license: http://www.w3.org/ns/dcat#license
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'

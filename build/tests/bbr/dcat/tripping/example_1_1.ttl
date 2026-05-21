@@ -1,5 +1,0 @@
-@prefix ex: <http://example.org/ontology/> .
-
-[] ex:geometry [ ex:type "MultiLineString" ] ;
-    ex:type "Feature" .
-

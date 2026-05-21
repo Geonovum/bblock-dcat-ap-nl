@@ -1,9 +1,0 @@
-path	@id	schema
-/geometry	http://example.org/ontology/geometry	/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/fid		/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/name		/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/cmt		/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/desc		/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/src		/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/type	http://example.org/ontology/type	/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
-/boat_type		/github/workspace/build/annotated/bbr/dcat/tripping/schema.yaml
