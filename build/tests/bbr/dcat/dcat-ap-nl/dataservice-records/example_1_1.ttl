@@ -3,14 +3,12 @@
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<urn:ogc:record:generated-id> a dcat:DataService,
-        prov:Entity,
+<urn:ogc:record:generated-id> a <file:///github/workspace/DataService>,
         geojson:Feature ;
     dct:conformsTo <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
         <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;

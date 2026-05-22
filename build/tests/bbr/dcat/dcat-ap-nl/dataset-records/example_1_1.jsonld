@@ -1,4 +1,5 @@
 {
+  "@context": "https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld",
   "id": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83",
   "conformsTo": [
     "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"

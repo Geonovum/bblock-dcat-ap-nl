@@ -12,6 +12,28 @@
     "conformsTo"
   ],
   "properties": {
+    "properties": {
+      "type": "object",
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/MultilingualString",
+          "description": "A human-readable name given to the resource.",
+          "x-jsonld-container": "@set",
+          "x-jsonld-id": "http://purl.org/dc/terms/title"
+        },
+        "description": {
+          "$ref": "#/definitions/MultilingualString",
+          "description": "A free-text account of the resource.",
+          "x-jsonld-container": "@set",
+          "x-jsonld-id": "http://purl.org/dc/terms/description"
+        }
+      },
+      "x-jsonld-id": "@nest"
+    },
     "links": {
       "type": "array",
       "minItems": 1,
@@ -109,7 +131,6 @@
       "x-jsonld-id": "https://purl.org/geojson/vocab#features"
     },
     "id": "@id",
-    "properties": "@nest",
     "geometry": {
       "x-jsonld-context": {
         "coordinates": {
@@ -157,10 +178,6 @@
     },
     "created": "http://purl.org/dc/terms/created",
     "updated": "http://purl.org/dc/terms/modified",
-    "description": {
-      "x-jsonld-container": "@set",
-      "x-jsonld-id": "http://purl.org/dc/terms/description"
-    },
     "keywords": {
       "x-jsonld-container": "@set",
       "x-jsonld-id": "http://www.w3.org/ns/dcat#keyword"
