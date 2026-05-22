@@ -14,6 +14,18 @@ required:
   # - properties
   # - links
 properties:
+  properties:
+    type: object
+    required:
+      - title
+      - description
+    properties:
+      title:
+        $ref: '#/definitions/MultilingualString'
+        description: A human-readable name given to the resource.
+      description:
+        $ref: '#/definitions/MultilingualString'
+        description: A free-text account of the resource.
   links:
     type: array
     minItems: 1
