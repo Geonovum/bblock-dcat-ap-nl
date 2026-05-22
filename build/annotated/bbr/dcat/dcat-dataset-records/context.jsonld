@@ -13,23 +13,15 @@
       "@container": "@set",
       "@id": "geojson:features"
     },
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-    "type": "dct:format",
-========
     "type": "@type",
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
     "id": "@id",
     "properties": "@nest",
     "geometry": {
       "@context": {
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-        "type": "@type"
-========
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
         }
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
       },
       "@id": "geojson:geometry"
     },
@@ -39,38 +31,6 @@
     },
     "links": {
       "@context": {
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-        "type": "dct:type"
-      },
-      "@id": "rdfs:seeAlso"
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "href": {
-      "@type": "@id",
-      "@id": "oa:hasTarget"
-    },
-    "rel": {
-      "@context": {
-        "@base": "http://www.iana.org/assignments/relation/"
-      },
-      "@id": "http://www.iana.org/assignments/relation",
-      "@type": "@id"
-    },
-    "hreflang": "dct:language",
-    "title": "rdfs:label",
-    "length": "dct:extent",
-    "created": "dct:created",
-    "updated": "dct:modified",
-    "uriTemplate": {
-      "@type": "xsd:string",
-      "@id": "oa:hasTarget"
-    },
-    "time": {
-      "@id": "dct:temporal",
-========
         "rel": {
           "@context": {
             "@base": "http://www.iana.org/assignments/relation/"
@@ -94,7 +54,6 @@
     },
     "time": "dct:temporal",
     "linkTemplates": {
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
       "@context": {
         "rel": {
           "@context": {
@@ -174,15 +133,11 @@
           "@context": {
             "id": {
               "@type": "xsd:string",
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-              "@id": "rec:conceptID"
-========
               "@id": "thns:id"
             },
             "url": {
               "@type": "@id",
               "@id": "@id"
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
             }
           },
           "@container": "@set"
@@ -193,30 +148,19 @@
     "formats": {
       "@id": "rec:format",
       "@context": {
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-        "name": "rec:name"
-      }
-========
         "name": "rec:name",
         "mediaType": "rec:mediaType"
       },
       "@container": "@set",
       "@type": "@id"
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
     },
     "contacts": {
       "@container": "@set",
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-    "license": "dct:license",
-    "accessrights": "dct:accessRights",
-    "linkTemplates": "rec:hasLinkTemplate",
-========
     "license": "dcat:license",
     "accessrights": "dct:accessRights",
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
     "variables": {
       "@container": "@id",
       "@id": "rec:hasVariable",
@@ -225,61 +169,11 @@
         "@vocab": "https://www.opengis.net/def/ogc-api/records/"
       }
     },
-<<<<<<<< HEAD:build/annotated/bbr/dcat/dcat-ap-nl-rec-dev/context.jsonld
-    "a": "@type",
-    "accrualPeriodicity": "dct:accrualPeriodicity",
-    "distribution": "dcat:distribution",
-    "accessURL": "dcat:accessURL",
-    "mediaType": "dcat:mediaType",
-    "format": "dct:format",
-    "dataservice": "dcat:DataService",
-    "accessRights": "dct:accessRights",
-    "publisher": "dct:publisher",
-    "contactpunt": "dcat:contactPoint",
-    "fn": {
-      "@id": "vcard:fn",
-      "@language": "nl"
-    },
-    "organization-name": {
-      "@id": "vcard:organization-name",
-      "@container": "@language"
-    },
-    "hasEmail": {
-      "@id": "vcard:hasEmail",
-      "@type": "@id"
-    },
-    "creator": "dct:creator",
-    "orgtype": {
-      "@id": "dct:type",
-      "@type": "@id"
-    },
-    "name": {
-      "@id": "foaf:name",
-      "@container": "@language"
-    },
-    "endpointURL": "dcat:endpointURL",
-    "servesDataset": "dcat:servesDataset",
-    "identifier": "dct:identifier",
-    "endpointDescription": "dcat:endpointDescription",
-    "themas": {
-      "@id": "dcat:theme",
-      "@nest": "nested_themes"
-    },
-    "nested_themes": {
-      "@id": "@null",
-      "@container": "@set"
-    },
-    "url": {
-      "@id": "dcat:theme",
-      "@type": "@id"
-    },
-========
     "rights": "dcat:rights",
     "href": {
       "@type": "@id",
       "@id": "oa:hasTarget"
     },
->>>>>>>> d30762dec4a3f88122929e2db99788bbe23c3204:build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

@@ -3,7 +3,7 @@ $id: https://geonovum-labs.bbr.dcat.dataset-records.json
 title: DCAT OGC API record definition
 description: DCAT Dataset OGC API record definition
 allOf:
-- $ref: https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
+- $ref: https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection

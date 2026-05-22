@@ -5,7 +5,7 @@
   "description": "DCAT DataService OGC API record definition",
   "allOf": [
     {
-      "$ref": "https://nielshoffmann.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.json"
+      "$ref": "https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.json"
     }
   ],
   "required": [

@@ -712,6 +712,6 @@ Voor meer informatie over de beschrijvende gegevens van de stads- en dorpsgezich
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/NielsHoffmann/bblock-dcat-ap-nl](https://github.com/NielsHoffmann/bblock-dcat-ap-nl)
+* URL: [https://github.com/Geonovum/bblock-dcat-ap-nl](https://github.com/Geonovum/bblock-dcat-ap-nl)
 * Path: `_sources/transforms/xslt2`
 

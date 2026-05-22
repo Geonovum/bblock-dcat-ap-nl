@@ -1,7 +1,0 @@
-Validation report for geonovum.bbr.dcat.dcat-ap - DCAT-AP 3.0 profile (copy)
-Generated 2025-10-23T12:50:24.135900+00:00
-=== Files ===
-Using example_1_1.ttl from examples
-Output Turtle example_1_1.ttl created
-=== End Files ===
-
