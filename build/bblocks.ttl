@@ -2,8 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -14,70 +14,20 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<bblocks://geonovum-labs.bbr.dcat.transforms.xslt-example> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "XSLT Transforms example" ;
-    dct:abstract "A sample building block to showcase transforms"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2026-05-08T11:31:00+02:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/transforms/xslt-example/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/transforms/xslt-example/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.transforms.xslt-example> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2026-05-22"^^xsd:date ;
-    skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
-    skos:prefLabel "XSLT Transforms example" ;
-    skos:topConceptOf <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/transforms/xslt-example/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/transforms/xslt-example/schema.yaml> ;
-            prof:hasRole role:schema ] ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<bblocks://geonovum-labs.bbr.dcat.transforms.xslt2> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Schema ;
-    rdfs:label "XSLT2 Transforms example" ;
-    dct:abstract "A sample building block to showcase transforms"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2026-05-11T11:31:00+02:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/transforms/xslt2/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/transforms/xslt2/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.transforms.xslt2> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2026-05-22"^^xsd:date ;
-    skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
-    skos:prefLabel "XSLT2 Transforms example" ;
-    skos:topConceptOf <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
 <https://geonovum.github.io/bblock-dcat-ap-nl/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:Nd51e53f04b3b4afaa2ac4bf692a78594 ;
+    prov:wasAttributedTo _:Nd8150432ac75410baca33e22528228cc ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-05-22T08:37:54.818015"^^xsd:dateTime ;
-            prov:startedAtTime "2026-05-22T08:37:54.616297"^^xsd:dateTime ;
+            prov:endedAtTime "2026-06-26T12:03:09.321413"^^xsd:dateTime ;
+            prov:startedAtTime "2026-06-26T12:03:09.134739"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:83488000507f5f09b2ba3a188c01ce584f67c063" ;
+                    dct:hasVersion "git:ecf77102f1a60f593a4f801b0d83cb0f42cdbd56" ;
                     rdfs:seeAlso <https://geonovum.github.io/bblock-dcat-ap-nl/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:Nd51e53f04b3b4afaa2ac4bf692a78594 ] .
+            prov:wasAssociatedWith _:Nd8150432ac75410baca33e22528228cc ] .
 
 <bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records> a skos:Concept,
         dcat:Dataset,
@@ -86,14 +36,14 @@
     rdfs:label "DCAT-AP-NL-DataService/Records binding" ;
     dct:abstract "DCAT-AP-NL profile binding to the OGC API Records schema."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-05-11T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl/dataservice-records/index.md> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl/dataservice-records/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl/dataservice-records/index.md> ] ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-05-22"^^xsd:date ;
+    dct:modified "2026-06-26"^^xsd:date ;
     dct:source <https://geonovum.github.io/DCAT-AP-NL30> ;
     skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
     skos:prefLabel "DCAT-AP-NL-DataService/Records binding" ;
@@ -102,30 +52,21 @@
         "DataService",
         "Records",
         "profile" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.geodcat.dcat-ap> ;
             prof:hasArtifact <https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl>,
                 <https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/schema.json> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/schema.yaml> ;
@@ -134,7 +75,16 @@
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records> ;
             prof:hasArtifact <https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://geonovum-labs.bbr.dcat.dcat-dataservice-records>,
         <bblocks://ogc.geo.geodcat.dcat-ap>,
         <bblocks://ogc.geo.geodcat.dcat-records> ;
@@ -152,12 +102,12 @@
     dct:created "2026-05-08T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl/dataset-records/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl/dataset-records/index.json> ] ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl/dataset-records/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl/dataset-records/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-05-22"^^xsd:date ;
+    dct:modified "2026-06-26"^^xsd:date ;
     dct:source <https://geonovum.github.io/DCAT-AP-NL30> ;
     skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
     skos:prefLabel "DCAT-AP-NL-Dataset/Records binding" ;
@@ -169,10 +119,6 @@
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
@@ -186,19 +132,23 @@
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records> ;
             prof:hasArtifact <https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://geonovum-labs.bbr.dcat.dcat-dataset-records>,
         <bblocks://ogc.geo.geodcat.dcat-ap> ;
     bblocks:hasSourceJsonLdContext <https://geonovum.github.io/bblock-dcat-ap-nl/_sources/dcat-ap-nl/dataset-records/context.jsonld> ;
@@ -213,14 +163,14 @@
     rdfs:label "DCAT-DataService/Records binding" ;
     dct:abstract "DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataservice. This is the baseline for semantic equivalence of OGC API records and a DCAT DataService."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-05-21T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-dataservice-records> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-dataservice-records/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-dataservice-records> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-dataservice-records/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-05-22"^^xsd:date ;
+    dct:modified "2026-06-26"^^xsd:date ;
     dct:source <https://github.com/opengeospatial/ogcapi-records>,
         <https://www.w3.org/TR/vocab-dcat-3/> ;
     skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
@@ -230,28 +180,28 @@
         "DataService",
         "Records",
         "profile" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.json> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/context.jsonld> ;
             prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.api.records.records-ontology>,
         <bblocks://ogc.api.records.v1.schemas.recordGeoJSON>,
         <bblocks://ogc.geo.geodcat.dcat>,
@@ -270,12 +220,12 @@
     dct:created "2026-04-08T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-dataset-records> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-dataset-records/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-dataset-records/index.json> ] ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-dataset-records/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-dataset-records/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-05-22"^^xsd:date ;
+    dct:modified "2026-06-26"^^xsd:date ;
     dct:source <https://github.com/opengeospatial/ogcapi-records>,
         <https://www.w3.org/TR/vocab-dcat-3/> ;
     skos:inScheme <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
@@ -285,28 +235,28 @@
         "Dataset",
         "Records",
         "profile" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/context.jsonld> ;
             prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.json> ;
-            prof:hasRole role:schema ] ;
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.api.records.v1.schemas.linkTemplate> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl> ;
+            prof:hasRole role:validation ] ;
     bblocks:dependsOn <bblocks://ogc.api.records.records-ontology>,
         <bblocks://ogc.api.records.v1.schemas.recordGeoJSON>,
         <bblocks://ogc.geo.geodcat.dcat>,
@@ -334,34 +284,32 @@ this potentially can add value.
 Note: the building blocks in the geonovum repository are a more conservative implementation while the 
 building blocks in this repository are more experimental.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-05-22T08:37:46.286622"^^xsd:dateTime ;
+    dct:modified "2026-06-26T12:02:59.262948"^^xsd:dateTime ;
     owl:imports <https://ogcincubator.github.io/geodcat-ogcapi-records/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records>,
         <bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records>,
         <bblocks://geonovum-labs.bbr.dcat.dcat-dataservice-records>,
-        <bblocks://geonovum-labs.bbr.dcat.dcat-dataset-records>,
-        <bblocks://geonovum-labs.bbr.dcat.transforms.xslt-example>,
-        <bblocks://geonovum-labs.bbr.dcat.transforms.xslt2> ;
+        <bblocks://geonovum-labs.bbr.dcat.dcat-dataset-records> ;
     skos:prefLabel "Building Blocks - OGC Building Blocks for DCAT-AP-NL 3.0 - EXPERIMENTAL" ;
     prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://geonovum.github.io/bblock-dcat-ap-nl/build/bblocks.jsonld> ],
-        [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://geonovum.github.io/bblock-dcat-ap-nl/build/register.json> ],
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geonovum.github.io/bblock-dcat-ap-nl/build/bblocks.jsonld> ],
         [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://geonovum.github.io/bblock-dcat-ap-nl/build/bblocks.ttl> ] ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geonovum.github.io/bblock-dcat-ap-nl/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geonovum.github.io/bblock-dcat-ap-nl/build/register.json> ] ;
     foaf:homepage <https://geonovum.github.io/bblock-dcat-ap-nl/> ;
     bblocks:hasValidationReport <https://geonovum.github.io/bblock-dcat-ap-nl/build/tests/report.html> .
 
-_:Nd51e53f04b3b4afaa2ac4bf692a78594 a prov:Agent,
+_:Nd8150432ac75410baca33e22528228cc a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.29" ;
+    dct:hasVersion "0.5.31" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

@@ -1,1 +1,0 @@
-{"defs":{},"properties":[{"path":["one"],"schema_type":"number","sources":["bblocks://geonovum-labs.bbr.dcat.transforms.xslt-example"]},{"path":["two"],"schema_type":"number","sources":["bblocks://geonovum-labs.bbr.dcat.transforms.xslt-example"]},{"path":["string"],"schema_type":"string","sources":["bblocks://geonovum-labs.bbr.dcat.transforms.xslt-example"]}]}
