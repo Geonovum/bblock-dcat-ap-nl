@@ -128,6 +128,159 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld",
+  "id": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83",
+  "conformsTo": [
+    "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
+  ],
+  "type": "Feature",
+  "time": {
+    "interval": [
+      "2024-09-30",
+      "9999-12-31"
+    ],
+    "resolution": "P1D"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          2.4807,
+          53.7187
+        ],
+        [
+          7.9685,
+          53.7187
+        ],
+        [
+          7.9685,
+          50.6058
+        ],
+        [
+          2.4807,
+          50.6058
+        ],
+        [
+          2.4807,
+          53.7187
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "created": "2024-09-30",
+    "updated": "2024-12-06T09:49:52Z",
+    "type": "Dataset",
+    "title": "Bomen",
+    "description": "Subset van bomen in de omgeving van Sloten (Amsterdam)",
+    "providers": [
+      {
+        "contactInfo": {
+          "address": {
+            "office": {}
+          },
+          "email": {
+            "office": "opendata@amsterdam.nl"
+          }
+        },
+        "name": null,
+        "roles": [
+          {
+            "name": "pointOfContact"
+          }
+        ]
+      }
+    ],
+    "externalIds": [
+      {
+        "scheme": "default",
+        "value": "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83"
+      }
+    ],
+    "themes": [
+      {
+        "concepts": [
+          {
+            "id": "Boom",
+            "url": "https://definities.geostandaarden.nl/ibro/id/begrip/boom"
+          },
+          {
+            "id": "Park",
+            "url": "https://definities.geostandaarden.nl/ibro/id/begrip/park"
+          }
+        ],
+        "scheme": "https://definities.geostandaarden.nl/ibro/nl/"
+      }
+    ]
+  },
+  "links": [
+    {
+      "href": "http://localhost:5000/collections/bomen",
+      "rel": "access",
+      "title": "Bomen",
+      "type": "OGC API Features",
+      "distribution": {
+        "type": "dcat:Distribution",
+        "title": {
+          "nl": "Bomen (OGC API Features)"
+        },
+        "description": {
+          "nl": "API"
+        },
+        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
+      }
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
+@prefix thns: <https://w3id.org/ogc/stac/themes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83> a <file:///github/workspace/Dataset>,
+        geojson:Feature ;
+    dct:conformsTo <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
+    dct:created "2024-09-30" ;
+    dct:description "Subset van bomen in de omgeving van Sloten (Amsterdam)" ;
+    dct:modified "2024-12-06T09:49:52Z" ;
+    dct:temporal [ ] ;
+    dct:title "Bomen" ;
+    rdfs:seeAlso [ dct:title "Bomen" ;
+            ns1:relation <http://www.iana.org/assignments/relation/access> ;
+            dcat:distribution [ a dcat:Distribution ;
+                    dct:title [ ] ;
+                    dcat:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ;
+                    rec:description [ ] ] ;
+            oa:hasTarget <http://localhost:5000/collections/bomen> ] ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
+    rec:scopedIdentifier [ rec:id "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83" ;
+            rec:scheme "default" ] ;
+    rec:themes [ thns:concepts <https://definities.geostandaarden.nl/ibro/id/begrip/boom>,
+                <https://definities.geostandaarden.nl/ibro/id/begrip/park> ;
+            thns:scheme "https://definities.geostandaarden.nl/ibro/nl/" ] .
+
+<https://definities.geostandaarden.nl/ibro/id/begrip/boom> thns:id "Boom"^^xsd:string .
+
+<https://definities.geostandaarden.nl/ibro/id/begrip/park> thns:id "Park"^^xsd:string .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -137,6 +290,68 @@ title: DCAT OGC API record definition
 description: DCAT Dataset OGC API record definition
 allOf:
 - $ref: https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
+required:
+- conformsTo
+properties:
+  links:
+    type: array
+    minItems: 1
+    items:
+      $ref: '#/definitions/Link'
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    x-jsonld-extra-terms:
+      hreflang: http://purl.org/dc/terms/language
+      length: http://purl.org/dc/terms/extent
+      distribution:
+        x-jsonld-context:
+          mediaType: https://www.opengis.net/def/ogc-api/records/mediaType
+          name: https://www.opengis.net/def/ogc-api/records/name
+          description: https://www.opengis.net/def/ogc-api/records/description
+          license: http://www.w3.org/ns/dcat#license
+          accessRights: https://www.opengis.net/def/ogc-api/records/accessRights
+          conformsTo:
+            '@container': '@set'
+            '@id': http://purl.org/dc/terms/conformsTo
+            '@type': '@id'
+        x-jsonld-id: http://www.w3.org/ns/dcat#distribution
+        x-jsonld-type: '@id'
+definitions:
+  Link:
+    title: Link object definition
+    description: Link object definition including distribution
+    type: object
+    required:
+    - href
+    properties:
+      href:
+        type: string
+        format: uri
+        x-jsonld-type: '@id'
+        x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
+      rel:
+        type: string
+        x-jsonld-id: http://www.iana.org/assignments/relation
+        x-jsonld-type: '@id'
+        x-jsonld-base: http://www.iana.org/assignments/relation/
+      type:
+        type: string
+        x-jsonld-id: '@type'
+      title:
+        type: string
+        x-jsonld-container: '@set'
+        x-jsonld-id: http://purl.org/dc/terms/title
+  LanguageMap:
+    type: object
+    description: A language-mapped string where keys are BCP 47 language tags and
+      values are the localized strings.
+    patternProperties:
+      ^[a-zA-Z]{2,8}(-[a-zA-Z0-9]{2,8})*$:
+        type: string
+    additionalProperties: false
+  MultilingualString:
+    oneOf:
+    - type: string
+    - $ref: '#/definitions/LanguageMap'
 x-jsonld-extra-terms:
   Feature: https://purl.org/geojson/vocab#Feature
   FeatureCollection: https://purl.org/geojson/vocab#FeatureCollection
@@ -150,7 +365,6 @@ x-jsonld-extra-terms:
   features:
     x-jsonld-container: '@set'
     x-jsonld-id: https://purl.org/geojson/vocab#features
-  type: '@type'
   id: '@id'
   properties: '@nest'
   geometry:
@@ -162,31 +376,6 @@ x-jsonld-extra-terms:
   bbox:
     x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#bbox
-  links:
-    x-jsonld-context:
-      rel:
-        '@context':
-          '@base': http://www.iana.org/assignments/relation/
-        '@id': http://www.iana.org/assignments/relation
-        '@type': '@id'
-      type: http://purl.org/dc/terms/format
-      hreflang: http://purl.org/dc/terms/language
-      title: http://www.w3.org/2000/01/rdf-schema#label
-      length: http://purl.org/dc/terms/extent
-      distribution:
-        '@context':
-          mediaType: https://www.opengis.net/def/ogc-api/records/mediaType
-          name: https://www.opengis.net/def/ogc-api/records/name
-          description: https://www.opengis.net/def/ogc-api/records/description
-          license: http://www.w3.org/ns/dcat#license
-          accessRights: https://www.opengis.net/def/ogc-api/records/accessRights
-          conformsTo:
-            '@container': '@set'
-            '@id': http://purl.org/dc/terms/conformsTo
-            '@type': '@id'
-        '@id': http://www.w3.org/ns/dcat#distribution
-        '@type': '@id'
-    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
   conformsTo:
     x-jsonld-container: '@set'
     x-jsonld-id: http://purl.org/dc/terms/conformsTo
@@ -214,9 +403,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/hasLinkTemplate
   created: http://purl.org/dc/terms/created
   updated: http://purl.org/dc/terms/modified
-  title:
-    x-jsonld-container: '@set'
-    x-jsonld-id: http://purl.org/dc/terms/title
   description:
     x-jsonld-container: '@set'
     x-jsonld-id: http://purl.org/dc/terms/description
@@ -280,9 +466,6 @@ x-jsonld-extra-terms:
     x-jsonld-context:
       '@base': http://example.com/variables/
       '@vocab': https://www.opengis.net/def/ogc-api/records/
-  href:
-    x-jsonld-type: '@id'
-    x-jsonld-id: http://www.w3.org/ns/oa#hasTarget
   rights: http://www.w3.org/ns/dcat#rights
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
@@ -353,12 +536,18 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
+        "hreflang": "dct:language",
+        "length": "dct:extent",
         "distribution": {
+          "@context": {
+            "mediaType": "rec:mediaType",
+            "name": "rec:name",
+            "description": "rec:description",
+            "accessRights": "rec:accessRights"
+          },
           "@id": "dcat:distribution",
           "@type": "@id"
-        },
-        "hreflang": "dct:language",
-        "length": "dct:extent"
+        }
       },
       "@id": "rdfs:seeAlso"
     },

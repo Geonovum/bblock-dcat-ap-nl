@@ -2,7 +2,7 @@
   "title": "Validation report for geonovum-labs.bbr.dcat.dcat-dataservice-records - DCAT-DataService/Records binding",
   "bblockName": "DCAT-DataService/Records binding",
   "bblockId": "geonovum-labs.bbr.dcat.dcat-dataservice-records",
-  "generated": "2026-05-22T08:02:33.413989+00:00",
+  "generated": "2026-05-22T08:37:52.013972+00:00",
   "result": true,
   "items": [
     {
@@ -72,8 +72,10 @@
             {
               "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
-                "geojson:LinkShape": {
-                  "nodes": []
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<urn:ogc:record:bag-api>"
+                  ]
                 },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
@@ -84,14 +86,12 @@
                 "geojson:GeometryShape": {
                   "nodes": []
                 },
-                "geojson:FeatureShape": {
-                  "nodes": [
-                    "<urn:ogc:record:bag-api>"
-                  ]
+                "geojson:LinkShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <urn:ogc:record:bag-api>\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <urn:ogc:record:bag-api>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n"
             },
             {
               "op": "shacl-report",

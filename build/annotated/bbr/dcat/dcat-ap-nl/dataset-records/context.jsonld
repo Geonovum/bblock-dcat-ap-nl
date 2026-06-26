@@ -38,12 +38,18 @@
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
+        "hreflang": "dct:language",
+        "length": "dct:extent",
         "distribution": {
+          "@context": {
+            "mediaType": "rec:mediaType",
+            "name": "rec:name",
+            "description": "rec:description",
+            "accessRights": "rec:accessRights"
+          },
           "@id": "dcat:distribution",
           "@type": "@id"
-        },
-        "hreflang": "dct:language",
-        "length": "dct:extent"
+        }
       },
       "@id": "rdfs:seeAlso"
     },

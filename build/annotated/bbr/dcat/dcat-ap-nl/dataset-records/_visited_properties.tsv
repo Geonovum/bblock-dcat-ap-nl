@@ -43,13 +43,13 @@ path	@id	schema
 /geometry/_oneOf/7/geometries/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
 /geometry/_oneOf/7/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
 /bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
-/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
-/links/href	http://www.w3.org/ns/oa#hasTarget	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
-/links/rel	http://www.iana.org/assignments/relation	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
+/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.yaml
+/links/href	http://www.w3.org/ns/oa#hasTarget	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.yaml
+/links/rel	http://www.iana.org/assignments/relation	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.yaml
 /links/anchor		https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
-/links/type	@type	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
+/links/type	@type	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.yaml
 /links/hreflang	http://purl.org/dc/terms/language	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
-/links/title	http://purl.org/dc/terms/title	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
+/links/title	http://purl.org/dc/terms/title	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/schema.yaml
 /links/length	http://purl.org/dc/terms/extent	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/linkBase/schema.yaml
 /conformsTo	http://purl.org/dc/terms/conformsTo	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 /time	http://purl.org/dc/terms/temporal	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml

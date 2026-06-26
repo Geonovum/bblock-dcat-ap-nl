@@ -45,10 +45,7 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
     ]
   },
   "properties": {
-    "type": [
-      "http://www.w3.org/ns/dcat#DataService",
-      "http://www.w3.org/ns/prov#Entity"
-    ],
+    "type": "DataService",
     "contactPoint": {
       "organizationName": {
         "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
@@ -170,10 +167,7 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
     ]
   },
   "properties": {
-    "type": [
-      "http://www.w3.org/ns/dcat#DataService",
-      "http://www.w3.org/ns/prov#Entity"
-    ],
+    "type": "DataService",
     "contactPoint": {
       "organizationName": {
         "nl": "Directie Operatie, Dienstverlening en Registratie, afdeling Data-, Proces- en Informatiemanagement"
@@ -264,14 +258,12 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<urn:ogc:record:generated-id> a dcat:DataService,
-        prov:Entity,
+<urn:ogc:record:generated-id> a <file:///github/workspace/DataService>,
         geojson:Feature ;
     dct:conformsTo <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
         <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
@@ -309,6 +301,23 @@ allOf:
 required:
 - conformsTo
 properties:
+  properties:
+    type: object
+    required:
+    - title
+    - description
+    properties:
+      title:
+        $ref: '#/definitions/MultilingualString'
+        description: A human-readable name given to the resource.
+        x-jsonld-container: '@set'
+        x-jsonld-id: http://purl.org/dc/terms/title
+      description:
+        $ref: '#/definitions/MultilingualString'
+        description: A free-text account of the resource.
+        x-jsonld-container: '@set'
+        x-jsonld-id: http://purl.org/dc/terms/description
+    x-jsonld-id: '@nest'
   links:
     type: array
     minItems: 1
@@ -382,7 +391,6 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: https://purl.org/geojson/vocab#features
   id: '@id'
-  properties: '@nest'
   geometry:
     x-jsonld-context:
       coordinates:
@@ -419,9 +427,6 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://www.opengis.net/def/ogc-api/records/hasLinkTemplate
   created: http://purl.org/dc/terms/created
   updated: http://purl.org/dc/terms/modified
-  description:
-    x-jsonld-container: '@set'
-    x-jsonld-id: http://purl.org/dc/terms/description
   keywords:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#keyword

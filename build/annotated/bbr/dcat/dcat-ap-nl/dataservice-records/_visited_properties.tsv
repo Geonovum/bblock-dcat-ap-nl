@@ -1,7 +1,7 @@
 path	@id	schema
 /type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 /id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
-/properties	@nest	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml
+/properties	@nest	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/schema.yaml
 /geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
 /geometry/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
 /geometry/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
@@ -60,8 +60,8 @@ path	@id	schema
 /properties/created	http://purl.org/dc/terms/created	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 /properties/updated	http://purl.org/dc/terms/modified	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 /properties/type	@type	https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml
-/properties/title	http://purl.org/dc/terms/title	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
-/properties/description	http://purl.org/dc/terms/description	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
+/properties/title	http://purl.org/dc/terms/title	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/schema.yaml
+/properties/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/schema.yaml
 /properties/keywords	http://www.w3.org/ns/dcat#keyword	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 /properties/language	https://www.opengis.net/def/ogc-api/records/language	https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 /properties/language/code		https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/language/schema.yaml
