@@ -12,18 +12,6 @@ building blocks in this repository are more experimental.
 
 ## Building Blocks
 
-### `geonovum-labs.bbr.dcat.transforms.xslt-example` — XSLT Transforms example
-
-**Type:** schema
-
-A sample building block to showcase transforms
-
-### `geonovum-labs.bbr.dcat.transforms.xslt2` — XSLT2 Transforms example
-
-**Type:** schema
-
-A sample building block to showcase transforms
-
 ### `geonovum-labs.bbr.dcat.dcat-dataservice-records` — DCAT-DataService/Records binding
 
 **Type:** schema
