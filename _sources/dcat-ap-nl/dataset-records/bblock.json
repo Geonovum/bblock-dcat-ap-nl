@@ -9,8 +9,8 @@
   "dateOfLastChange": "2026-05-08",
   "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
   "dependsOn": [
-    "ogc.geo.geodcat.dcat-ap",
-    "geonovum-labs.bbr.dcat.dcat-dataset-records"
+    "geonovum.bbr.dcat.dcat-ap-nl",
+    "geonovum.bbr.dcat.dcat-dataset-records"
   ],
   "sources": [
     {
@@ -18,7 +18,6 @@
       "link": "https://geonovum.github.io/DCAT-AP-NL30"
     }
   ],
-   "shaclShapes": ["https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl"],
   "scope": "dev",
   "tags": [
     "DCAT-AP-NL",

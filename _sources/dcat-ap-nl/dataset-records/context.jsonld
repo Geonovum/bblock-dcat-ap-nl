@@ -29,6 +29,7 @@
       "@container": "@list",
       "@id": "geojson:bbox"
     },
+    "accessRights": "dct:accessRights",
     "links": {
       "@context": {
         "rel": {
@@ -44,16 +45,21 @@
         "length": "dct:extent",
         "distribution" : {
           "@context": {
-            "mediaType": "rec:mediaType",
-            "name": "rec:name",
-            "description": "rec:description",
-            "license": "dcat:license",
-            "accessRights": "rec:accessRights",
+            "mediaType": "dcat:mediaType",
+            "description": "dct:description",
+            "license": {
+              "@id": "dct:license",
+              "@type": "@id"
+            },
             "conformsTo": {
               "@container": "@set",
               "@id": "dct:conformsTo",
               "@type": "@id"
             }
+          },
+          "title": {
+            "@container": "@set",
+            "@id": "dct:title"
           },
           "@id": "dcat:distribution",
           "@type": "@id"
@@ -173,7 +179,6 @@
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",

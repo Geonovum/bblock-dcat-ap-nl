@@ -14,7 +14,7 @@ description: |
   building blocks in this repository are more experimental.
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: geonovum-labs.bbr.dcat.
+identifier-prefix: geonovum.bbr.dcat.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:

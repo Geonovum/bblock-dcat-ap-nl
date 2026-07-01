@@ -1,0 +1,23 @@
+{
+  "name": "DCAT-AP-NL 3.0 profile",
+  "abstract": "DCAT-AP-NL 3.0 ( dutch profile of DCAT)",
+  "status": "under-development",
+  "dateTimeAddition": "2026-07-01T00:00:00Z",
+  "itemClass": "model",
+  "register": "geonovum-building-blocks",
+  "version": "0.1",
+  "dateOfLastChange": "2026-07-01",
+  "dependsOn": [
+        "ogc.geo.geodcat.dcat-ap"
+      ],
+  "sources": [
+    {
+      "title": "DCAT-AP-NL 3.0 Specification",
+      "link": "https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/"
+    }
+  ],
+  "shaclShapes": [ "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl" ],
+  "scope": "dev",
+  "tags": ["DCAT-AP-NL", "DCAT", "profile"],
+  "highlighted": true
+}

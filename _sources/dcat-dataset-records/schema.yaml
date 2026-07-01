@@ -3,9 +3,11 @@ $id: 'https://geonovum-labs.bbr.dcat.dataset-records.json'
 title: DCAT OGC API record definition
 description: DCAT Dataset OGC API record definition
 
+# allOf:
+#   - $ref: bblocks://ogc.geo.geodcat.dcat-records
 allOf:
-  - $ref: bblocks://ogc.geo.geodcat.dcat-records
-
+  - $ref: bblocks://ogc.api.records.v1.schemas.recordGeoJSON
+  
 properties:
   properties:
      type: object

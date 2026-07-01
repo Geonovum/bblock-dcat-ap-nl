@@ -1,0 +1,8 @@
+- title: DCAT-AP-NL 3.0 example
+  content: |-
+    This is an example conforming to DCAT-AP-NL 3.0
+
+    
+  snippets:
+    - language: ttl
+      ref: ./examples/dcat-ap-nl.ttl

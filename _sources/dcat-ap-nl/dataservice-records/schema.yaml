@@ -1,10 +1,10 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema'
-$id: 'https://geonovum-labs.bbr.dcat.dataservice-records.json'
+$id: 'https://geonovum.bbr.dcat.dataservice-records.json'
 title: DCAT DataService OGC API record definition
 description: DCAT DataService OGC API record definition
 
-allOf:
-  - $ref: bblocks://geonovum-labs.bbr.dcat.dcat-dataservice-records
+# allOf:
+#   - $ref: bblocks://geonovum.bbr.dcat.dcat-dataservice-records
 
 required:
   - conformsTo

@@ -173,7 +173,10 @@
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
+    "license": {
+      "@id": "dcat:license",
+      "@type": "@id"
+    },
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
