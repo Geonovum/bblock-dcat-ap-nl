@@ -121,4 +121,4 @@ path	@id	schema
 /links/distribution/accessURL		/github/workspace/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
 /links/distribution/downloadURL		/github/workspace/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
 /links/distribution/format		/github/workspace/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
-/links/distribution/license	http://www.w3.org/ns/dcat#license	/github/workspace/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
+/links/distribution/license	http://purl.org/dc/terms/license	/github/workspace/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml

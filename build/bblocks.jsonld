@@ -194,12 +194,12 @@
   "name": "Building Blocks - OGC Building Blocks for DCAT-AP-NL 3.0 - EXPERIMENTAL",
   "abstract": "These building blocks are an experimental implementation of DCAT-AP-NL.\n",
   "description": "The purpose of this collection is to experiment with the building block approach and to showcase how\nthis potentially can add value.\n\nNote: the building blocks in the geonovum repository are a more conservative implementation while the \nbuilding blocks in this repository are more experimental.\n",
-  "modified": "2026-06-30T08:31:30.269548",
+  "modified": "2026-07-01T13:58:09.415845",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"16a4f35d2189f0542931cf422c86706b2607cf01",
-      "shortCommitId": "\"16a4f3",
-      "date": "2026-06-25T15:20:49+00:00\""
+      "commitId": "\"6a10405b6d14cb859cbcbeb1762f51a8815960bd",
+      "shortCommitId": "\"6a1040",
+      "date": "2026-07-01T11:39:30+00:00\""
     }
   },
   "gitRepository": "https://github.com/Geonovum/bblock-dcat-ap-nl",
@@ -241,7 +241,89 @@
   "skos:prefLabel": "Building Blocks - OGC Building Blocks for DCAT-AP-NL 3.0 - EXPERIMENTAL",
   "hasConcepts": [
     {
-      "itemIdentifier": "geonovum-labs.bbr.dcat.dcat-dataservice-records",
+      "itemIdentifier": "geonovum.bbr.dcat.dcat-ap-nl",
+      "name": "DCAT-AP-NL 3.0 profile",
+      "abstract": "DCAT-AP-NL 3.0 ( dutch profile of DCAT)",
+      "status": "under-development",
+      "dateTimeAddition": "2026-07-01T00:00:00Z",
+      "itemClass": "model",
+      "register": "geonovum-building-blocks",
+      "version": "0.1",
+      "dateOfLastChange": "2026-07-01",
+      "dependsOn": [
+        "bblocks://ogc.geo.geodcat.dcat-ap"
+      ],
+      "sources": [
+        {
+          "title": "DCAT-AP-NL 3.0 Specification",
+          "link": "https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/"
+        }
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl"
+          ],
+          "rdfs:seeAlso": "bblocks://geonovum.bbr.dcat.dcat-ap-nl",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
+            "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.geo.geodcat.dcat-ap",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "scope": "dev",
+      "tags": [
+        "DCAT-AP-NL",
+        "DCAT",
+        "profile"
+      ],
+      "highlighted": true,
+      "sourceFiles": "https://geonovum.github.io/bblock-dcat-ap-nl/_sources/dcat-ap-nl/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum/bblock-dcat-ap-nl/blob/master/build/tests/bbr/dcat/dcat-ap-nl/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/markdown/bbr/dcat/dcat-ap-nl/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/build/generateddocs/json-full/bbr/dcat/dcat-ap-nl/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-ap-nl"
+        }
+      },
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-ap-nl",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "DCAT-AP-NL 3.0 profile",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://geonovum.github.io/bblock-dcat-ap-nl/"
+      }
+    },
+    {
+      "itemIdentifier": "geonovum.bbr.dcat.dcat-dataservice-records",
       "name": "DCAT-DataService/Records binding",
       "abstract": "DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataservice. This is the baseline for semantic equivalence of OGC API records and a DCAT DataService.",
       "status": "under-development",
@@ -249,13 +331,12 @@
       "itemClass": "schema",
       "register": "geonovum-building-blocks",
       "version": "0.1",
-      "dateOfLastChange": "2026-06-30",
+      "dateOfLastChange": "2026-07-01",
       "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
       "dependsOn": [
         "bblocks://ogc.api.records.v1.schemas.recordGeoJSON",
-        "bblocks://ogc.geo.geodcat.dcat",
-        "bblocks://ogc.geo.geodcat.dcat-records",
-        "bblocks://ogc.api.records.records-ontology"
+        "bblocks://ogc.api.records.records-ontology",
+        "bblocks://ogc.geo.geodcat.dcat"
       ],
       "sources": [
         {
@@ -278,18 +359,18 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -332,10 +413,10 @@
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-dataservice-records"
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-dataservice-records"
         }
       },
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-dataservice-records",
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-dataservice-records",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
@@ -352,7 +433,7 @@
       }
     },
     {
-      "itemIdentifier": "geonovum-labs.bbr.dcat.dcat-dataset-records",
+      "itemIdentifier": "geonovum.bbr.dcat.dcat-dataset-records",
       "name": "DCAT-Dataset/Records binding",
       "abstract": "DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataset. This is the baseline for semantic equivalence of OGC API records and a DCAT Dataset.",
       "status": "under-development",
@@ -360,13 +441,12 @@
       "itemClass": "schema",
       "register": "geonovum-building-blocks",
       "version": "0.1",
-      "dateOfLastChange": "2026-06-30",
+      "dateOfLastChange": "2026-07-01",
       "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
       "dependsOn": [
         "bblocks://ogc.api.records.v1.schemas.recordGeoJSON",
-        "bblocks://ogc.geo.geodcat.dcat",
-        "bblocks://ogc.geo.geodcat.dcat-records",
-        "bblocks://ogc.api.records.records-ontology"
+        "bblocks://ogc.api.records.records-ontology",
+        "bblocks://ogc.geo.geodcat.dcat"
       ],
       "sources": [
         {
@@ -389,18 +469,18 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -443,10 +523,10 @@
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-dataset-records"
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-dataset-records"
         }
       },
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-dataset-records",
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-dataset-records",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
@@ -463,7 +543,7 @@
       }
     },
     {
-      "itemIdentifier": "geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records",
+      "itemIdentifier": "geonovum.bbr.dcat.dcat-ap-nl.dataservice-records",
       "name": "DCAT-AP-NL-DataService/Records binding",
       "abstract": "DCAT-AP-NL profile binding to the OGC API Records schema.",
       "status": "under-development",
@@ -471,12 +551,11 @@
       "itemClass": "schema",
       "register": "geonovum-building-blocks",
       "version": "0.1",
-      "dateOfLastChange": "2026-06-30",
+      "dateOfLastChange": "2026-07-01",
       "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
       "dependsOn": [
-        "bblocks://geonovum-labs.bbr.dcat.dcat-dataservice-records",
-        "bblocks://ogc.geo.geodcat.dcat-ap",
-        "bblocks://ogc.geo.geodcat.dcat-records"
+        "bblocks://geonovum.bbr.dcat.dcat-ap-nl",
+        "bblocks://geonovum.bbr.dcat.dcat-dataservice-records"
       ],
       "sources": [
         {
@@ -489,16 +568,26 @@
           "prof:hasArtifact": [
             "https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl"
           ],
-          "rdfs:seeAlso": "bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records",
+          "rdfs:seeAlso": "bblocks://geonovum.bbr.dcat.dcat-ap-nl.dataservice-records",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+            "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "rdfs:seeAlso": "bblocks://geonovum.bbr.dcat.dcat-ap-nl",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
+            "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.geo.geodcat.dcat-ap",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -514,10 +603,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl",
-            "https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl"
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
           ],
-          "rdfs:seeAlso": "bblocks://ogc.geo.geodcat.dcat-ap",
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -555,7 +643,7 @@
       "sourceLdContext": "https://geonovum.github.io/bblock-dcat-ap-nl/_sources/dcat-ap-nl/dataservice-records/context.jsonld",
       "resolvedSchemaProperties": "https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataservice-records/resolvedProperties.json",
       "sourceFiles": "https://geonovum.github.io/bblock-dcat-ap-nl/_sources/dcat-ap-nl/dataservice-records/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/Geonovum/bblock-dcat-ap-nl/blob/master/build/tests/bbr/dcat/dcat-ap-nl/dataservice-records/",
       "documentation": {
         "markdown": {
@@ -568,10 +656,10 @@
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records"
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-ap-nl.dataservice-records"
         }
       },
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records",
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-ap-nl.dataservice-records",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
@@ -588,7 +676,7 @@
       }
     },
     {
-      "itemIdentifier": "geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records",
+      "itemIdentifier": "geonovum.bbr.dcat.dcat-ap-nl.dataset-records",
       "name": "DCAT-AP-NL-Dataset/Records binding",
       "abstract": "DCAT-AP-NL profile binding to the OGC API Records schema.",
       "status": "under-development",
@@ -596,11 +684,11 @@
       "itemClass": "schema",
       "register": "geonovum-building-blocks",
       "version": "0.1",
-      "dateOfLastChange": "2026-06-30",
+      "dateOfLastChange": "2026-07-01",
       "link": "https://github.com/Geonovum/bblock-dcat-ap-nl",
       "dependsOn": [
-        "bblocks://ogc.geo.geodcat.dcat-ap",
-        "bblocks://geonovum-labs.bbr.dcat.dcat-dataset-records"
+        "bblocks://geonovum.bbr.dcat.dcat-ap-nl",
+        "bblocks://geonovum.bbr.dcat.dcat-dataset-records"
       ],
       "sources": [
         {
@@ -608,12 +696,20 @@
           "link": "https://geonovum.github.io/DCAT-AP-NL30"
         }
       ],
+      "scope": "dev",
+      "tags": [
+        "DCAT-AP-NL",
+        "Dataset",
+        "profile",
+        "Records"
+      ],
+      "highlighted": true,
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl"
+            "https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl"
           ],
-          "rdfs:seeAlso": "bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records",
+          "rdfs:seeAlso": "bblocks://geonovum.bbr.dcat.dcat-ap-nl",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
@@ -630,31 +726,23 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.features.feature",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-ogcapi-records/_sources/v1/schemas/linkTemplate/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.api.records.v1.schemas.linkTemplate",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
-      "scope": "dev",
-      "tags": [
-        "DCAT-AP-NL",
-        "Dataset",
-        "profile",
-        "Records"
-      ],
-      "highlighted": true,
       "ldContext": {
         "prof:hasArtifact": "https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-ap-nl/dataset-records/context.jsonld",
         "prof:hasRole": "role:mapping",
@@ -692,10 +780,10 @@
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records"
+          "url": "https://geonovum.github.io/bblock-dcat-ap-nl/bblock/geonovum.bbr.dcat.dcat-ap-nl.dataset-records"
         }
       },
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records",
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-ap-nl.dataset-records",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
@@ -714,16 +802,19 @@
   ],
   "skos:hasTopConcept": [
     {
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-dataservice-records"
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-ap-nl"
     },
     {
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-dataset-records"
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-dataservice-records"
     },
     {
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records"
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-dataset-records"
     },
     {
-      "@id": "bblocks://geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records"
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-ap-nl.dataservice-records"
+    },
+    {
+      "@id": "bblocks://geonovum.bbr.dcat.dcat-ap-nl.dataset-records"
     }
   ]
 }

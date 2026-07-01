@@ -1,7 +1,7 @@
 
 # DCAT-DataService/Records binding (Schema)
 
-`geonovum-labs.bbr.dcat.dcat-dataservice-records` *v0.1*
+`geonovum.bbr.dcat.dcat-dataservice-records` *v0.1*
 
 DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataservice. This is the baseline for semantic equivalence of OGC API records and a DCAT DataService.
 
@@ -203,7 +203,7 @@ $id: https://geonovum-labs.bbr.dcat.dataservice-records.json
 title: DCAT DataService OGC API record definition
 description: DCAT DataService OGC API record definition
 allOf:
-- $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 properties:
   properties:
     type: object
@@ -380,7 +380,7 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
-  license: http://www.w3.org/ns/dcat#license
+  license: http://purl.org/dc/terms/license
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'
@@ -508,10 +508,6 @@ Links to the schema:
     },
     "created": "dct:created",
     "updated": "dct:modified",
-    "title": {
-      "@container": "@set",
-      "@id": "dct:title"
-    },
     "description": {
       "@container": "@set",
       "@id": "dct:description"
@@ -617,6 +613,10 @@ Links to the schema:
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "thns": "https://w3id.org/ogc/stac/themes/",
+    "title": {
+      "@container": "@set",
+      "@id": "dct:title"
+    },
     "@version": 1.1
   }
 }

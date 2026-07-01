@@ -1,13 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://geonovum-labs.bbr.dcat.dataset-records.json",
+  "$id": "https://geonovum.bbr.dcat.dataset-records.json",
   "title": "DCAT OGC API record definition",
   "description": "DCAT Dataset OGC API record definition",
-  "allOf": [
-    {
-      "$ref": "https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.json"
-    }
-  ],
   "required": [
     "conformsTo"
   ],
@@ -24,11 +19,12 @@
         "length": "http://purl.org/dc/terms/extent",
         "distribution": {
           "x-jsonld-context": {
-            "mediaType": "https://www.opengis.net/def/ogc-api/records/mediaType",
-            "name": "https://www.opengis.net/def/ogc-api/records/name",
-            "description": "https://www.opengis.net/def/ogc-api/records/description",
-            "license": "http://www.w3.org/ns/dcat#license",
-            "accessRights": "https://www.opengis.net/def/ogc-api/records/accessRights",
+            "mediaType": "http://www.w3.org/ns/dcat#mediaType",
+            "description": "http://purl.org/dc/terms/description",
+            "license": {
+              "@id": "http://purl.org/dc/terms/license",
+              "@type": "@id"
+            },
             "conformsTo": {
               "@container": "@set",
               "@id": "http://purl.org/dc/terms/conformsTo",
@@ -123,6 +119,7 @@
       "x-jsonld-container": "@list",
       "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
     },
+    "accessRights": "http://purl.org/dc/terms/accessRights",
     "conformsTo": {
       "x-jsonld-container": "@set",
       "x-jsonld-id": "http://purl.org/dc/terms/conformsTo",
@@ -231,7 +228,6 @@
       "x-jsonld-id": "http://www.w3.org/ns/dcat#contactPoint",
       "x-jsonld-type": "@id"
     },
-    "license": "http://www.w3.org/ns/dcat#license",
     "accessrights": "http://purl.org/dc/terms/accessRights",
     "variables": {
       "x-jsonld-container": "@id",
@@ -245,8 +241,8 @@
   },
   "x-jsonld-prefixes": {
     "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dcat": "http://www.w3.org/ns/dcat#",
     "rec": "https://www.opengis.net/def/ogc-api/records/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",

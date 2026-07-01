@@ -1,7 +1,7 @@
 
 # DCAT-AP-NL-DataService/Records binding (Schema)
 
-`geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records` *v0.1*
+`geonovum.bbr.dcat.dcat-ap-nl.dataservice-records` *v0.1*
 
 DCAT-AP-NL profile binding to the OGC API Records schema.
 
@@ -263,9 +263,7 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 @prefix rec: <https://www.opengis.net/def/ogc-api/records/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<urn:ogc:record:generated-id> a <file:///github/workspace/DataService>,
-        geojson:Feature ;
-    dct:conformsTo <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
+<urn:ogc:record:generated-id> dct:conformsTo <http://modellen.geostandaarden.nl/dcat-ap-nl/>,
         <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
     dct:created "2013-02-18" ;
     dct:description [ ] ;
@@ -280,8 +278,7 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
         [ ],
         [ ],
         [ ] ;
-    geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
+    geojson:geometry [ geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
     rec:language "http://publications.europa.eu/resource/authority/language/DUT" ;
     rec:themes [ ],
         [ ] .
@@ -293,11 +290,9 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://geonovum-labs.bbr.dcat.dataservice-records.json
+$id: https://geonovum.bbr.dcat.dataservice-records.json
 title: DCAT DataService OGC API record definition
 description: DCAT DataService OGC API record definition
-allOf:
-- $ref: https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml
 required:
 - conformsTo
 properties:
@@ -479,7 +474,9 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
-  license: http://www.w3.org/ns/dcat#license
+  license:
+    x-jsonld-id: http://www.w3.org/ns/dcat#license
+    x-jsonld-type: '@id'
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'
@@ -532,9 +529,7 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "type": "@type",
     "id": "@id",
-    "properties": "@nest",
     "geometry": {
       "@context": {
         "coordinates": {
@@ -547,30 +542,6 @@ Links to the schema:
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
-    },
-    "links": {
-      "@context": {
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "hreflang": "dct:language",
-        "length": "dct:extent",
-        "distribution": {
-          "@context": {
-            "mediaType": "rec:mediaType",
-            "name": "rec:name",
-            "description": "rec:description",
-            "accessRights": "rec:accessRights"
-          },
-          "@id": "dcat:distribution",
-          "@type": "@id"
-        }
-      },
-      "@id": "rdfs:seeAlso"
     },
     "conformsTo": {
       "@container": "@set",
@@ -606,14 +577,6 @@ Links to the schema:
     },
     "created": "dct:created",
     "updated": "dct:modified",
-    "title": {
-      "@container": "@set",
-      "@id": "dct:title"
-    },
-    "description": {
-      "@container": "@set",
-      "@id": "dct:description"
-    },
     "keywords": {
       "@container": "@set",
       "@id": "dcat:keyword"
@@ -684,7 +647,10 @@ Links to the schema:
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
+    "license": {
+      "@id": "dcat:license",
+      "@type": "@id"
+    },
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
@@ -695,18 +661,53 @@ Links to the schema:
       }
     },
     "rights": "dcat:rights",
-    "href": {
-      "@type": "@id",
-      "@id": "oa:hasTarget"
+    "title": {
+      "@container": "@set",
+      "@id": "dct:title"
+    },
+    "description": {
+      "@container": "@set",
+      "@id": "dct:description"
+    },
+    "properties": "@nest",
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "@type",
+        "hreflang": "dct:language",
+        "length": "dct:extent",
+        "distribution": {
+          "@context": {
+            "mediaType": "rec:mediaType",
+            "name": "rec:name",
+            "description": "rec:description",
+            "accessRights": "rec:accessRights"
+          },
+          "@id": "dcat:distribution",
+          "@type": "@id"
+        }
+      },
+      "@id": "rdfs:seeAlso"
     },
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "rec": "https://www.opengis.net/def/ogc-api/records/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "thns": "https://w3id.org/ogc/stac/themes/",
+    "oa": "http://www.w3.org/ns/oa#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "w3ctime": "http://www.w3.org/2006/time#",
@@ -714,7 +715,6 @@ Links to the schema:
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
-    "thns": "https://w3id.org/ogc/stac/themes/",
     "@version": 1.1
   }
 }

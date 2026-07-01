@@ -1,7 +1,7 @@
 
 # DCAT-Dataset/Records binding (Schema)
 
-`geonovum-labs.bbr.dcat.dcat-dataset-records` *v0.1*
+`geonovum.bbr.dcat.dcat-dataset-records` *v0.1*
 
 DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataset. This is the baseline for semantic equivalence of OGC API records and a DCAT Dataset.
 
@@ -269,8 +269,8 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
             ns1:relation <http://www.iana.org/assignments/relation/access> ;
             dcat:distribution [ a dcat:Distribution ;
                     dct:description [ ] ;
-                    dct:title [ ] ;
-                    dcat:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ] ;
+                    dct:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ;
+                    dct:title [ ] ] ;
             oa:hasTarget <http://localhost:5000/collections/bomen> ] ;
     geojson:geometry [ a geojson:Polygon ;
             geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
@@ -295,7 +295,7 @@ $id: https://geonovum-labs.bbr.dcat.dataset-records.json
 title: DCAT OGC API record definition
 description: DCAT Dataset OGC API record definition
 allOf:
-- $ref: https://ogcincubator.github.io/geodcat-ogcapi-records/build/annotated/geo/geodcat/dcat-records/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-ogcapi-records/build/annotated/api/records/v1/schemas/recordGeoJSON/schema.yaml
 properties:
   properties:
     type: object
@@ -364,7 +364,7 @@ definitions:
             type: string
           license:
             type: string
-            x-jsonld-id: http://www.w3.org/ns/dcat#license
+            x-jsonld-id: http://purl.org/dc/terms/license
         x-jsonld-id: http://www.w3.org/ns/dcat#distribution
         x-jsonld-type: '@id'
   LanguageMap:
@@ -559,6 +559,9 @@ Links to the schema:
           "@type": "@id"
         },
         "distribution": {
+          "@context": {
+            "license": "dct:license"
+          },
           "@id": "dcat:distribution",
           "@type": "@id"
         },
@@ -601,14 +604,6 @@ Links to the schema:
     },
     "created": "dct:created",
     "updated": "dct:modified",
-    "title": {
-      "@container": "@set",
-      "@id": "dct:title"
-    },
-    "description": {
-      "@container": "@set",
-      "@id": "dct:description"
-    },
     "keywords": {
       "@container": "@set",
       "@id": "dcat:keyword"
@@ -679,7 +674,6 @@ Links to the schema:
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
@@ -710,6 +704,15 @@ Links to the schema:
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "thns": "https://w3id.org/ogc/stac/themes/",
+    "title": {
+      "@container": "@set",
+      "@id": "dct:title"
+    },
+    "description": {
+      "@container": "@set",
+      "@id": "dct:description"
+    },
+    "license": "dcat:license",
     "@version": 1.1
   }
 }

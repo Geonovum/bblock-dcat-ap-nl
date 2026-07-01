@@ -12,25 +12,31 @@ building blocks in this repository are more experimental.
 
 ## Building Blocks
 
-### `geonovum-labs.bbr.dcat.dcat-dataservice-records` — DCAT-DataService/Records binding
+### `geonovum.bbr.dcat.dcat-ap-nl` — DCAT-AP-NL 3.0 profile
+
+**Type:** model
+
+DCAT-AP-NL 3.0 ( dutch profile of DCAT)
+
+### `geonovum.bbr.dcat.dcat-dataservice-records` — DCAT-DataService/Records binding
 
 **Type:** schema
 
 DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataservice. This is the baseline for semantic equivalence of OGC API records and a DCAT DataService.
 
-### `geonovum-labs.bbr.dcat.dcat-dataset-records` — DCAT-Dataset/Records binding
+### `geonovum.bbr.dcat.dcat-dataset-records` — DCAT-Dataset/Records binding
 
 **Type:** schema
 
 DCAT profile of OGC API Records binds the OGC API Records schema to a DCAT Dataset. This is the baseline for semantic equivalence of OGC API records and a DCAT Dataset.
 
-### `geonovum-labs.bbr.dcat.dcat-ap-nl.dataservice-records` — DCAT-AP-NL-DataService/Records binding
+### `geonovum.bbr.dcat.dcat-ap-nl.dataservice-records` — DCAT-AP-NL-DataService/Records binding
 
 **Type:** schema
 
 DCAT-AP-NL profile binding to the OGC API Records schema.
 
-### `geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records` — DCAT-AP-NL-Dataset/Records binding
+### `geonovum.bbr.dcat.dcat-ap-nl.dataset-records` — DCAT-AP-NL-Dataset/Records binding
 
 **Type:** schema
 

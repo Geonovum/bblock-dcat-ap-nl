@@ -1,7 +1,7 @@
-Validation report for geonovum.bbr.dcat.dcat-ap-nl.dataset-records - DCAT-AP-NL-Dataset/Records binding
-Generated 2026-07-01T13:58:14.267391+00:00
+Validation report for geonovum.bbr.dcat.dcat-ap-nl.dataservice-records - DCAT-AP-NL-DataService/Records binding
+Generated 2026-07-01T13:58:13.963472+00:00
 === Files ===
-Using examples/bomen.geojson from examples
+Using examples/bag-api.geojson from examples
 JSON-LD context is present - uplifting
 Output JSON-LD example_1_1.jsonld created
 Output Turtle example_1_1.ttl created
@@ -12,6 +12,23 @@ Validation passed
 === End JSON Schema ===
 
 === SHACL ===
+Validation result for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl:
+ - Shape dcatapnl-sh:DataServiceShape: *none*
+ - Shape dcatapnl-sh:DatasetSeriesShape: *none*
+ - Shape dcatapnl-sh:CatalogRecordShape: *none*
+ - Shape dcatapnl-sh:DistributionShape: *none*
+ - Shape _:n55322020c2e5452bacea48b0f5196b1fb3: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
+ - Shape _:n55322020c2e5452bacea48b0f5196b1fb4: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape: *none*
+ - Shape dcatapnl-sh:CatalogShape: *none*
+ - Shape dcatapnl-sh:DatasetShape: *none*
+
 Validation result for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/heads/main/shapes/dcat-ap-nl-SHACL.ttl:
   Validation Report
   Conforms: True
@@ -20,48 +37,18 @@ Focus nodes for https://raw.githubusercontent.com/Geonovum/DCAT-AP-NL30/refs/hea
  - Shape dcatapnl-sh:DataServiceShape: *none*
  - Shape dcatapnl-sh:DatasetSeriesShape: *none*
  - Shape dcatapnl-sh:CatalogRecordShape: *none*
- - Shape dcatapnl-sh:DistributionShape: <file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>/rdfs:seeAlso/dcat:distribution
- - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
- - Shape _:nb18cd73c9e2c45c7ae8286bf76e62549b3: *none*
- - Shape _:nb18cd73c9e2c45c7ae8286bf76e62549b4: *none*
+ - Shape dcatapnl-sh:DistributionShape: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:rest/rdf:first: *none*
+ - Shape _:nba37380b1cb547309ab8f7d8d315566db3: *none*
+ - Shape _:nba37380b1cb547309ab8f7d8d315566db4: *none*
  - Shape dcatapnl-sh:TemporalLiteralShape: *none*
  - Shape dcatapnl-sh:CatalogShape: *none*
  - Shape dcatapnl-sh:DatasetShape: *none*
+ - Shape dcatapnl-sh:TemporalLiteralShape/sh:xone/rdf:first: *none*
 
-
-** Validation error **
 Validation result for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:
   Validation Report
-  Conforms: False
-  Results (4):
-  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-  	Severity: shacl:Violation
-  	Source Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/6cae9880e515253132af1452a38a8a5827165149>
-  	Focus Node: [ dct:description [ ] ; dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ; dct:title [ ] ; rdf:type dcat:Distribution ]
-  	Value Node: [ ]
-  	Result Path: dc1:description
-  	Message: Value is not of Node Kind shacl:Literal
-  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
-  	Severity: shacl:Violation
-  	Source Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/d5d74574f70f9a979535f3624608f88180dd0c97>
-  	Focus Node: [ dct:description [ ] ; dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ; dct:title [ ] ; rdf:type dcat:Distribution ]
-  	Value Node: [ ]
-  	Result Path: dc1:title
-  	Message: Value is not of Node Kind shacl:Literal
-  Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
-  	Severity: shacl:Violation
-  	Source Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71>
-  	Focus Node: [ dct:description [ ] ; dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ; dct:title [ ] ; rdf:type dcat:Distribution ]
-  	Value Node: <http://creativecommons.org/publicdomain/mark/1.0/deed.nl>
-  	Result Path: dc1:license
-  	Message: Value does not have class dc1:LicenseDocument
-  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):
-  	Severity: shacl:Violation
-  	Source Shape: <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e0065293221c5851ec508ae96cd4ad03ffdedd19>
-  	Focus Node: [ dct:description [ ] ; dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ; dct:title [ ] ; rdf:type dcat:Distribution ]
-  	Result Path: dcat:accessURL
-  	Message: Less than 1 values on [ dct:description [ ] ; dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ; dct:title [ ] ; rdf:type dcat:Distribution ]->dcat:accessURL
+  Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/dcat-ap/rules.shacl:
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LinguisticSystemShape>: *none*
@@ -96,7 +83,7 @@ Focus nodes for https://ogcincubator.github.io/geodcat-ogcapi-records/_sources/d
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#TimeInstantShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#xsd:dateTimeShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape>: *none*
- - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>: <file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83>/rdfs:seeAlso/dcat:distribution
+ - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:FrequencyShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:PeriodOfTimeShape>: *none*
  - Shape <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape>: *none*
@@ -112,13 +99,13 @@ Validation result for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/ma
   Conforms: True
   
 Focus nodes for https://raw.githubusercontent.com/SEMICeu/dcat-ap_shacl/master/shacl/dcat-ap.shapes.ttl:
- - Shape :DateOrDateTimeDataType/sh:or/rdf:first: *none*
  - Shape dcat:Catalog: *none*
  - Shape :DateOrDateTimeDataType/sh:or/rdf:rest/rdf:first: *none*
  - Shape :DateOrDateTimeDataType: *none*
  - Shape dcat:CatalogRecord: *none*
  - Shape dcat:Dataset: *none*
  - Shape dcat:Distribution: *none*
+ - Shape :DateOrDateTimeDataType/sh:or/rdf:first: *none*
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report

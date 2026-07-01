@@ -1,7 +1,7 @@
 
 # DCAT-AP-NL-Dataset/Records binding (Schema)
 
-`geonovum-labs.bbr.dcat.dcat-ap-nl.dataset-records` *v0.1*
+`geonovum.bbr.dcat.dcat-ap-nl.dataset-records` *v0.1*
 
 DCAT-AP-NL profile binding to the OGC API Records schema.
 
@@ -251,23 +251,19 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 @prefix thns: <https://w3id.org/ogc/stac/themes/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83> a <file:///github/workspace/Dataset>,
-        geojson:Feature ;
-    dct:conformsTo <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
+<file:///github/workspace/7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83> dct:conformsTo <http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core> ;
     dct:created "2024-09-30" ;
     dct:description "Subset van bomen in de omgeving van Sloten (Amsterdam)" ;
     dct:modified "2024-12-06T09:49:52Z" ;
     dct:temporal [ ] ;
-    dct:title "Bomen" ;
     rdfs:seeAlso [ dct:title "Bomen" ;
             ns1:relation <http://www.iana.org/assignments/relation/access> ;
             dcat:distribution [ a dcat:Distribution ;
-                    dct:title [ ] ;
-                    dcat:license "http://creativecommons.org/publicdomain/mark/1.0/deed.nl" ;
-                    rec:description [ ] ] ;
+                    dct:description [ ] ;
+                    dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ;
+                    dct:title [ ] ] ;
             oa:hasTarget <http://localhost:5000/collections/bomen> ] ;
-    geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
+    geojson:geometry [ geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
     rec:scopedIdentifier [ rec:id "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83" ;
             rec:scheme "default" ] ;
     rec:themes [ thns:concepts <https://definities.geostandaarden.nl/ibro/id/begrip/boom>,
@@ -285,11 +281,9 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://geonovum-labs.bbr.dcat.dataset-records.json
+$id: https://geonovum.bbr.dcat.dataset-records.json
 title: DCAT OGC API record definition
 description: DCAT Dataset OGC API record definition
-allOf:
-- $ref: https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataset-records/schema.yaml
 required:
 - conformsTo
 properties:
@@ -304,11 +298,11 @@ properties:
       length: http://purl.org/dc/terms/extent
       distribution:
         x-jsonld-context:
-          mediaType: https://www.opengis.net/def/ogc-api/records/mediaType
-          name: https://www.opengis.net/def/ogc-api/records/name
-          description: https://www.opengis.net/def/ogc-api/records/description
-          license: http://www.w3.org/ns/dcat#license
-          accessRights: https://www.opengis.net/def/ogc-api/records/accessRights
+          mediaType: http://www.w3.org/ns/dcat#mediaType
+          description: http://purl.org/dc/terms/description
+          license:
+            '@id': http://purl.org/dc/terms/license
+            '@type': '@id'
           conformsTo:
             '@container': '@set'
             '@id': http://purl.org/dc/terms/conformsTo
@@ -376,6 +370,7 @@ x-jsonld-extra-terms:
   bbox:
     x-jsonld-container: '@list'
     x-jsonld-id: https://purl.org/geojson/vocab#bbox
+  accessRights: http://purl.org/dc/terms/accessRights
   conformsTo:
     x-jsonld-container: '@set'
     x-jsonld-id: http://purl.org/dc/terms/conformsTo
@@ -458,7 +453,6 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
-  license: http://www.w3.org/ns/dcat#license
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'
@@ -469,8 +463,8 @@ x-jsonld-extra-terms:
   rights: http://www.w3.org/ns/dcat#rights
 x-jsonld-prefixes:
   geojson: https://purl.org/geojson/vocab#
-  rdfs: http://www.w3.org/2000/01/rdf-schema#
   dct: http://purl.org/dc/terms/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
   dcat: http://www.w3.org/ns/dcat#
   rec: https://www.opengis.net/def/ogc-api/records/
   xsd: http://www.w3.org/2001/XMLSchema#
@@ -511,7 +505,6 @@ Links to the schema:
       "@container": "@set",
       "@id": "geojson:features"
     },
-    "type": "@type",
     "id": "@id",
     "properties": "@nest",
     "geometry": {
@@ -527,30 +520,7 @@ Links to the schema:
       "@container": "@list",
       "@id": "geojson:bbox"
     },
-    "links": {
-      "@context": {
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "hreflang": "dct:language",
-        "length": "dct:extent",
-        "distribution": {
-          "@context": {
-            "mediaType": "rec:mediaType",
-            "name": "rec:name",
-            "description": "rec:description",
-            "accessRights": "rec:accessRights"
-          },
-          "@id": "dcat:distribution",
-          "@type": "@id"
-        }
-      },
-      "@id": "rdfs:seeAlso"
-    },
+    "accessRights": "dct:accessRights",
     "conformsTo": {
       "@container": "@set",
       "@id": "dct:conformsTo",
@@ -585,10 +555,6 @@ Links to the schema:
     },
     "created": "dct:created",
     "updated": "dct:modified",
-    "title": {
-      "@container": "@set",
-      "@id": "dct:title"
-    },
     "description": {
       "@container": "@set",
       "@id": "dct:description"
@@ -663,7 +629,6 @@ Links to the schema:
       "@id": "dcat:contactPoint",
       "@type": "@id"
     },
-    "license": "dcat:license",
     "accessrights": "dct:accessRights",
     "variables": {
       "@container": "@id",
@@ -674,18 +639,49 @@ Links to the schema:
       }
     },
     "rights": "dcat:rights",
-    "href": {
-      "@type": "@id",
-      "@id": "oa:hasTarget"
+    "links": {
+      "@context": {
+        "href": {
+          "@type": "@id",
+          "@id": "oa:hasTarget"
+        },
+        "rel": {
+          "@context": {
+            "@base": "http://www.iana.org/assignments/relation/"
+          },
+          "@id": "http://www.iana.org/assignments/relation",
+          "@type": "@id"
+        },
+        "type": "@type",
+        "title": {
+          "@container": "@set",
+          "@id": "dct:title"
+        },
+        "hreflang": "dct:language",
+        "length": "dct:extent",
+        "distribution": {
+          "@context": {
+            "mediaType": "dcat:mediaType",
+            "license": {
+              "@id": "dct:license",
+              "@type": "@id"
+            }
+          },
+          "@id": "dcat:distribution",
+          "@type": "@id"
+        }
+      },
+      "@id": "rdfs:seeAlso"
     },
     "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dcat": "http://www.w3.org/ns/dcat#",
     "rec": "https://www.opengis.net/def/ogc-api/records/",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "thns": "https://w3id.org/ogc/stac/themes/",
+    "oa": "http://www.w3.org/ns/oa#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "w3ctime": "http://www.w3.org/2006/time#",
@@ -693,7 +689,6 @@ Links to the schema:
     "vcard": "http://www.w3.org/2006/vcard/ns#",
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/",
-    "thns": "https://w3id.org/ogc/stac/themes/",
     "@version": 1.1
   }
 }

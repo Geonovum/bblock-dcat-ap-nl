@@ -1,9 +1,7 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://geonovum-labs.bbr.dcat.dataservice-records.json
+$id: https://geonovum.bbr.dcat.dataservice-records.json
 title: DCAT DataService OGC API record definition
 description: DCAT DataService OGC API record definition
-allOf:
-- $ref: https://geonovum.github.io/bblock-dcat-ap-nl/build/annotated/bbr/dcat/dcat-dataservice-records/schema.yaml
 required:
 - conformsTo
 properties:
@@ -185,7 +183,9 @@ x-jsonld-extra-terms:
     x-jsonld-container: '@set'
     x-jsonld-id: http://www.w3.org/ns/dcat#contactPoint
     x-jsonld-type: '@id'
-  license: http://www.w3.org/ns/dcat#license
+  license:
+    x-jsonld-id: http://www.w3.org/ns/dcat#license
+    x-jsonld-type: '@id'
   accessrights: http://purl.org/dc/terms/accessRights
   variables:
     x-jsonld-container: '@id'
