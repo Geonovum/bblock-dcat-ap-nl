@@ -146,11 +146,11 @@
     },
     "rights": "dcat:rights",
     "title": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:title"
     },
     "description": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:description"
     },
     "properties": "@nest",

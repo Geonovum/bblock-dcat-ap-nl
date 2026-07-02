@@ -20,14 +20,26 @@
         "distribution": {
           "x-jsonld-context": {
             "mediaType": "http://www.w3.org/ns/dcat#mediaType",
-            "description": "http://purl.org/dc/terms/description",
+            "title": {
+              "@container": "@language",
+              "@id": "http://purl.org/dc/terms/title"
+            },
+            "description": {
+              "@container": "@language",
+              "@id": "http://purl.org/dc/terms/description"
+            },
             "license": {
               "@id": "http://purl.org/dc/terms/license",
               "@type": "@id"
             },
+            "LicenseDocument": "http://purl.org/dc/terms/LicenseDocument",
             "conformsTo": {
               "@container": "@set",
               "@id": "http://purl.org/dc/terms/conformsTo",
+              "@type": "@id"
+            },
+            "accessUrl": {
+              "@id": "http://www.w3.org/ns/dcat#accessURL",
               "@type": "@id"
             }
           },
@@ -64,7 +76,7 @@
         },
         "title": {
           "type": "string",
-          "x-jsonld-container": "@set",
+          "x-jsonld-container": "@language",
           "x-jsonld-id": "http://purl.org/dc/terms/title"
         }
       }
@@ -155,7 +167,7 @@
     "created": "http://purl.org/dc/terms/created",
     "updated": "http://purl.org/dc/terms/modified",
     "description": {
-      "x-jsonld-container": "@set",
+      "x-jsonld-container": "@language",
       "x-jsonld-id": "http://purl.org/dc/terms/description"
     },
     "keywords": {

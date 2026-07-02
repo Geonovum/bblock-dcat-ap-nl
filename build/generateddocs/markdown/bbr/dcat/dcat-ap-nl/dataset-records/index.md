@@ -115,13 +115,21 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
             "type": "OGC API Features",
             "distribution":{
                 "type": "dcat:Distribution",
-                    "title": {
-                        "nl": "Bomen (OGC API Features)"
-                    },
+                "title": {
+                    "nl": "Bomen (OGC API Features)",
+                    "en": "Trees (OGC API Features)"
+                },
                 "description": {
                     "nl": "API"
-                    },
-                "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
+                },
+                "license": {
+                    "@id": "http://creativecommons.org/publicdomain/zero/1.0/deed.nl",
+                    "@type": "LicenseDocument"
+                },
+                "accessUrl": {
+                    "@id": "http://localhost:5000/collections/bomen",
+                    "@type": "rdfs:Resource"
+                }
             }
         }
     ]
@@ -226,12 +234,20 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
       "distribution": {
         "type": "dcat:Distribution",
         "title": {
-          "nl": "Bomen (OGC API Features)"
+          "nl": "Bomen (OGC API Features)",
+          "en": "Trees (OGC API Features)"
         },
         "description": {
           "nl": "API"
         },
-        "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
+        "license": {
+          "@id": "http://creativecommons.org/publicdomain/zero/1.0/deed.nl",
+          "@type": "LicenseDocument"
+        },
+        "accessUrl": {
+          "@id": "http://localhost:5000/collections/bomen",
+          "@type": "rdfs:Resource"
+        }
       }
     }
   ]
@@ -259,9 +275,11 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
     rdfs:seeAlso [ dct:title "Bomen" ;
             ns1:relation <http://www.iana.org/assignments/relation/access> ;
             dcat:distribution [ a dcat:Distribution ;
-                    dct:description [ ] ;
-                    dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ;
-                    dct:title [ ] ] ;
+                    dct:description "API"@nl ;
+                    dct:license <http://creativecommons.org/publicdomain/zero/1.0/deed.nl> ;
+                    dct:title "Trees (OGC API Features)"@en,
+                        "Bomen (OGC API Features)"@nl ;
+                    dcat:accessURL <http://localhost:5000/collections/bomen> ] ;
             oa:hasTarget <http://localhost:5000/collections/bomen> ] ;
     geojson:geometry [ geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
     rec:scopedIdentifier [ rec:id "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83" ;
@@ -270,9 +288,13 @@ Converted in JSON so the Semantic uplift via a JSON-LD context can be shown.
                 <https://definities.geostandaarden.nl/ibro/id/begrip/park> ;
             thns:scheme "https://definities.geostandaarden.nl/ibro/nl/" ] .
 
+<http://creativecommons.org/publicdomain/zero/1.0/deed.nl> a dct:LicenseDocument .
+
 <https://definities.geostandaarden.nl/ibro/id/begrip/boom> thns:id "Boom"^^xsd:string .
 
 <https://definities.geostandaarden.nl/ibro/id/begrip/park> thns:id "Park"^^xsd:string .
+
+<http://localhost:5000/collections/bomen> a rdfs:Resource .
 
 
 ```
@@ -299,13 +321,22 @@ properties:
       distribution:
         x-jsonld-context:
           mediaType: http://www.w3.org/ns/dcat#mediaType
-          description: http://purl.org/dc/terms/description
+          title:
+            '@container': '@language'
+            '@id': http://purl.org/dc/terms/title
+          description:
+            '@container': '@language'
+            '@id': http://purl.org/dc/terms/description
           license:
             '@id': http://purl.org/dc/terms/license
             '@type': '@id'
+          LicenseDocument: http://purl.org/dc/terms/LicenseDocument
           conformsTo:
             '@container': '@set'
             '@id': http://purl.org/dc/terms/conformsTo
+            '@type': '@id'
+          accessUrl:
+            '@id': http://www.w3.org/ns/dcat#accessURL
             '@type': '@id'
         x-jsonld-id: http://www.w3.org/ns/dcat#distribution
         x-jsonld-type: '@id'
@@ -332,7 +363,7 @@ definitions:
         x-jsonld-id: '@type'
       title:
         type: string
-        x-jsonld-container: '@set'
+        x-jsonld-container: '@language'
         x-jsonld-id: http://purl.org/dc/terms/title
   LanguageMap:
     type: object
@@ -399,7 +430,7 @@ x-jsonld-extra-terms:
   created: http://purl.org/dc/terms/created
   updated: http://purl.org/dc/terms/modified
   description:
-    x-jsonld-container: '@set'
+    x-jsonld-container: '@language'
     x-jsonld-id: http://purl.org/dc/terms/description
   keywords:
     x-jsonld-container: '@set'
@@ -556,7 +587,7 @@ Links to the schema:
     "created": "dct:created",
     "updated": "dct:modified",
     "description": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:description"
     },
     "keywords": {
@@ -654,7 +685,7 @@ Links to the schema:
         },
         "type": "@type",
         "title": {
-          "@container": "@set",
+          "@container": "@language",
           "@id": "dct:title"
         },
         "hreflang": "dct:language",
@@ -664,6 +695,11 @@ Links to the schema:
             "mediaType": "dcat:mediaType",
             "license": {
               "@id": "dct:license",
+              "@type": "@id"
+            },
+            "LicenseDocument": "dct:LicenseDocument",
+            "accessUrl": {
+              "@id": "dcat:accessURL",
               "@type": "@id"
             }
           },

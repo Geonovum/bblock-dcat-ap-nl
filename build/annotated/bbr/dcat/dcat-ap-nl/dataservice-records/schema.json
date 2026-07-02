@@ -17,13 +17,13 @@
         "title": {
           "$ref": "#/definitions/MultilingualString",
           "description": "A human-readable name given to the resource.",
-          "x-jsonld-container": "@set",
+          "x-jsonld-container": "@language",
           "x-jsonld-id": "http://purl.org/dc/terms/title"
         },
         "description": {
           "$ref": "#/definitions/MultilingualString",
           "description": "A free-text account of the resource.",
-          "x-jsonld-container": "@set",
+          "x-jsonld-container": "@language",
           "x-jsonld-id": "http://purl.org/dc/terms/description"
         }
       },
@@ -85,7 +85,7 @@
         },
         "title": {
           "type": "string",
-          "x-jsonld-container": "@set",
+          "x-jsonld-container": "@language",
           "x-jsonld-id": "http://purl.org/dc/terms/title"
         }
       }

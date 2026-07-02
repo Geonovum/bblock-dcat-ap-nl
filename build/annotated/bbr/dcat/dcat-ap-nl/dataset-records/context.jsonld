@@ -64,7 +64,7 @@
     "created": "dct:created",
     "updated": "dct:modified",
     "description": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:description"
     },
     "keywords": {
@@ -162,7 +162,7 @@
         },
         "type": "@type",
         "title": {
-          "@container": "@set",
+          "@container": "@language",
           "@id": "dct:title"
         },
         "hreflang": "dct:language",
@@ -172,6 +172,11 @@
             "mediaType": "dcat:mediaType",
             "license": {
               "@id": "dct:license",
+              "@type": "@id"
+            },
+            "LicenseDocument": "dct:LicenseDocument",
+            "accessUrl": {
+              "@id": "dcat:accessURL",
               "@type": "@id"
             }
           },

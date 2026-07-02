@@ -17,9 +17,11 @@
     rdfs:seeAlso [ dct:title "Bomen" ;
             ns1:relation <http://www.iana.org/assignments/relation/access> ;
             dcat:distribution [ a dcat:Distribution ;
-                    dct:description [ ] ;
-                    dct:license <http://creativecommons.org/publicdomain/mark/1.0/deed.nl> ;
-                    dct:title [ ] ] ;
+                    dct:description "API"@nl ;
+                    dct:license <http://creativecommons.org/publicdomain/zero/1.0/deed.nl> ;
+                    dct:title "Trees (OGC API Features)"@en,
+                        "Bomen (OGC API Features)"@nl ;
+                    dcat:accessURL <http://localhost:5000/collections/bomen> ] ;
             oa:hasTarget <http://localhost:5000/collections/bomen> ] ;
     geojson:geometry [ geojson:coordinates ( ( ( 2.4807e+00 5.37187e+01 ) ( 7.9685e+00 5.37187e+01 ) ( 7.9685e+00 5.06058e+01 ) ( 2.4807e+00 5.06058e+01 ) ( 2.4807e+00 5.37187e+01 ) ) ) ] ;
     rec:scopedIdentifier [ rec:id "7b03a8de-5d0c-11ee-8a7e-3ce9f7462b83" ;
@@ -28,7 +30,11 @@
                 <https://definities.geostandaarden.nl/ibro/id/begrip/park> ;
             thns:scheme "https://definities.geostandaarden.nl/ibro/nl/" ] .
 
+<http://creativecommons.org/publicdomain/zero/1.0/deed.nl> a dct:LicenseDocument .
+
 <https://definities.geostandaarden.nl/ibro/id/begrip/boom> thns:id "Boom"^^xsd:string .
 
 <https://definities.geostandaarden.nl/ibro/id/begrip/park> thns:id "Park"^^xsd:string .
+
+<http://localhost:5000/collections/bomen> a rdfs:Resource .
 
