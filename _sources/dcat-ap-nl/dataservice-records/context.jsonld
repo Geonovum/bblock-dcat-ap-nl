@@ -96,11 +96,11 @@
     "created": "dct:created",
     "updated": "dct:modified",
     "title": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:title"
     },
     "description": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:description"
     },
     "keywords": {

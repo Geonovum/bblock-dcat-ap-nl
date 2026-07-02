@@ -46,20 +46,28 @@
         "distribution" : {
           "@context": {
             "mediaType": "dcat:mediaType",
-            "description": "dct:description",
+            "title": {
+              "@container": "@language",
+              "@id": "dct:title"
+            },
+            "description": {
+              "@container": "@language",
+              "@id": "dct:description"
+            },
             "license": {
               "@id": "dct:license",
               "@type": "@id"
             },
+            "LicenseDocument": "dct:LicenseDocument",
             "conformsTo": {
               "@container": "@set",
               "@id": "dct:conformsTo",
               "@type": "@id"
-            }
-          },
-          "title": {
-            "@container": "@set",
-            "@id": "dct:title"
+            },
+            "accessUrl":{
+              "@id": "dcat:accessURL",
+              "@type": "@id"
+            } 
           },
           "@id": "dcat:distribution",
           "@type": "@id"
@@ -102,11 +110,11 @@
     "created": "dct:created",
     "updated": "dct:modified",
     "title": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:title"
     },
     "description": {
-      "@container": "@set",
+      "@container": "@language",
       "@id": "dct:description"
     },
     "keywords": {

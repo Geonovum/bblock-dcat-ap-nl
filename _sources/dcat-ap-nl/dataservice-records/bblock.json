@@ -18,7 +18,6 @@
       "link": "https://geonovum.github.io/DCAT-AP-NL30"
     }
   ],
-   "shaclShapes": ["https://geonovum.github.io/DCAT-AP-NL30/shapes/dcat-ap-nl-SHACL.ttl"],
   "scope": "dev",
   "tags": [
     "DCAT-AP-NL",

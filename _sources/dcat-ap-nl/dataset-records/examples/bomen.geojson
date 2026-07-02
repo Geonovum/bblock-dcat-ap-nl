@@ -92,13 +92,21 @@
             "type": "OGC API Features",
             "distribution":{
                 "type": "dcat:Distribution",
-                    "title": {
-                        "nl": "Bomen (OGC API Features)"
-                    },
+                "title": {
+                    "nl": "Bomen (OGC API Features)",
+                    "en": "Trees (OGC API Features)"
+                },
                 "description": {
                     "nl": "API"
-                    },
-                "license": "http://creativecommons.org/publicdomain/mark/1.0/deed.nl"
+                },
+                "license": {
+                    "@id": "http://creativecommons.org/publicdomain/zero/1.0/deed.nl",
+                    "@type": "LicenseDocument"
+                },
+                "accessUrl": {
+                    "@id": "http://localhost:5000/collections/bomen",
+                    "@type": "rdfs:Resource"
+                }
             }
         }
     ]
